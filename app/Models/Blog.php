@@ -19,6 +19,9 @@ class Blog extends Model
         'image',
         'content',
         'slug',
+        'meta_title', 
+        'meta_description', 
+        'meta_keywords'
     ];
 
     /**

@@ -11,11 +11,17 @@ class Metadata extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct($page)
+    public function __construct($page = null)
     {
-        $this->title = $page->meta_title ?? "Enernew";
-        $this->desc = $page->meta_description ?? "Innovative Renewable Energy & Solar Power Park Solutions";
-        $this->keywords = $page->meta_keywords ?? "renewable energy, solar power, renewable energy park";
+        if ($page) {  // Check if $page is not null
+            $this->title = $page->meta_title;
+            $this->desc = $page->meta_description;
+            $this->keywords = $page->meta_keywords;
+        } else { // Use default values if $page is null
+            $this->title = "Enernew";
+            $this->desc = "Innovative Renewable Energy & Solar Power Park Solutions";
+            $this->keywords = "renewable energy, solar power, renewable energy park";
+        }
     }
 
     /**

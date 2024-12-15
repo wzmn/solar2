@@ -86,15 +86,15 @@ Route::get('/our-solutions', function () {
     return view('website.coming-soon', ['seo' => Page::where('slug', 'our-solutions')->first(),'seoData' => Page::where('slug', 'our-solutions')->count(),'hero_img' => [asset('storage/assets/images/about-header.png')]]);
 });
 
-
+// Blogs
 Route::get('/knowledge-center/why-off-site-solar-parks-are-the-future-of-renewable-energy', function () {
-    return view('website.blog-why-off-site-solar-parks-are-the-future-of-renewable-energy', ['seo' => Page::where('slug', 'why-off-site-solar-parks-are-the-future-of-renewable-energy')->first(),'seoData' => Page::where('slug', 'why-off-site-solar-parks-are-the-future-of-renewable-energy')->count(),'recentPosts' => []]);
+    return view('website.blog-why-off-site-solar-parks-are-the-future-of-renewable-energy', ['seo' => Blog::where('slug', 'why-off-site-solar-parks-are-the-future-of-renewable-energy')->first(),'seoData' => Blog::where('slug', 'why-off-site-solar-parks-are-the-future-of-renewable-energy')->count(),'recentPosts' => []]);
 });
 Route::get('/knowledge-center/embracing-sustainability-with-solar-energy-and-its-environmental-benefits', function () {
-    return view('website.blog-embracing-sustainability-with-solar-energy-and-its-environmental-benefits', ['seo' => Page::where('slug', 'embracing-sustainability-with-solar-energy-and-its-environmental-benefits')->first(),'seoData' => Page::where('slug', 'embracing-sustainability-with-solar-energy-and-its-environmental-benefits')->count(),'recentPosts' => []]);
+    return view('website.blog-embracing-sustainability-with-solar-energy-and-its-environmental-benefits', ['seo' => Blog::where('slug', 'embracing-sustainability-with-solar-energy-and-its-environmental-benefits')->first(),'seoData' => Blog::where('slug', 'embracing-sustainability-with-solar-energy-and-its-environmental-benefits')->count(),'recentPosts' => []]);
 });
 Route::get('/knowledge-center/choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas', function () {
-    return view('website.blog-3', ['seo' => Page::where('slug', 'choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas')->first(),'seoData' => Page::where('slug', 'choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas')->count(),'recentPosts' => []]);
+    return view('website.blog-3', ['seo' => Blog::where('slug', 'choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas')->first(),'seoData' => Blog::where('slug', 'choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas')->count(),'recentPosts' => []]);
 });
 
 

@@ -40,6 +40,8 @@ class PageController extends Controller
     {
         $validated = $request->validated();
         $validated['slug'] = Str::slug($validated['title'], '-');
+
+
         Page::create($validated);
 
         return Redirect::route('page.index')->with('status', 'Page created successfully!');

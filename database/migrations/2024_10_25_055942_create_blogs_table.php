@@ -19,6 +19,9 @@ return new class extends Migration
             $table->foreignId('author_id')->constrained('users'); // Add this line
             $table->string('image')->nullable();
             $table->longText('content');
+            $table->string('meta_title');
+            $table->string('meta_description');
+            $table->string('meta_keywords');
             $table->timestamps();
         });
     }

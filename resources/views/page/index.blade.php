@@ -29,9 +29,6 @@ use App\Models\User;
                         <thead>
                             <tr>
                                 <th class="border border-slate-300 p-2 text-left">Title</th>
-                                <th class="border border-slate-300 p-2 text-left">Date Published</th>
-                                <th class="border border-slate-300 p-2 text-left">Author</th>
-                                <th class="border border-slate-300 p-2 text-left">Slug</th>
                                 <th class="border border-slate-300 p-2 text-right">Actions</th>
                             </tr>
                         </thead>
@@ -41,11 +38,8 @@ use App\Models\User;
                                     <td class="border border-slate-300 py-2 px-2 text-left">
                                         {{ $item->title }}
                                     </td>
-                                    <td class="border border-slate-300 py-2 px-2 text-left">{{ $item->created_at }}</td>
-                                    <td class="border border-slate-300 py-2 px-2 text-left">{{ User::where('id', $item->author_id)->first()->name }}</td>
-                                    <td class="border border-slate-300 py-2 px-2 text-left">/{{ $item->slug }}</td>
                                     <td class="border border-slate-300 px-2">
-                                        <div class="flex gap-3 justify-end w-32">
+                                        <div class="flex gap-3 justify-end">
                                             <a class="border-l-2 px-2" href="{{ route('page.edit', $item) }}">Edit</a>
                                             <a class="border-l-2 px-2" href="{{ route('page.show', $item) }}">View</a>
                                             <form method="POST" action="{{ route('page.destroy', $item) }}">

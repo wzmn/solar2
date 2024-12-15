@@ -90,6 +90,7 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        $blog->delete();
+        return Redirect::route('blog.index')->with('status', 'Blog Deleted');
     }
 }

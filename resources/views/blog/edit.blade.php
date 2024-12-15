@@ -55,7 +55,7 @@
                         <div class="mb-4">
                             <label for="content" class="block text-sm font-medium text-gray-700">Content</label>
                             <input id="content" value='{{ old('content', $blog->content) }}' type="hidden" name="content">
-                            <trix-editor input="content"></trix-editor>
+                            <textarea id="mytextarea">{{ old('content', $blog->content) }}</textarea>
                         </div>
 
                         <div class="mt-6">
@@ -68,4 +68,15 @@
             </div>
         </div>
     </div>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea',
+            plugins: 'code',
+            setup: function(editor) {
+                editor.on('change', function() {
+                    document.querySelector("#content").value = editor.getContent();
+                });
+            }
+        });
+    </script>
 </x-app-layout>

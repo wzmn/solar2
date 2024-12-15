@@ -21,9 +21,11 @@
         })(window, document, 'script', 'dataLayer', 'GTM-NJ776GQC');
     </script>
     <!-- End Google Tag Manager -->
-
+    @if (isset($seo))
     <x-metadata :page="$seo"></x-metadata>
-
+    @else
+    <x-metadata></x-metadata>
+    @endif
     {{-- @if (!!$seoData)
         <x-metadata :title="$seo->meta_title" :desc="$seo->meta_description" :keywords="$seo->meta_keywords"></x-metadata>
      @else
