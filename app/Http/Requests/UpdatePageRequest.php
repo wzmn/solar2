@@ -26,7 +26,9 @@ class UpdatePageRequest extends FormRequest
             'content' => 'required',
             'author_id' => 'required',
             'date' => 'required',
-            'meta' => 'required',
+            'meta_title' => 'required',
+            'meta_description' => 'required',
+            'meta_keywords' => 'required',
         ];
     }
 }

@@ -46,9 +46,13 @@ use App\Models\User;
                                     <td class="border border-slate-300 py-2 px-2 text-left">/{{ $item->slug }}</td>
                                     <td class="border border-slate-300 px-2">
                                         <div class="flex gap-3 justify-end w-32">
-                                            <a href="{{ route('page.edit', $item) }}">Edit</a>
-                                            <a href="{{ route('page.show', $item) }}">View</a>
-                                            <a class="text-red-700" href="{{ route('page.edit', $item) }}">Delete</a>
+                                            <a class="border-l-2 px-2" href="{{ route('page.edit', $item) }}">Edit</a>
+                                            <a class="border-l-2 px-2" href="{{ route('page.show', $item) }}">View</a>
+                                            <form method="POST" action="{{ route('page.destroy', $item) }}">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="border-l-2 px-2 text-red-700">Delete</button>
+                                            </form>
                                         </div>
                                     </td>
                                 </tr>

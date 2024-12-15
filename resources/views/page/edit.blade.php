@@ -22,25 +22,25 @@
 
                         <div class="mb-4">
                             <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
-                            <input type="text" name="title" id="title" value={{$page->title}}
+                            <input type="text" name="title" id="title" value="{{$page->title}}"
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                 required>
                         </div>
                         <div class="mb-4">
                             <label for="meta_title" class="block text-sm font-medium text-gray-700">Meta Title</label>
-                            <input type="text" value={{$page->meta_title}} name="meta_title" id="meta_title"  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
+                            <input type="text" value="{{$page->meta_title}}" name="meta_title" id="meta_title"  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
                         </div>
                         <div class="mb-4">
                             <label for="meta_description" class="block text-sm font-medium text-gray-700">Meta
                                 Description</label>
-                            <input type="text" value={{$page->meta_description}} name="meta_description" id="meta_description"
+                            <input type="text" value="{{$page->meta_description}}" name="meta_description" id="meta_description"
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                 required>
                         </div>
                         <div class="mb-4">
                             <label for="meta_keywords" class="block text-sm font-medium text-gray-700">Meta Keywords
                                 <span class="text-xs">(comma separated)</span></label>
-                            <input type="text" value={{$page->meta_keywords}} name="meta_keywords" id="meta_keywords"
+                            <input type="text" value="{{old('meta_keywords', $page->meta_keywords)}}" name="meta_keywords" id="meta_keywords"
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                 required>
                         </div>

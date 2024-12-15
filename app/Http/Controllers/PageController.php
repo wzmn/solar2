@@ -7,6 +7,7 @@ use App\Http\Requests\StorePageRequest;
 use App\Http\Requests\UpdatePageRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 use App\Models\User;
 use Illuminate\Support\Str;
@@ -49,7 +50,7 @@ class PageController extends Controller
      */
     public function show(Page $page)
     {
-         return view('website.page-single', compact('page'));
+        return Route::has($page->slug) ? Redirect::route($page->slug) : Redirect::route('404');
     }
 
 
@@ -76,7 +77,7 @@ class PageController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Page $page)
+    public function destroy(Page $page): RedirectResponse
     {
         $page->delete();
         return Redirect::route('page.index')->with('status', 'Page Deleted');
