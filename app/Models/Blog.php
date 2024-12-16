@@ -7,6 +7,18 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Str;
 class Blog extends Model
 {
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($blog) {
+            $blog->slug = Str::slug($blog->title, '-');
+        });
+
+        static::updating(function ($blog) {
+            $blog->slug = Str::slug($blog->title, '-');
+        });
+    }
     /**
      * The attributes that are mass assignable.
      *

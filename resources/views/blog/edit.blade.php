@@ -25,6 +25,28 @@
                             <input type="text" name="title" id="title" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="{{ old('title', $blog->title) }}" required>
                         </div>
                         <div class="mb-4">
+                            <label for="meta_title" class="block text-sm font-medium text-gray-700">Meta Title</label>
+                            <input type="text" value="{{ $blog->meta_title }}" name="meta_title" id="meta_title"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="meta_description" class="block text-sm font-medium text-gray-700">Meta
+                                Description</label>
+                            <input type="text" value="{{ $blog->meta_description }}" name="meta_description"
+                                id="meta_description"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="meta_keywords" class="block text-sm font-medium text-gray-700">Meta Keywords
+                                <span class="text-xs">(comma separated)</span></label>
+                            <input type="text" value="{{ old('meta_keywords', $blog->meta_keywords) }}"
+                                name="meta_keywords" id="meta_keywords"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                required>
+                        </div>
+                        <div class="mb-4">
                             <label for="slug" class="block text-sm font-medium text-gray-700">Slug</label>
                             <input type="text" id="slug" class="bg-gray-200 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="{{ old('title', $blog->slug) }}" disabled>
                         </div>
@@ -33,7 +55,7 @@
                             <label for="image" class="block text-sm font-medium text-gray-700">Image</label>
                             <input type="file" name="image" id="image" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             @if ($blog->image)
-                            <img src="{{ asset("storage/" . $blog->image) }}" alt="{{ $blog->title }}" class="mt-2 h-48 w-auto">
+                            <img src="{{ Storage::disk('public')->url($blog->image) }}" alt="{{ $blog->title }}" class="mt-2 h-48 w-auto">
 
                             @endif
                         </div>

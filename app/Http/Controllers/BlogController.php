@@ -38,13 +38,14 @@ class BlogController extends Controller
      */
     public function store(StoreBlogRequest $request)
     {
-        //
-        $validated = $request->validated();
-        $validated['slug'] = Str::slug($validated['title'], '-'); 
+        $blog = new Blog($request->validated());
+
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('images', 'public');
+            $blog->image = $request->file('image')->store('images', 'public');
         }
-        Blog::create($validated);
+
+        $blog->save();
+
         return Redirect::route('blog.index')->with('status', 'blog-created');
     }
     
@@ -73,15 +74,16 @@ class BlogController extends Controller
      */
     public function update(UpdateBlogRequest $request, Blog $blog): RedirectResponse
     {
-        //
         $validated = $request->validated();
-        
-        $validated['slug'] = Str::slug($validated['title'], '-'); 
+
+        $blog->fill($validated);
+
         if ($request->hasFile('image')) {
-            $blog->image = $request->file('image')->store('images', 'public'); // Assuming 'blog-images' is your storage disk and path
-            $blog->save();
+            $blog->image = $request->file('image')->store('images', 'public');
         }
-        $blog->update($validated);
+        
+        $blog->save();
+        
         return Redirect::route('blog.edit', compact('blog'))->with('status', 'blog-updated');
     }
 

@@ -1,4 +1,4 @@
-@section("title", "Choosing the Right Green Energy: Captive vs Third-Party PPAs")
+@section("title", $blog->title)
 
 @extends("layouts.website")
 
@@ -16,7 +16,7 @@
           <div class="mb-4">
             {{ $blog->date }} / by Enernew
           </div>
-          <img src="{{ asset("storage/" . $blog->image) }}" class="img-fluid rounded-3" alt="Comparison of Captive and Third-Party PPAS">
+          <img src="{{Storage::disk('public')->url($blog->image)}}" class="img-fluid rounded-3" alt="Comparison of Captive and Third-Party PPAS">
         </div>
       </div>
       <div class="row">

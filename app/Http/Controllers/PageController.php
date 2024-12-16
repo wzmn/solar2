@@ -39,11 +39,7 @@ class PageController extends Controller
     public function store(StorePageRequest $request)
     {
         $validated = $request->validated();
-        $validated['slug'] = Str::slug($validated['title'], '-');
-
-
         Page::create($validated);
-
         return Redirect::route('page.index')->with('status', 'Page created successfully!');
     }
 
@@ -71,7 +67,6 @@ class PageController extends Controller
     public function update(UpdatePageRequest $request, Page $page): RedirectResponse
     {
         $validated = $request->validated();
-        $validated['slug'] = Str::slug($validated['title'], '-');
         $page->update($validated);
         return Redirect::route('page.edit', compact('page'))->with('status', 'Page Updated');
     }
