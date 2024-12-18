@@ -79,9 +79,11 @@ class BlogController extends Controller
         $blog->fill($validated);
 
         if ($request->hasFile('image')) {
-            $blog->image = $request->file('image')->store('images', 'public');
+            $img = $request->file('image')->store('images', 'public');
         }
-        
+        $blog->image = $img;
+        var_dump($img);
+        dd($request->file('image'));
         $blog->save();
         
         return Redirect::route('blog.edit', compact('blog'))->with('status', 'blog-updated');
