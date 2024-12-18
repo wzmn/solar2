@@ -77,9 +77,15 @@ class BlogController extends Controller
         $validated = $request->validated();
 
         $blog->fill($validated);
-
+        $img;
         if ($request->hasFile('image')) {
-            $img = $request->file('image')->store('images', 'public');
+            try {
+                //code...
+                $img = $request->file('image')->store('images', 'public');
+            } catch (\Throwable $th) {
+                //throw $th;
+                var_dump($th);
+            }
         }
         $blog->image = $img;
         var_dump($img);
