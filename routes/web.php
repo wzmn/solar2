@@ -20,70 +20,70 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/', function () {
-    return view('website.index', ['seo' => Page::where('slug', 'home')->first(),'seoData' => Page::where('slug', 'home')->count(), 'hero_img' => [asset('storage/assets/images/1.webp'), asset('storage/assets/images/video-slide.webp'), asset('storage/assets/images/slider-3.webp')]]);
+    return view('website.index', ['seo' => Page::where('slug', 'home')->first(),'seoData' => Page::where('slug', 'home')->count(), 'hero_img' => [asset('assets/images/1.webp'), asset('assets/images/video-slide.webp'), asset('assets/images/slider-3.webp')]]);
 })->name('home');
 
 Route::get('/about-us', function () {
-    return view('website.about', ['seo' => Page::where('slug', 'about-us')->first(),'seoData' => Page::where('slug', 'about-us')->count(),'hero_img' => [asset('storage/assets/images/about-header.png')]]);
+    return view('website.about', ['seo' => Page::where('slug', 'about-us')->first(),'seoData' => Page::where('slug', 'about-us')->count(),'hero_img' => [asset('assets/images/about-header.png')]]);
 })->name('about-us');
 
 Route::get('/solar-calculator', function () {
-    return view('website.coming-soon', ['seo' => Page::where('slug', 'solar-calculator')->first(),'seoData' => Page::where('slug', 'solar-calculator')->count(),'hero_img' => [asset('storage/assets/images/about-header.png')]]);
+    return view('website.coming-soon', ['seo' => Page::where('slug', 'solar-calculator')->first(),'seoData' => Page::where('slug', 'solar-calculator')->count(),'hero_img' => [asset('assets/images/about-header.png')]]);
 });
 
 Route::get('/contact-us', function () {
-    return view('website.contact', ['seo' => Page::where('slug', 'contact-us')->first(),'seoData' => Page::where('slug', 'contact-us')->count(),'hero_img' => [asset('storage/assets/images/contact-us.png')]]);
+    return view('website.contact', ['seo' => Page::where('slug', 'contact-us')->first(),'seoData' => Page::where('slug', 'contact-us')->count(),'hero_img' => [asset('assets/images/contact-us.png')]]);
 })->name('contact-us');
 
 Route::get('/careers', function () {
-    return view('website.career', ['seo' => Page::where('slug', 'careers')->first(),'seoData' => Page::where('slug', 'careers')->count(),'hero_img' => [asset('storage/assets/images/career.png')]]);
+    return view('website.career', ['seo' => Page::where('slug', 'careers')->first(),'seoData' => Page::where('slug', 'careers')->count(),'hero_img' => [asset('assets/images/career.png')]]);
 });
 
 Route::get('/employee-testimonials', function () {
-    return view('website.employee-testimonials', ['seo' => Page::where('slug', 'employee-testimonials')->first(),'seoData' => Page::where('slug', 'employee-testimonials')->count(),'hero_img' => [asset('storage/assets/images/employee-testimonials.png')]]);
+    return view('website.employee-testimonials', ['seo' => Page::where('slug', 'employee-testimonials')->first(),'seoData' => Page::where('slug', 'employee-testimonials')->count(),'hero_img' => [asset('assets/images/employee-testimonials.png')]]);
 });
 
 Route::get('/job-openings', function () {
-    return view('website.job-openings', ['seo' => Page::where('slug', 'job-openings')->first(),'seoData' => Page::where('slug', 'job-openings')->count(),'hero_img' => [asset('storage/assets/images/job-openings.png')]]);
+    return view('website.job-openings', ['seo' => Page::where('slug', 'job-openings')->first(),'seoData' => Page::where('slug', 'job-openings')->count(),'hero_img' => [asset('assets/images/job-openings.png')]]);
 });
 
 Route::get('/life-at-enernew', function () {
-    return view('website.life-at-enernew', ['seo' => Page::where('slug', 'life-at-enernew')->first(),'seoData' => Page::where('slug', 'life-at-enernew')->count(),'hero_img' => [asset('storage/assets/images/life-enernew.png')]]);
+    return view('website.life-at-enernew', ['seo' => Page::where('slug', 'life-at-enernew')->first(),'seoData' => Page::where('slug', 'life-at-enernew')->count(),'hero_img' => [asset('assets/images/life-enernew.png')]]);
 });
 
 Route::get('/press-release', function () {
-    return view('website.pr', ['hero_img' => ['seo' => Page::where('slug', 'press-release')->first(),'seoData' => Page::where('slug', 'press-release')->count(),asset('storage/assets/images/press-release.png')]]);
+    return view('website.pr', ['hero_img' => ['seo' => Page::where('slug', 'press-release')->first(),'seoData' => Page::where('slug', 'press-release')->count(),asset('assets/images/press-release.png')]]);
 });
 
 Route::get('/knowledge-center', function () {
     return view('website.blog', ['seo' => Page::where('slug', 'knowledge-center')->first(),'seoData' => Page::where('slug', 'knowledge-center')->count(),
-                                    'hero_img' => [asset('storage/assets/images/blog-header.png')],
+                                    'hero_img' => [asset('assets/images/blog-header.png')],
                                     'recentPosts' => []
                                 ]);
 });
 
 Route::get('/privacy', function () {
-    return view('website.privacy', ['seo' => Page::where('slug', 'privacy')->first(),'seoData' => Page::where('slug', 'privacy')->count(),'hero_img' => [asset('storage/assets/images/privacy-policy.jpg')]]);
+    return view('website.privacy', ['seo' => Page::where('slug', 'privacy')->first(),'seoData' => Page::where('slug', 'privacy')->count(),'hero_img' => [asset('assets/images/privacy-policy.jpg')]]);
 });
 
 Route::get('/terms-of-use', function () {
-    return view('website.terms-of-use', ['seo' => Page::where('slug', 'terms-of-use')->first(),'seoData' => Page::where('slug', 'terms-of-use')->count(),'hero_img' => [asset('storage/assets/images/terms-of-use.jpg')]]);
+    return view('website.terms-of-use', ['seo' => Page::where('slug', 'terms-of-use')->first(),'seoData' => Page::where('slug', 'terms-of-use')->count(),'hero_img' => [asset('assets/images/terms-of-use.jpg')]]);
 });
 
 Route::get('/b2b-solar-solutions', function () {
-    return view('website.b2b', ['hero_img' => ['seo' => Page::where('slug', 'b2b-solar-solutions')->first(),'seoData' => Page::where('slug', 'b2b-solar-solutions')->count(),asset('storage/assets/images/b2b.png')]]);
+    return view('website.b2b', ['hero_img' => ['seo' => Page::where('slug', 'b2b-solar-solutions')->first(),'seoData' => Page::where('slug', 'b2b-solar-solutions')->count(),asset('assets/images/b2b.png')]]);
 });
 
 Route::get('/asset-management-services', function () {
-    return view('website.asset-management', ['seo' => Page::where('slug', 'asset-management-services')->first(),'seoData' => Page::where('slug', 'asset-management-services')->count(),'hero_img' => [asset('storage/assets/images/asset.png')]]);
+    return view('website.asset-management', ['seo' => Page::where('slug', 'asset-management-services')->first(),'seoData' => Page::where('slug', 'asset-management-services')->count(),'hero_img' => [asset('assets/images/asset.png')]]);
 });
 
 Route::get('/utility-scale-solar-power-park-solutions', function () {
-    return view('website.solar-solutions', ['seo' => Page::where('slug', 'utility-scale-solar-power-park-solutions')->first(),'seoData' => Page::where('slug', 'utility-scale-solar-power-park-solutions')->count(),'hero_img' => [asset('storage/assets/images/utility-scale.png')]]);
+    return view('website.solar-solutions', ['seo' => Page::where('slug', 'utility-scale-solar-power-park-solutions')->first(),'seoData' => Page::where('slug', 'utility-scale-solar-power-park-solutions')->count(),'hero_img' => [asset('assets/images/utility-scale.png')]]);
 });
 
 Route::get('/our-solutions', function () {
-    return view('website.coming-soon', ['seo' => Page::where('slug', 'our-solutions')->first(),'seoData' => Page::where('slug', 'our-solutions')->count(),'hero_img' => [asset('storage/assets/images/about-header.png')]]);
+    return view('website.coming-soon', ['seo' => Page::where('slug', 'our-solutions')->first(),'seoData' => Page::where('slug', 'our-solutions')->count(),'hero_img' => [asset('assets/images/about-header.png')]]);
 });
 
 // Blogs

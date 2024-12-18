@@ -15,11 +15,11 @@
     <div class="container-fluid mt-5 position-relative">
         <div class="row mb-5">
             <div class="col mb-3" data-aos="fade-up">
-                <img src="{{ asset('storage/assets/images/3.webp') }}" class="img-fluid">
+                <img src="{{ asset('assets/images/3.webp') }}" class="img-fluid">
                 <div class="col-12 d-md-flex flex-wrap flex-md-nowrap justify-content-center">
                     <div class="icon">
                         <div class="icon__box" data-aos="fade-up">
-                            <img src="./storage/assets/images/icon-14.png" class="img-fluid">
+                            <img src="./assets/images/icon-14.png" class="img-fluid">
                             <div>
                                 <span class="bold">Founded in </span>
                                 <h4 class="mb-0" style="--to: 2018;"></h4>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="icon">
                         <div class="icon__box" data-aos="fade-up" data-aos-delay="100">
-                            <img src="./storage/assets/images/icon-16.png" class="img-fluid">
+                            <img src="./assets/images/icon-16.png" class="img-fluid">
                             <div>
                                 <span class="bold">Partnered with </span>
                                 <div class="d-flex justify-content-center align-items-center">
@@ -43,7 +43,7 @@
                     </div>
                     <div class="icon">
                         <div class="icon__box" data-aos="fade-up" data-aos-delay="200">
-                            <img src="./storage/assets/images/ICON-17.png" class="img-fluid">
+                            <img src="./assets/images/ICON-17.png" class="img-fluid">
                             <div>
                                 <span class="bold">Commissioned</span>
                                 <div class="d-flex justify-content-center align-items-center">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="icon">
                         <div class="icon__box" data-aos="fade-up" data-aos-delay="300">
-                            <img src="./storage/assets/images/icon-18.png" class="img-fluid">
+                            <img src="./assets/images/icon-18.png" class="img-fluid">
                             <div>
                                 <span class="bold">Saved</span>
                                 <div class="d-flex justify-content-center align-items-center">
@@ -109,7 +109,7 @@
     </div>
 </div>
 <div class="history d-flex flex-column"
-    style="background-image: url('{{ asset('storage/assets/images/history-bg.png') }}');    background-size: cover;">
+    style="background-image: url('{{ asset('assets/images/history-bg.png') }}');    background-size: cover;">
     <div class="container">
         <div class="row mt-5">
             <div class="col mt-5">
@@ -146,10 +146,10 @@
                     </div>
                     <div class="col-md-6">
                         <div class="history__grid__gallery history__grid_item--half">
-                            <img src="{{ asset('storage/assets/images/small-3.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="50">
-                            <img src="{{ asset('storage/assets/images/small-2.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="150">
-                            <img src="{{ asset('storage/assets/images/small-4.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="250">
-                            <img src="{{ asset('storage/assets/images/small-1.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="350" alt="Sriram Cables Manufacturing building">
+                            <img src="{{ asset('assets/images/small-3.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="50">
+                            <img src="{{ asset('assets/images/small-2.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="150">
+                            <img src="{{ asset('assets/images/small-4.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="250">
+                            <img src="{{ asset('assets/images/small-1.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="350" alt="Sriram Cables Manufacturing building">
                         </div>
                     </div>
 
@@ -171,7 +171,7 @@
                     </div>
 
                     <div class="history__grid_item history__grid__image mb-3">
-                        <img src="{{ asset('storage/assets/images/medium.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="150">
+                        <img src="{{ asset('assets/images/medium.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="150">
                     </div>
                     <div class="col-md-6">
                         <div class="history__grid_item history__grid_item--half" data-aos="fade-up">
@@ -191,7 +191,7 @@
                                     instrumentation imagery.
                                 </li>
                             </ul>
-                            <img src="{{ asset('storage/assets/images/clients.png') }}" class="img-fluid mb-4">
+                            <img src="{{ asset('assets/images/clients.png') }}" class="img-fluid mb-4">
                             <div>
                                 <b>We are confident to touch more new milestones in the years to come.</b>
                             </div>
@@ -199,10 +199,10 @@
                     </div>
                     <div class="col-md-6">
                         <div class="history__grid__gallery history__grid_item history__grid_item--half">
-                            <img src="{{ asset('storage/assets/images/small-5.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="150">
-                            <img src="{{ asset('storage/assets/images/small-6.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="250">
-                            <img src="{{ asset('storage/assets/images/small-7.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="350">
-                            <img src="{{ asset('storage/assets/images/small-8.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="450">
+                            <img src="{{ asset('assets/images/small-5.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="150">
+                            <img src="{{ asset('assets/images/small-6.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="250">
+                            <img src="{{ asset('assets/images/small-7.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="350">
+                            <img src="{{ asset('assets/images/small-8.png') }}" class="img-fluid" data-aos="fade-up" data-aos-delay="450">
                         </div>
                     </div>
                 </div>
@@ -256,7 +256,7 @@
                         <div class="carousel-inner mb-5">
                             <div class="carousel-item flex-column flex-md-row active">
                                 <div class="col-md-4 col-12 mb-4">
-                                    <img src="{{ asset('storage/assets/images/slide-1.png') }}" class="img-fluid" data-aos="fade-up">
+                                    <img src="{{ asset('assets/images/slide-1.png') }}" class="img-fluid" data-aos="fade-up">
                                 </div>
                                 <div class="col-md-8 col-12" data-aos="fade-up">
                                     <h4>Sriram Cables</h4>
@@ -284,7 +284,7 @@
                             </div>
                             <div class="carousel-item flex-column flex-md-row">
                                 <div class="col-md-4 col-12 mb-4">
-                                    <img src="{{ asset('storage/assets/images/slide-1.png') }}" class="img-fluid" data-aos="fade-up">
+                                    <img src="{{ asset('assets/images/slide-1.png') }}" class="img-fluid" data-aos="fade-up">
                                 </div>
                                 <div class="col-md-8 col-12" data-aos="fade-up">
                                     <h4>Sriram Cables</h4>
@@ -312,7 +312,7 @@
                             </div>
                             <div class="carousel-item flex-column flex-md-row">
                                 <div class="col-md-4 col-12 mb-4">
-                                    <img src="{{ asset('storage/assets/images/slide-1.png') }}" class="img-fluid" data-aos="fade-up">
+                                    <img src="{{ asset('assets/images/slide-1.png') }}" class="img-fluid" data-aos="fade-up">
                                 </div>
                                 <div class="col-md-8 col-12" data-aos="fade-up">
                                     <h4>Sriram Cables</h4>
@@ -346,7 +346,7 @@
         </div>
     </div>
 </div>
-<div id="founders" class="founders d-none" style="background-image: url('{{ asset('storage/assets/images/7.png') }}');    background-size: cover;">
+<div id="founders" class="founders d-none" style="background-image: url('{{ asset('assets/images/7.png') }}');    background-size: cover;">
     <div class="container py-5">
         <div class="row">
             <div class="col my-5">
@@ -370,7 +370,7 @@
             <div class="col-12">
                 <div class="row mb-5">
                     <div class="col-sm-4 text-center mb-5" data-aos="fade-up">
-                        <img src="{{ asset('storage/assets/images/person-1.png') }}" class="img-fluid rounded-3 mb-3 founder-image">
+                        <img src="{{ asset('assets/images/person-1.png') }}" class="img-fluid rounded-3 mb-3 founder-image">
                         <div class="text-center fs-4">
                             Mr. Ashutosh Garg
                         </div>
@@ -379,7 +379,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 text-center mb-5" data-aos="fade-up">
-                        <img src="{{ asset('storage/assets/images/person-2.png') }}" class="img-fluid rounded-3 mb-3 founder-image">
+                        <img src="{{ asset('assets/images/person-2.png') }}" class="img-fluid rounded-3 mb-3 founder-image">
                         <div class="text-center fs-4">
                             Mr. Anil Garg
                         </div>
@@ -388,7 +388,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 text-center mb-5" data-aos="fade-up">
-                        <img src="{{ asset('storage/assets/images/person-3.png') }}" class="img-fluid rounded-3 mb-3 founder-image">
+                        <img src="{{ asset('assets/images/person-3.png') }}" class="img-fluid rounded-3 mb-3 founder-image">
                         <div class="text-center fs-4">
                             Mr. Sunil Garg
                         </div>
@@ -411,24 +411,24 @@
                 </div>
                 <div class="vision__grid my-5">
                     <div class="vision__grid_item" data-aos="fade-left" data-aos-delay="100">
-                        <img src="{{ asset('storage/assets/images/icon-1.png') }}" alt="Integrity in all business dealings Logo">
+                        <img src="{{ asset('assets/images/icon-1.png') }}" alt="Integrity in all business dealings Logo">
                         <div>Embodying integrity in every business interaction</div>
                     </div>
                     <div class="vision__grid_item" data-aos="fade-left" data-aos-delay="200">
-                        <img src="{{ asset('storage/assets/images/icon-2.png') }}" alt="Embracing innovation Logo">
+                        <img src="{{ asset('assets/images/icon-2.png') }}" alt="Embracing innovation Logo">
                         <div>Embracing innovation and a pragmatic approach</div>
                     </div>
                     <div class="vision__grid_image">
                         <div class="">
-                            <img src="{{ asset('storage/assets/images/cross.png') }}" class="img-fluid" data-aos="zoom-in">
+                            <img src="{{ asset('assets/images/cross.png') }}" class="img-fluid" data-aos="zoom-in">
                         </div>
                     </div>
                     <div class="vision__grid_item" data-aos="fade-right" data-aos-delay="300">
-                        <img src="{{ asset('storage/assets/images/icon-3.png') }}">
+                        <img src="{{ asset('assets/images/icon-3.png') }}">
                         Upholding the highest ethical and professional standards
                     </div>
                     <div class="vision__grid_item" data-aos="fade-right" data-aos-delay="400">
-                        <img src="{{ asset('storage/assets/images/icon-4.png') }}">
+                        <img src="{{ asset('assets/images/icon-4.png') }}">
                         Cultivating continuous development and growth of our people
                     </div>
                 </div>
@@ -438,40 +438,40 @@
 </div>
 <div class="work_with_us flex-column flex-md-row" id="whyus">
     <div class="bg-1 d-flex justify-content-center p-5 "
-        style="background-image: url('{{ asset('storage/assets/images/4.png') }}');    background-size: cover;    background-position: 30px 430px;">
+        style="background-image: url('{{ asset('assets/images/4.png') }}');    background-size: cover;    background-position: 30px 430px;">
         <div class="align-items-center col-12 col-sm-5 d-flex my-5">
             <h2 class="highlight" data-aos="fade-up">
                 Why Choose Us?
             </h2>
         </div>
     </div>
-    <div class="bg-2" style="background-image: url('{{ asset('storage/assets/images/bg-2.png') }}');    background-size: cover;">
+    <div class="bg-2" style="background-image: url('{{ asset('assets/images/bg-2.png') }}');    background-size: cover;">
         <div class="infra py-5 my-5">
             <!-- <img src="https://placehold.co/640x480" class="infra__image"> -->
             <div class="infra__item_wrapper">
                 <div class="infra__item" data-aos="fade-up" data-aos-delay="300">
-                    <img src="{{ asset('storage/assets/images/why-1.png') }}" class="img-fluid">
+                    <img src="{{ asset('assets/images/why-1.png') }}" class="img-fluid">
                     <div class="text-white">Pioneering Green Energy Innovation</div>
                 </div>                
                 <div class="infra__item" data-aos="fade-up" data-aos-delay="600">
-                    <img src="{{ asset('storage/assets/images/why-6.png') }}" class="img-fluid">
+                    <img src="{{ asset('assets/images/why-6.png') }}" class="img-fluid">
                     <div class="text-white">Comprehensive Excellence in Project Delivery</div>
                 </div>                
 
                 <div class="infra__item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="{{ asset('storage/assets/images/why-2.png') }}" class="img-fluid">
+                    <img src="{{ asset('assets/images/why-2.png') }}" class="img-fluid">
                     <div class="text-white">Relentless Pursuit of Net-Zero Emissions</div>
                 </div>
                 <div class="infra__item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="{{ asset('storage/assets/images/why-3.png') }}" class="img-fluid">
+                    <img src="{{ asset('assets/images/why-3.png') }}" class="img-fluid">
                     <div class="text-white">Ready-to-Implement Infrastructure</div>
                 </div>
                 <div class="infra__item" data-aos="fade-up" data-aos-delay="400">
-                    <img src="{{ asset('storage/assets/images/why-4.png') }}" class="img-fluid">
+                    <img src="{{ asset('assets/images/why-4.png') }}" class="img-fluid">
                     <div class="text-white">Legacy of Expertise: Sriram Cables’ Proven Team</div>
                 </div>
                 <!-- <div class="infra__item" data-aos="fade-up" data-aos-delay="500">
-                    <img src="{{ asset('storage/assets/images/why-5.png') }}" class="img-fluid">
+                    <img src="{{ asset('assets/images/why-5.png') }}" class="img-fluid">
                     <div class="text-white">Dedicated Customer Support</div>
                 </div> -->
 

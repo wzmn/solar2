@@ -35,11 +35,11 @@
     <title>@yield('title')</title>
     <link rel="canonical" href="{{ url()->current() }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('storage/assets/node_modules/bootstrap/dist/css/bootstrap.css') }}">
-    <script src="{{ asset('storage/assets/node_modules/bootstrap/dist/js/bootstrap.js') }}" defer></script>
-    <link rel="stylesheet" href="{{ asset('storage/assets/node_modules/aos/dist/aos.css') }}" />
-    <link rel="stylesheet" href="{{ asset('storage/assets/node_modules/swiper/swiper-bundle.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('storage/assets/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/node_modules/bootstrap/dist/css/bootstrap.css') }}">
+    <script src="{{ asset('assets/node_modules/bootstrap/dist/js/bootstrap.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ asset('assets/node_modules/aos/dist/aos.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/node_modules/swiper/swiper-bundle.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="google-site-verification" content="gZYGu-x8qMlMgZUa2vgkdG0g0VVIL6Kbx6OmQdeT7kM" />
@@ -117,7 +117,7 @@
             <div class="d-flex justify-content-between fixed container">
                 <div class="navbar__logo">
                     <a href="/">
-                        <img src="{{ asset('storage/assets/images/logo-15.png') }}" class="logo" alt="Enernew Logo">
+                        <img src="{{ asset('assets/images/logo-15.png') }}" class="logo" alt="Enernew Logo">
                     </a>
                 </div>
                 <div class="navbar__menu">
@@ -136,7 +136,7 @@
                             <div class="col">
                                 <div class="navbar__logo">
                                     <a href="/">
-                                        <img src="{{ asset('storage/assets/images/logo-white.png') }}" class="logo"
+                                        <img src="{{ asset('assets/images/logo-white.png') }}" class="logo"
                                             alt="Enernew Logo White">
                                     </a>
                                 </div>
@@ -387,29 +387,29 @@
                             <div id="footerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img fetchpriority="low" src="{{ asset('storage/assets/images/c1.png') }}"
+                                        <img fetchpriority="low" src="{{ asset('assets/images/c1.png') }}"
                                             class="img-fluid" alt="Jindal Saw Client Logo">
                                     </div>
                                     <div class="carousel-item">
-                                        <img fetchpriority="low" src="{{ asset('storage/assets/images/c2.png') }}"
+                                        <img fetchpriority="low" src="{{ asset('assets/images/c2.png') }}"
                                             class="img-fluid" alt="NTPC Client Logo">
                                     </div>
                                     <div class="carousel-item">
                                         <img fetchpriority="low"
-                                            src="{{ asset('storage/assets/images/6-min.jpeg') }}" class="img-fluid"
+                                            src="{{ asset('assets/images/6-min.jpeg') }}" class="img-fluid"
                                             alt="HSIL Client Logo">
                                     </div>
                                     <div class="carousel-item">
-                                        <img fetchpriority="low" src="{{ asset('storage/assets/images/c1.png') }}"
+                                        <img fetchpriority="low" src="{{ asset('assets/images/c1.png') }}"
                                             class="img-fluid" alt="Jindal Saw Client Logo">
                                     </div>
                                     <div class="carousel-item">
-                                        <img fetchpriority="low" src="{{ asset('storage/assets/images/c2.png') }}"
+                                        <img fetchpriority="low" src="{{ asset('assets/images/c2.png') }}"
                                             class="img-fluid" alt="NTPC Client Logo">
                                     </div>
                                     <div class="carousel-item">
                                         <img fetchpriority="low"
-                                            src="{{ asset('storage/assets/images/6-min.jpeg') }}" class="img-fluid"
+                                            src="{{ asset('assets/images/6-min.jpeg') }}" class="img-fluid"
                                             alt="HSIL Client Logo">
                                     </div>
                                 </div>
@@ -422,7 +422,7 @@
                 <div class="row">
                     <div class="col-12 col-md-3 justify-content-center d-flex flex-column"
                         @if (Route::is('home')) data-aos="fade-up" @endif>
-                        <a href="/"><img src="{{ asset('storage/assets/images/logo-15.png') }}"
+                        <a href="/"><img src="{{ asset('assets/images/logo-15.png') }}"
                                 class="logo mb-3" alt="Enernew Logo"></a>
                         <p class="mb-3 lh-lg fs-7">Enernew continues the legacy of Sriram Cables, a brand well known
                             since 45
@@ -828,7 +828,7 @@
             })
         </script>
         @yield('scripts')
-        <script src="{{ asset('storage/assets/node_modules/aos/dist/aos.js') }}"></script>
+        <script src="{{ asset('assets/node_modules/aos/dist/aos.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
             integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
