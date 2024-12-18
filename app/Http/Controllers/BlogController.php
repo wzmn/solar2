@@ -81,7 +81,7 @@ class BlogController extends Controller
         if ($request->hasFile('image')) {
             try {
                 //code...
-                $img = $request->file('image')->store('images', 'public');
+                $img = $request->put('image')->store('images', 'public');
             } catch (\Throwable $th) {
                 //throw $th;
                 var_dump($th);
