@@ -26,10 +26,6 @@
     @else
     <x-metadata></x-metadata>
     @endif
-    {{-- @if (!!$seoData)
-        <x-metadata :title="$seo->meta_title" :desc="$seo->meta_description" :keywords="$seo->meta_keywords"></x-metadata>
-     @else
-     @endif --}}
 
     
     <title>@yield('title')</title>

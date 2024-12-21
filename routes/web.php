@@ -1,8 +1,13 @@
 <?php
-
+use App\Models\JobListing;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\FormEntryController;
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\SolutionsController;
+use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Blog;
 use App\Models\Page;
@@ -44,8 +49,8 @@ Route::get('/employee-testimonials', function () {
 });
 
 Route::get('/job-openings', function () {
-    return view('website.job-openings', ['seo' => Page::where('slug', 'job-openings')->first(),'seoData' => Page::where('slug', 'job-openings')->count(),'hero_img' => [asset('assets/images/job-openings.png')]]);
-});
+    return view('website.job-openings', ['jobs' => JobListing::all(), 'seo' => Page::where('slug', 'job-openings')->first(),'seoData' => Page::where('slug', 'job-openings')->count(),'hero_img' => [asset('assets/images/job-openings.png')]]);
+})->name('job-openings');
 
 Route::get('/life-at-enernew', function () {
     return view('website.life-at-enernew', ['seo' => Page::where('slug', 'life-at-enernew')->first(),'seoData' => Page::where('slug', 'life-at-enernew')->count(),'hero_img' => [asset('assets/images/life-enernew.png')]]);
@@ -102,6 +107,15 @@ Route::get('/knowledge-center/choosing-the-right-green-energy-path-a-comparison-
 
 Route::get('/form_submit', [App\Http\Controllers\FormController::class, 'store'])->name('form.store');
 Route::get('/admin/form_view', [App\Http\Controllers\FormController::class, 'show'])->name('form.show');
+
+
+
+
+Route::resource('jobs', JobController::class);
+Route::resource('form_entries', FormEntryController::class);
+Route::resource('testimonials', TestimonialController::class);
+Route::resource('solutions', SolutionsController::class);
+Route::resource('projects', ProjectsController::class);
 
 
 require __DIR__.'/auth.php';
