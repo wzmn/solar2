@@ -1,5 +1,6 @@
 <?php
-use App\Models\JobListing;
+use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PageController;
@@ -8,9 +9,11 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\SolutionsController;
 use App\Http\Controllers\TestimonialController;
-use Illuminate\Support\Facades\Route;
+
+use App\Models\JobListing;
 use App\Models\Blog;
 use App\Models\Page;
+use App\Models\Testimonial;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,11 +32,19 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/', function () {
-    return view('website.index', ['seo' => Page::where('slug', 'home')->first(),'seoData' => Page::where('slug', 'home')->count(), 'hero_img' => [asset('assets/images/1.webp'), asset('assets/images/video-slide.webp'), asset('assets/images/slider-3.webp')]]);
+    $Testimonial = Testimonial::all();
+    $seo = Page::where('slug', 'home')->first();
+    $hero_img = [asset('assets/images/1.webp'), asset('assets/images/video-slide.webp'), asset('assets/images/slider-3.webp')];
+
+    return view('website.index', compact('seo', 'Testimonial', 'hero_img'));
+
 })->name('home');
 
 Route::get('/about-us', function () {
-    return view('website.about', ['seo' => Page::where('slug', 'about-us')->first(),'seoData' => Page::where('slug', 'about-us')->count(),'hero_img' => [asset('assets/images/about-header.png')]]);
+    return view('website.about', [
+        'seo' => Page::where('slug', 'about-us')->first(),
+        'hero_img' => [asset('assets/images/about-header.png')]
+    ]);
 })->name('about-us');
 
 Route::get('/solar-calculator', function () {

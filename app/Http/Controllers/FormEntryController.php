@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\FormEntry;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Mail; // Import the Mail facade
+use App\Mail\FormSubmitted; // Assuming you'll create this mail class
+
 class FormEntryController extends Controller
 {
     public function index()
@@ -33,10 +36,14 @@ class FormEntryController extends Controller
             'form_type' => 'required',
             // Add other validation rules
         ]);
-        
+
         FormEntry::create($request->all());
 
-        return json_encode(['message' => 'Form entry created successfully.']);
+        if(Mail::to('contact@enernew.in')->send(new FormSubmitted($request->all()))){
+            return json_encode(['message' => 'Form entry saved! We will get back to you soon.']);;
+        }else{
+            return "Failed";
+        };
     }
 
     public function show(Request $request, FormEntry $form)

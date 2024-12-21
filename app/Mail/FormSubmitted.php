@@ -30,9 +30,10 @@ class FormSubmitted extends Mailable
      */
     public function build()
     {
-        $name = $this->formData['name'];
+        $formData = $this->formData;
+        $name = $formData['name'];
         return $this->view('emails.form-submission') // Create this view
             ->subject("New Query Received From $name")
-            ->with('formData', $this->formData);
+            ->with('formData', compact('formData'));
     }
 }

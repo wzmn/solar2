@@ -108,6 +108,8 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJ776GQC" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    
     <div class="main__wrapper {{ Route::currentRouteName() }}">
         <div class="container">
             <div class="d-flex justify-content-between fixed container">
