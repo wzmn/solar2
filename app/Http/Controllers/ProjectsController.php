@@ -40,7 +40,8 @@ class ProjectsController extends Controller
 
     public function show(Projects $project) // Route-model binding
     {
-        return view('projects.show', compact('project'));
+        return redirect()->route('home');
+        // return view('projects.show', compact('project'));
     }
 
     public function edit(Projects $project) // Route-model binding

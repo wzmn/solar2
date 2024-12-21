@@ -790,12 +790,12 @@
             </div>
             <div class="col d-none d-lg-block"></div>
             <div class="col-12 col-md-7">
-                <form class="lets_talk__form" name="home">
+                <form class="lets_talk__form" name="Home Form">
                     <h4>Drop a line</h4>
                     <div class="d-grid lets_talk__form_input_group mb-3">
                         @csrf
                         <label for="Name">
-                            <input type="text" placeholder="Name*" name="Name" id="Name" required>
+                            <input type="text" placeholder="Name*" name="name" id="Name" required>
                         </label>
                         <label for="email">
                             <input name="email" id="email" type="email" placeholder="Email Address*" required>

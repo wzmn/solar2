@@ -778,42 +778,38 @@
                     })
                 })
 
-                ifExists("form", (s) => {
-                    s.forEach(s => {
+                ifExists("form", (formElement) => {
+                    formElement.forEach(s => {
                         s.addEventListener("submit", e => {
                             e.preventDefault();
                             if (!validateInputs(s)) return;
                             $submit = s.querySelector('button[type="submit"]');
                             $submit.classList.add('submitting')
                             $submit.disabled = true;
-                            let fields = [];
+                            let params = {
+                                form_type: s.getAttribute('name')
+                            }
                             for (const pair of new FormData(s).entries()) {
                                 console.log(pair);
-                                fields.push({
-                                    [pair[0]]: pair[1]
-                                })
+                                params[pair[0]] = pair[1];
                             }
 
-
-                            axios.get('/form_submit', {
-                                    params: {
-                                        form_name: s.name,
-                                        form_fields: fields
-                                    }
-                                })
-                                .then(function(response) {
-                                    s.reset();
-                                    s.querySelector(".message_box").innerText =
-                                        "Your message has been sent sucessfully";
-                                })
-                                .catch(function(error) {
-                                    s.querySelector(".message_box").innerText =
-                                        "Oops something went wrong, please try again later";
-                                })
-                                .finally(function() {
-                                    $submit.classList.remove('submitting')
-                                    $submit.disabled = false;
-                                });
+                            axios.post('/submit_form', {
+                                ...params
+                            })
+                            .then(function(response) {
+                                s.reset();
+                                s.querySelector(".message_box").innerText =
+                                    "Your message has been sent sucessfully";
+                            })
+                            .catch(function(error) {
+                                s.querySelector(".message_box").innerText =
+                                    "Oops something went wrong, please try again later";
+                            })
+                            .finally(function() {
+                                $submit.classList.remove('submitting')
+                                $submit.disabled = false;
+                            });
                         })
                     });
                 })

@@ -33,7 +33,8 @@ class TestimonialController extends Controller
 
     public function show(Testimonial $testimonial) // Route-model binding
     {
-        return view('testimonials.show', compact('testimonial'));
+        return redirect()->route('home');
+        // return view('testimonials.show', compact('testimonial'));
     }
 
     public function edit(Testimonial $testimonial)  // Route-model binding
@@ -45,7 +46,7 @@ class TestimonialController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'content' => 'required',
+            'testimonial' => 'required',
             // Add other validation rules
         ]);
 

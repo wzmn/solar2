@@ -13,13 +13,13 @@ use App\Models\User;
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            @if (session()->has('created'))
+            @if (session()->has('success'))
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4 p-6 flex">
                 <div class="alert alert-success">
-                    {{ session('created') }}
+                    {{ session('success') }}
                 </div>
             </div>
-        @endif
+            @endif
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4 p-6 flex">
                 <a href="{{ route('page.create') }}" class="bg-gray-800 flex justify-start px-4 py-2 rounded-md text-white gap-4">Add New + </a>
             </div>

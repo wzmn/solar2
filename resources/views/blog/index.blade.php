@@ -7,13 +7,13 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            @if (session()->has('created'))
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4 p-6 flex">
-                    <div class="alert alert-success">
-                        {{ session('created') }}
-                    </div>
+            @if (session()->has('success'))
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4 p-6 flex">
+                <div class="alert alert-success">
+                    {{ session('success') }}
                 </div>
-            @endif
+            </div>
+        @endif
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4 p-6 flex">
                 <a href="{{ route('blog.create') }}"
                     class="bg-gray-800 flex justify-start px-4 py-2 rounded-md text-white gap-4">Add New + </a>

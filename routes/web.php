@@ -22,6 +22,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('blog', BlogController::class);
     Route::resource('page', PageController::class);
+    Route::resource('jobs', JobController::class);
+    Route::resource('testimonials', TestimonialController::class);
+    Route::resource('solutions', SolutionsController::class);
+    Route::resource('projects', ProjectsController::class);
 });
 
 Route::get('/', function () {
@@ -102,20 +106,10 @@ Route::get('/knowledge-center/choosing-the-right-green-energy-path-a-comparison-
     return view('website.blog-3', ['seo' => Blog::where('slug', 'choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas')->first(),'seoData' => Blog::where('slug', 'choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas')->count(),'recentPosts' => []]);
 });
 
+Route::post('/submit_form', [FormEntryController::class, 'store'])->name('form-entries.store');
 
+Route::resource('form', FormEntryController::class);
 
-
-Route::get('/form_submit', [App\Http\Controllers\FormController::class, 'store'])->name('form.store');
-Route::get('/admin/form_view', [App\Http\Controllers\FormController::class, 'show'])->name('form.show');
-
-
-
-
-Route::resource('jobs', JobController::class);
-Route::resource('form_entries', FormEntryController::class);
-Route::resource('testimonials', TestimonialController::class);
-Route::resource('solutions', SolutionsController::class);
-Route::resource('projects', ProjectsController::class);
 
 
 require __DIR__.'/auth.php';

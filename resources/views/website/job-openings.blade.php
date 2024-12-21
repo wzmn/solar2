@@ -48,56 +48,12 @@
                 </h2>
                 <div id="accord-{{$loop->index}}" class="accordion-collapse collapse {{ $loop->first ? 'show' : ''}}" data-bs-parent="#accordion">
                   <div class="accordion-body">
-                    <div class="bold">
-                      Job Location
+                    {!! $job->description !!}
+                    <div>
+                      <a class="btn bg-orange px-5 {{!$job->apply_link ? 'disabled' : ''}}" href="{{$job->apply_link}}">
+                        Apply
+                      </a>
                     </div>
-                    <ul>
-                      <li>
-                        Rajasthan
-                      </li>
-                    </ul>
-                    <div class="bold">
-                      Experience
-                    </div>
-                    <ul>
-                      <li>
-                        Minimum of 3-5 years of proven experience in sales within the renewable energy sector, with a focus on solar energy solutions.
-                      </li>
-                    </ul>
-                    <div class="bold">
-                      Education
-                    </div>
-                    <ul>
-                      <li>
-                        Bachelor’s degree in Marketing & sales, or related field.
-                      </li>
-                      <li>Minimum of 3-5 years of proven experience in sales within the renewable energy sector, with a focus on solar energy solutions.</li>
-                      <li>
-                        In-depth knowledge of solar technology, including photovoltaic systems, inverters, and mounting structures.
-                      </li>
-                      <li>Familiarity with various types of solar installations, including rooftop, ground-mounted, and carport systems.</li>
-                      <li>Strong communication and interpersonal skills, with the ability to effectively engage with clients and stakeholders at all levels.</li>
-                      <li>Excellent negotiation and persuasion abilities, with a track record of closing complex deals and achieving revenue targets.</li>
-                    </ul>
-                    <div class="bold">
-                      Responsibilities
-                    </div>
-
-                  <ul>
-                    <li>Identify and cultivate new business opportunities & New Leads in the solar energy sector, with a specific emphasis on rooftop and ground-mounted installations.</li>
-                    <li>Develop New Leads and maintain strong relationships with key stakeholders, including commercial and residential property owners, government agencies, and contractors.</li>
-                    <li>Conduct thorough site assessments to determine feasibility and suitability for solar installations, considering factors such as roof orientation, shading, and structural integrity.</li>
-                    <li>Collaborate with engineering and design teams to develop customized solar solutions tailored to the specific needs and requirements of clients.</li>
-                    <li>Prepare and present compelling proposals and quotations to prospective clients, outlining the benefits and financial returns of solar energy investments.</li>
-                    <li>Negotiate contracts and agreements with clients, ensuring favourable terms and conditions for all parties involved.</li>
-                    <li>Stay informed about industry trends, market developments, and emerging technologies in solar energy to maintain a competitive edge.</li>
-                    <li>Meet or exceed sales targets and KPIs set by the company, demonstrating consistent performance and achievement.</li>
-                  </ul>
-                  
-                    <a class="btn bg-orange px-5 {{!$job->apply_link ? 'disabled' : ''}}" href="{{$job->apply_link}}">
-                      Apply
-                    </a>
-
                   </div>
                 </div>
               </div>

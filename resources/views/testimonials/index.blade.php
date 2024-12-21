@@ -27,11 +27,11 @@
                         <table class="table-auto w-full">
                             <thead>
                                 <tr>
-                                    <th class="px-4 py-2">Name</th>
-                                    <th class="px-4 py-2">Testimonial</th>
-                                    <th class="px-4 py-2">Designation</th>
-                                    <th class="px-4 py-2">Type</th>
-                                    <th class="px-4 py-2">Actions</th>
+                                    <th class="border border-slate-300 p-2 text-left">Name</th>
+                                    <th class="border border-slate-300 p-2 text-left">Testimonial</th>
+                                    <th class="border border-slate-300 p-2 text-left">Designation</th>
+                                    <th class="border border-slate-300 p-2 text-left">Type</th>
+                                    <th class="border border-slate-300 p-2 text-right">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -42,13 +42,16 @@
                                         <td class="border px-4 py-2">{{ $testimonial->designation }}</td>
                                         <td class="border px-4 py-2">{{ $testimonial->type }}</td>
                                         <td class="border px-4 py-2">
-                                            <a href="{{ route('testimonials.edit', $testimonial) }}" class="text-blue-600 hover:underline">Edit</a>
-                                            <a href="{{ route('testimonials.show', $testimonial) }}" class="text-green-600 hover:underline">View</a>
+                                            <div class="flex gap-3 justify-end">
+                                            <a href="{{ route('testimonials.edit', $testimonial) }}" class="border-l-2 px-2">Edit</a>
+                                            <a href="{{ route('testimonials.show', $testimonial) }}" class="border-l-2 px-2">View</a>
                                             <form action="{{ route('testimonials.destroy', $testimonial) }}" method="POST" style="display: inline-block;">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="text-red-600 hover:underline" onclick="return confirm('Are you sure you want to delete this testimonial?')">Delete</button>
-                                            </form>                                        </td>
+                                                <button type="submit" class="text-red-600 border-l-2 px-2" onclick="return confirm('Are you sure you want to delete this testimonial?')">Delete</button>
+                                            </form>
+                                            </div>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>

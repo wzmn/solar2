@@ -40,7 +40,7 @@ class PageController extends Controller
     {
         $validated = $request->validated();
         Page::create($validated);
-        return Redirect::route('page.index')->with('status', 'Page created successfully!');
+        return Redirect::route('page.index')->with('success', 'Page created successfully!');
     }
 
     /**
@@ -68,7 +68,7 @@ class PageController extends Controller
     {
         $validated = $request->validated();
         $page->update($validated);
-        return Redirect::route('page.edit', compact('page'))->with('status', 'Page Updated');
+        return Redirect::route('page.edit', compact('page'))->with('success', 'Page Updated');
     }
 
     /**
@@ -77,6 +77,6 @@ class PageController extends Controller
     public function destroy(Page $page): RedirectResponse
     {
         $page->delete();
-        return Redirect::route('page.index')->with('status', 'Page Deleted');
+        return Redirect::route('page.index')->with('success', 'Page Deleted');
     }
 }

@@ -24,16 +24,23 @@ class FormEntryController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'message' => 'required',
+            'phone' => 'required|numeric',
+            'reason' => 'required',
+            'zip' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'country' => 'required',
+            'form_type' => 'required',
             // Add other validation rules
         ]);
-
+        
         FormEntry::create($request->all());
 
-        return redirect()->back()->with('success', 'Form submitted successfully.'); // Redirect back to the form
+        return json_encode(['message' => 'Form entry created successfully.']);
     }
 
-    public function show(FormEntry $form)
-    {
+    public function show(Request $request, FormEntry $form)
+    {   
         return view('form.show', compact('form')); // Create a view
     }
 
@@ -58,6 +65,6 @@ class FormEntryController extends Controller
     public function destroy(FormEntry $form)
     {
         $form->delete();
-        return redirect()->route('form.index')->with('success', 'form deleted successfully.');
+        return redirect()->route('form.index')->with('success', 'Entry deleted successfully.');
     }
 }

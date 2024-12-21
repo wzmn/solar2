@@ -24,7 +24,7 @@
                     <x-nav-link :href="route('jobs.index')" :active="request()->routeIs('jobs.index')">
                         {{ __('Jobs') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('form_entries.index')" :active="request()->routeIs('form_entries.index')">
+                    <x-nav-link :href="route('form.index')" :active="request()->routeIs('form.index')">
                         {{ __('Form Entries') }} 
                     </x-nav-link>
 
@@ -128,7 +128,7 @@
             <x-responsive-nav-link :href="route('jobs.index')" :active="request()->routeIs('jobs.index')">
                 {{ __('Jobs') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('form_entries.index')" :active="request()->routeIs('form_entries.index')">
+            <x-responsive-nav-link :href="route('form.index')" :active="request()->routeIs('form.index')">
                 {{ __('Form Entries') }} </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('testimonials.index')" :active="request()->routeIs('testimonials.index')">
                 {{ __('Testimonials') }}

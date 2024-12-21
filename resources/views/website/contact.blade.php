@@ -178,12 +178,13 @@
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                         aria-labelledby="pills-home-tab">
-                        <form class="lets_talk__form" name="General Enquiy">
+                        <form class="lets_talk__form" name="General Enquiry">
                             <div>* represents mandatory fields</div>
                             <div class="d-grid lets_talk__form_input_group mb-3">
                                 @csrf
-                                <label for="FirstName">
-                                    <input type="text" placeholder="First Name*" name="FirstName" id="FirstName" required>
+                                <input type="hidden" name="reason" value="General Enquiry">
+                                <label for="name">
+                                    <input type="text" placeholder="First Name*" name="name" id="name" required>
                                 </label>
                                 <label for="LastName">
                                     <input type="text" placeholder="Last Name*" name="LastName" id="LastName" required>
@@ -218,8 +219,10 @@
                             <div>* represents mandatory fields</div>
                             <div class="d-grid lets_talk__form_input_group mb-3">
                                 @csrf
-                                <label for="FirstName">
-                                    <input type="text" placeholder="First Name*" name="FirstName" id="FirstName" required>
+                                <input type="hidden" name="reason" value="Sales Enquiry">
+
+                                <label for="name">
+                                    <input type="text" placeholder="First Name*" name="name" id="name" required>
                                 </label>
                                 <label for="LastName">
                                     <input type="text" placeholder="Last Name*" name="LastName" id="LastName" required>
@@ -254,8 +257,10 @@
                             <div>* represents mandatory fields</div>
                             <div class="d-grid lets_talk__form_input_group mb-3">
                                 @csrf
-                                <label for="FirstName">
-                                    <input type="text" placeholder="First Name*" name="FirstName" id="FirstName" required>
+                                <input type="hidden" name="reason" value="Supplier Enquiry">
+
+                                <label for="name">
+                                    <input type="text" placeholder="First Name*" name="name" id="name" required>
                                 </label>
                                 <label for="LastName">
                                     <input type="text" placeholder="Last Name*" name="LastName" id="LastName" required>
@@ -290,8 +295,10 @@
                             <div>* represents mandatory fields</div>
                             <div class="d-grid lets_talk__form_input_group mb-3">
                                 @csrf
-                                <label for="FirstName">
-                                    <input type="text" placeholder="First Name*" name="FirstName" id="FirstName" required>
+                                <input type="hidden" name="reason" value="Channel Enquiry">
+
+                                <label for="name">
+                                    <input type="text" placeholder="First Name*" name="name" id="name" required>
                                 </label>
                                 <label for="LastName">
                                     <input type="text" placeholder="Last Name*" name="LastName" id="LastName" required>
@@ -326,8 +333,10 @@
                             <div>* represents mandatory fields</div>
                             <div class="d-grid lets_talk__form_input_group mb-3">
                                 @csrf
-                                <label for="FirstName">
-                                    <input type="text" placeholder="First Name*" name="FirstName" id="FirstName" required>
+                                <input type="hidden" name="reason" value="Media Enquiry">
+
+                                <label for="name">
+                                    <input type="text" placeholder="First Name*" name="name" id="name" required>
                                 </label>
                                 <label for="LastName">
                                     <input type="text" placeholder="Last Name*" name="LastName" id="LastName" required>

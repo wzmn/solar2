@@ -54,7 +54,7 @@ class BlogController extends Controller
 
         $blog->save();
 
-        return Redirect::route('blog.index')->with('status', 'blog-created');
+        return Redirect::route('blog.index')->with('success', 'blog-created');
     }
     
 
@@ -98,7 +98,7 @@ class BlogController extends Controller
         
         $blog->save();
         
-        return Redirect::route('blog.edit', compact('blog'))->with('status', 'blog-updated');
+        return Redirect::route('blog.edit', compact('blog'))->with('success', 'blog-updated');
     }
 
     /**
@@ -107,6 +107,6 @@ class BlogController extends Controller
     public function destroy(Blog $blog)
     {
         $blog->delete();
-        return Redirect::route('blog.index')->with('status', 'Blog Deleted');
+        return Redirect::route('blog.index')->with('success', 'Blog Deleted');
     }
 }

@@ -28,9 +28,9 @@
                         <table class="table-auto w-full">
                             <thead>
                                 <tr>
-                                    <th class="px-4 py-2">Title</th>
-                                    <th class="px-4 py-2">Description</th>
-                                    <th class="px-4 py-2">Actions</th>  </header>
+                                    <th class="border border-slate-300 p-2 text-left">Title</th>
+                                    <th class="border border-slate-300 p-2 text-left">Description</th>
+                                    <th class="border border-slate-300 p-2 text-right">Actions</th>  </header>
                                 </tr>
                             </thead>
                             <tbody>
@@ -39,13 +39,15 @@
                                         <td class="border px-4 py-2">{{ $solution->title }}</td>
                                         <td class="border px-4 py-2">{{ Str::limit($solution->description, 50) }}</td>
                                         <td class="border px-4 py-2">
-                                            <a href="{{ route('solutions.edit', $solution) }}" class="text-blue-600 hover:underline">Edit</a>
-                                            <a href="{{ route('solutions.show', $solution) }}" class="text-green-600 hover:underline">View</a>
-                                            <form action="{{ route('solutions.destroy', $solution) }}" method="POST" style="display: inline-block;">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="text-red-600 hover:underline" onclick="return confirm('Are you sure you want to delete this solution?')">Delete</button>
-                                            </form>
+                                            <div class="flex gap-3 justify-end">
+                                                <a href="{{ route('solutions.edit', $solution) }}" class="border-l-2 px-2">Edit</a>
+                                                <a href="{{ route('solutions.show', $solution) }}" class="border-l-2 px-2">View</a>
+                                                <form action="{{ route('solutions.destroy', $solution) }}" method="POST" style="display: inline-block;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="text-red-600 border-l-2 px-2" onclick="return confirm('Are you sure you want to delete this solution?')">Delete</button>
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach
