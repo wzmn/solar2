@@ -756,18 +756,15 @@
                     <img src="./assets/images/c9.png" class="img-fluid" alt="India Oil Client Logo">
                 </div>
             </div>
-
+            
             <div class="row mt-5 justify-content-center pt-5">
                 <div class="col-9 mb-5">
                     <div id="clients" class="carousel carousel-dark slide flex-column" data-bs-interval="false">
                         <h2 class="text-center mb-3 highlight highlight--center" data-aos="fade-up">Client Testimonials
                         </h2>
-
                         <div class="carousel-inner" data-aos="fade-up" data-aos-delay="100">
-
-
-                            {{-- @foreach ($testimonials as $item) --}}
-                                <div class="carousel-item active">
+                            @foreach ($testimonials as $item)
+                                <div class="carousel-item {{ $loop->first ? 'active' : ''}}">
                                     <div class="d-flex justify-content-center flex-column align-items-center pb-5 gap-2">
                                         <svg width="50" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 57 57"
@@ -784,54 +781,19 @@
                                             <path style="fill:#3b9d30;" d="M13,32c-0.553,0-1-0.447-1-1c0-7.72,6.28-14,14-14c0.553,0,1,0.447,1,1s-0.447,1-1,1 c-6.617,0-12,5.383-12,12C14,31.553,13.553,32,13,32z" />
                                             <path style="fill:#3b9d30;" d="M30,32c-0.553,0-1-0.447-1-1c0-7.72,6.28-14,14-14c0.553,0,1,0.447,1,1s-0.447,1-1,1 c-6.617,0-12,5.383-12,12C31,31.553,30.553,32,30,32z" />
                                         </svg>
-                                        <i class="text-center mb-3">“Enernew's partnership has significantly enhanced our
-                                            operations at India Power Company. Their expertise in solar energy solutions is
-                                            exemplary, delivering exceptional results with utmost professionalism and precision.
-                                            Enernew's commitment to innovation and sustainability has been instrumental in
-                                            advancing our energy management strategies. We highly value our collaboration and
-                                            recommend Enernew for their outstanding service and expertise.”
+                                        <i class="text-center mb-3">“{!! $item->testimonial !!}”
                                         </i>
-                                        <h2 class="h2 mb-0">- Mr. P. Anand</h2>
-                                        <p>India power company</p>
+                                        <h2 class="h2 mb-0">- {{$item->name}}</h2>
+                                        <p>{{$item->company}}</p>
                                     </div>
                                 </div>
-                            {{-- @endforeach --}}
-                            {{-- <div class="carousel-item">
-                                <div class="d-flex justify-content-center flex-column align-items-center pb-5 gap-2">
-                                    
-                                    <i class="text-center mb-3">“Enernew's partnership has significantly enhanced our
-                                        operations at India Power Company. Their expertise in solar energy solutions is
-                                        exemplary, delivering exceptional results with utmost professionalism and precision.
-                                        Enernew's commitment to innovation and sustainability has been instrumental in
-                                        advancing our energy management strategies. We highly value our collaboration and
-                                        recommend Enernew for their outstanding service and expertise.”
-                                    </i>
-                                    <h2 class="h2 mb-0">- Mr. P. Anand</h2>
-                                    <p>India power company</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="d-flex justify-content-center flex-column align-items-center pb-5 gap-2">
-                                   
-                                    <i class="text-center mb-3">“Enernew's partnership has significantly enhanced our
-                                        operations at India Power Company. Their expertise in solar energy solutions is
-                                        exemplary, delivering exceptional results with utmost professionalism and precision.
-                                        Enernew's commitment to innovation and sustainability has been instrumental in
-                                        advancing our energy management strategies. We highly value our collaboration and
-                                        recommend Enernew for their outstanding service and expertise.”
-                                    </i>
-                                    <h2 class="h2 mb-0">- Mr. P. Anand</h2>
-                                    <p>India power company</p>
-                                </div>
-                            </div> --}}
+                            @endforeach
                         </div>
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#clients" data-bs-slide-to="0" class="active"
+                            @foreach ($testimonials as $item)
+                            <button type="button" data-bs-target="#clients" data-bs-slide-to="{{$loop->index}}" class="{{ $loop->first ? 'active' : ''}}"
                                 aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#clients" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#clients" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
+                            @endforeach
                         </div>
                     </div>
                 </div>

@@ -32,11 +32,10 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/', function () {
-    $Testimonial = Testimonial::all();
+    $testimonials = Testimonial::where('type', 'client')->get();
     $seo = Page::where('slug', 'home')->first();
     $hero_img = [asset('assets/images/1.webp'), asset('assets/images/video-slide.webp'), asset('assets/images/slider-3.webp')];
-
-    return view('website.index', compact('seo', 'Testimonial', 'hero_img'));
+    return view('website.index', compact('seo', 'testimonials', 'hero_img'));
 
 })->name('home');
 
