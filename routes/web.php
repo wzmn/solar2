@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('testimonials', TestimonialController::class);
     Route::resource('solutions', SolutionsController::class);
     Route::resource('projects', ProjectsController::class);
+    Route::resource('form', FormEntryController::class);
 });
 
 Route::get('/', function () {
@@ -64,12 +65,18 @@ Route::get('/contact-us', function () {
 })->name('contact-us');
 
 Route::get('/careers', function () {
-    return view('website.career', ['seo' => Page::where('slug', 'careers')->first(),'seoData' => Page::where('slug', 'careers')->count(),'hero_img' => [asset('assets/images/career.png')]]);
+    $testimonials = Testimonial::where('type', 'employee')->first();
+    $seo = Page::where('slug', 'careers')->first();
+    $hero_img = [asset('assets/images/career.png')];
+    return view('website.career', compact('testimonials', 'seo', 'hero_img'));
 });
 
 Route::get('/employee-testimonials', function () {
-    return view('website.employee-testimonials', ['seo' => Page::where('slug', 'employee-testimonials')->first(),'seoData' => Page::where('slug', 'employee-testimonials')->count(),'hero_img' => [asset('assets/images/employee-testimonials.png')]]);
-});
+    $testimonials = Testimonial::where('type', 'employee')->get();
+    $seo = Page::where('slug', 'employee-testimonials')->first();
+    $hero_img = [asset('assets/images/employee-testimonials.png')];
+    return view('website.employee-testimonials', compact('testimonials', 'seo', 'hero_img'));
+})->name('employee-testimonials');
 
 Route::get('/job-openings', function () {
     return view('website.job-openings', ['jobs' => JobListing::all(), 'seo' => Page::where('slug', 'job-openings')->first(),'seoData' => Page::where('slug', 'job-openings')->count(),'hero_img' => [asset('assets/images/job-openings.png')]]);
@@ -83,11 +90,21 @@ Route::get('/press-release', function () {
     return view('website.pr', ['hero_img' => ['seo' => Page::where('slug', 'press-release')->first(),'seoData' => Page::where('slug', 'press-release')->count(),asset('assets/images/press-release.png')]]);
 });
 
+
+Route::get('/knowledge-center/{slug}', function (string $slug) {
+    $blog = Blog::where('slug', $slug)->firstOrFail();
+    $seo = new Fruit($blog);
+    $seo->meta_title;
+    $seo->meta_description;
+    $seo->meta_keywords;
+    return view('website.blog-single', compact('blog', 'seo'));
+})->name('blog.show');
+
 Route::get('/knowledge-center', function () {
-    return view('website.blog', ['seo' => Page::where('slug', 'knowledge-center')->first(),'seoData' => Page::where('slug', 'knowledge-center')->count(),
-                                    'hero_img' => [asset('assets/images/blog-header.png')],
-                                    'recentPosts' => []
-                                ]);
+    $blogs = Blog::paginate();
+    $seo = Page::where('slug', 'knowledge-center')->first();
+    $recentPosts = $blogs;
+    return view('website.blog', compact('blogs', 'seo', 'recentPosts'));
 });
 
 Route::get('/privacy', function () {
@@ -114,30 +131,6 @@ Route::get('/our-solutions', function () {
     return view('website.coming-soon', ['seo' => Page::where('slug', 'our-solutions')->first(),'seoData' => Page::where('slug', 'our-solutions')->count(),'hero_img' => [asset('assets/images/about-header.png')]]);
 });
 
-// Blogs
-// Route::get('/knowledge-center/why-off-site-solar-parks-are-the-future-of-renewable-energy', function () {
-//     return view('website.blog-why-off-site-solar-parks-are-the-future-of-renewable-energy', ['seo' => Blog::where('slug', 'why-off-site-solar-parks-are-the-future-of-renewable-energy')->first(),'seoData' => Blog::where('slug', 'why-off-site-solar-parks-are-the-future-of-renewable-energy')->count(),'recentPosts' => []]);
-// });
-// Route::get('/knowledge-center/embracing-sustainability-with-solar-energy-and-its-environmental-benefits', function () {
-//     return view('website.blog-embracing-sustainability-with-solar-energy-and-its-environmental-benefits', ['seo' => Blog::where('slug', 'embracing-sustainability-with-solar-energy-and-its-environmental-benefits')->first(),'seoData' => Blog::where('slug', 'embracing-sustainability-with-solar-energy-and-its-environmental-benefits')->count(),'recentPosts' => []]);
-// });
-// Route::get('/knowledge-center/choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas', function () {
-//     return view('website.blog-3', ['seo' => Blog::where('slug', 'choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas')->first(),'seoData' => Blog::where('slug', 'choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas')->count(),'recentPosts' => []]);
-// });
-
 Route::post('/submit_form', [FormEntryController::class, 'store'])->name('form-entries.store');
-
-Route::resource('form', FormEntryController::class);
-
-
-Route::get('/knowledge-center/{slug}', function (string $slug) {
-    $blog = Blog::where('slug', $slug)->firstOrFail();
-    $seo = new Fruit($blog);
-    $seo->meta_title;
-    $seo->meta_description;
-    $seo->meta_keywords;
-    return view('website.blog-single', compact('blog', 'seo'));
-})->name('blog.show');
-
 
 require __DIR__.'/auth.php';

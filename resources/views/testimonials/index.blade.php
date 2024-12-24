@@ -38,7 +38,7 @@
                                 @foreach ($testimonials as $testimonial)
                                     <tr>
                                         <td class="border px-4 py-2">{{ $testimonial->name }}</td>
-                                        <td class="border px-4 py-2">{{ Str::limit($testimonial->testimonial, 50) }}</td> {{-- Limit the testimonial text --}}
+                                        <td class="border px-4 py-2">{!! Str::limit($testimonial->testimonial, 50) !!}</td> {{-- Limit the testimonial text --}}
                                         <td class="border px-4 py-2">{{ $testimonial->designation }}</td>
                                         <td class="border px-4 py-2">{{ $testimonial->type }}</td>
                                         <td class="border px-4 py-2">

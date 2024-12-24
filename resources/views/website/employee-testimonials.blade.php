@@ -26,48 +26,28 @@
         </div>
     </div>
     <div class="row">
-        
-            
-                <div class="testimonials__grid_item col-lg-6 mb-5">
+        @if ($testimonials)
+            @foreach ($testimonials as $user)
+                <div class="testimonials__grid_item col-lg-6 mb-5 @if ($loop->index === 2) offset-lg-3 @endif">
                     <img src="{{ asset('assets/images/test-bg.png') }}" class="bg">
                     <div class="content">
-                        <div class="fs-7">Joining Enernew has been a career-defining decision. Working at Enernew has been a transformative experience. I'm inspired by our shared commitment to innovation and sustainability..</div>
+                        <div class="fs-7">{!! $user->testimonial !!}</div>
                         <div>
-                            <div class="bold fs-7">Rahul Kumar</div>
-                            <div class="fs-7">Senior Executive</div>
+                            <div class="bold fs-7">{{$user->name}}</div>
+                            <div class="fs-7">{{$user->designation}}</div>
                         </div>
+                        
                         <div class="img">
+                            @if ($user->image)
+                                <img src="{{Storage::disk('public')->url($post->image)}}" alt="" class="img-fluid">
+                            @else 
                             <img src="{{ asset('assets/images/testimonial-2.jpg') }}" alt="" class="img-fluid">
+                            @endif;
                         </div>
                     </div>
                 </div>
-                <div class="testimonials__grid_item col-lg-6 mb-5">
-                    <img src="{{ asset('assets/images/test-bg.png') }}" class="bg">
-                    <div class="content">
-                        <div class="fs-7">As a Senior Design Engineer at Enernew, I’m thrilled by the opportunity to work on cutting-edge Solar park developent projects. The role challenges me with innovative solar projects while offering a supportive and dynamic team environment. It’s a privilege to contribute to a Renewable energy future.</div>
-                        <div>
-                            <div class="bold fs-7">Satyam Srivastava</div>
-                            <div class="fs-7">Senior Design Engineer</div>
-                        </div>
-                        <div class="img">
-                            <img src="{{ asset('assets/images/testimonial-3.jpg') }}" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonials__grid_item col-lg-6 mb-5 offset-lg-3">
-                    <img src="{{ asset('assets/images/test-bg.png') }}" class="bg">
-                    <div class="content">
-                        <div class="fs-7">Since I joined Enernew as a Solar Site Engineer, it has been an amazing journey. The company's commitment to innovative solar technology and sustainable practices is evident in every project we take on. I am proud to be part of a team that is working towards a greener future. The leadership values our input and encourages continuous learning, which helped me to grow professionally.</div>
-                        <div>
-                            <div class="bold fs-7">Arvind Kumar</div>
-                            <div class="fs-7">Site Engineer</div>
-                        </div>
-                        <div class="img">
-                            <img src="{{ asset('assets/images/testimonial-4.jpg') }}" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-            
+            @endforeach
+        @endif;
     </div>
 </div>
 @endsection

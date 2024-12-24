@@ -89,19 +89,26 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <div class="testimonials__grid_item col-lg-6 offset-lg-3 mb-5">
-                <img src="{{ asset('assets/images/test-bg.png') }}" class="bg">
-                <div class="content">
-                    <div class="fs-7">Working at Enernew has been incredibly rewarding. The company's dedication to renewable energy and sustainability has greatly contributed to my professional growth. I am thankful for the continuous learning opportunities and the positive work environment.</div>
-                    <div>
-                        <div class="bold fs-7">Divya Patel</div>
-                        <div class="fs-7">Sales Project Coordinator</div>
-                    </div>
-                    <div class="img">
-                        <img src="{{ asset('assets/images/testimonial-1.jpg') }}" alt="" class="img-fluid">
+            @if ($testimonials)
+                <div class="testimonials__grid_item col-lg-6 mb-5 offset-lg-3">
+                    <img src="{{ asset('assets/images/test-bg.png') }}" class="bg">
+                    <div class="content">
+                        <div class="fs-7">{!! $testimonials->testimonial !!}</div>
+                        <div>
+                            <div class="bold fs-7">{{$testimonials->name}}</div>
+                            <div class="fs-7">{{$testimonials->designation}}</div>
+                        </div>
+                        
+                        <div class="img">
+                            @if ($testimonials->image)
+                                <img src="{{Storage::disk('public')->url($post->image)}}" alt="" class="img-fluid">
+                            @else 
+                            <img src="{{ asset('assets/images/testimonial-2.jpg') }}" alt="" class="img-fluid">
+                            @endif;
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endif
             <div class="text-center">
                 <a href="/employee-testimonials" class="btn bg-orange">Explore More</a>
             </div>

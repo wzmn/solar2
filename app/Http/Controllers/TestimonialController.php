@@ -33,7 +33,11 @@ class TestimonialController extends Controller
 
     public function show(Testimonial $testimonial) // Route-model binding
     {
-        return redirect()->route('home');
+        if ($testimonial->type == 'client'){
+            return redirect()->route('home');
+        }else{
+            return redirect()->route('employee-testimonials');
+        }
         // return view('testimonials.show', compact('testimonial'));
     }
 

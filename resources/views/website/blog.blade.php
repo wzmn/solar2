@@ -28,36 +28,20 @@
         <div class="row">
             <div class="col-md-8 col-12">
                 <div class="row">
+                    @foreach ($blogs as $item)
                     <div class="col-sm-4 col-12 mb-4">
-                        <div class="card" href="/knowledge-center/why-off-site-solar-parks-are-the-future-of-renewable-energy">
-                            <img src="{{ asset('assets/images/blogs/blog-1-details.jpg') }}" class="card-img-top" alt="...">
+                        <div class="card">
+                            @if($item->image) 
+                            <img src="{{Storage::disk('public')->url($item->image)}}" class="card-img-top" alt="...">
+                            @endif
                             <div class="card-body d-flex flex-column justify-content-around">
-                                <div class="mb-2">January 9, 2024</div>
-                                <div class="h4 mb-4 text-green">Why Off-Site Solar Parks are the Future of Renewable Energy</div>
-                                <a href="/knowledge-center/why-off-site-solar-parks-are-the-future-of-renewable-energy" class="text-orange">Read More</a>
+                                <div class="mb-2">{{$item->date}}</div>
+                                <div class="h4 mb-4 text-green">{{$item->title}}</div>
+                                <a href="{{ route('blog.show', $item->slug) }}" class="text-orange">Read More</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 col-12 mb-4">
-                        <div class="card" href="/knowledge-center/embracing-sustainability-with-solar-energy-and-its-environmental-benefits">
-                            <img src="{{ asset('assets/images/blogs/blog-2-details.jpg') }}" class="card-img-top" alt="...">
-                            <div class="card-body d-flex flex-column justify-content-around">
-                                <div class="mb-2">January 9, 2024</div>
-                                <div class="h4 mb-4 text-green">Embracing Sustainability with Solar Energy and Its Environmental Benefits</div>
-                                <a href="/knowledge-center/embracing-sustainability-with-solar-energy-and-its-environmental-benefits" class="text-orange">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-12 mb-4">
-                        <div class="card" href="/knowledge-center/choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas">
-                            <img src="{{ asset('assets/images/blogs/blog-3-details.jpg') }}" class="card-img-top" alt="...">
-                            <div class="card-body d-flex flex-column justify-content-around">
-                                <div class="mb-2">January 9, 2024</div>
-                                <div class="h4 mb-4 text-green">Choosing the Right Green Energy Path: A Comparison of Captive and Third-Party PPAS</div>
-                                <a href="/knowledge-center/choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas" class="text-orange">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <div class="col-md-4 col-12">
