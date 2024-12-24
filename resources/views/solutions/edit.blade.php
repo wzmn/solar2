@@ -7,6 +7,13 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            @if (session()->has('success'))
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4 p-6 flex">
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            </div>
+            @endif
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4 p-6 flex">
                 <a href="{{ route('solutions.index') }}" class="bg-gray-800 flex justify-start px-4 py-2 rounded-md text-white gap-4">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="20">

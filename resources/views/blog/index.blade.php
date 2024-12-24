@@ -37,7 +37,7 @@
                                     <td class="border border-slate-300 px-2">
                                         <div class="flex gap-3 justify-end">
                                             <a href="{{ route('blog.edit', $item) }}">Edit</a>
-                                            <a href="{{ route('blog.show', $item) }}">View</a>
+                                            <a href="{{ route('blog.show', $item->slug) }}">View</a>
                                             <form method="POST" action="{{ route('blog.destroy', $item) }}">
                                                 @csrf
                                                 @method('DELETE')

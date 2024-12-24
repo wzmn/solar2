@@ -11,13 +11,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use Illuminate\Support\Str;
 
-class Fruit {
-    public function __construct($data) {
-        $this->meta_title = $data->meta_title;
-        $this->meta_description = $data->meta_description;
-        $this->meta_keywords = $data->meta_keywords;
-    }   
-}   
+ 
 
 class BlogController extends Controller
 {
@@ -54,7 +48,7 @@ class BlogController extends Controller
 
         $blog->save();
 
-        return Redirect::route('blog.index')->with('success', 'blog-created');
+        return Redirect::route('blog.index')->with('success', 'Blog Created');
     }
     
 
@@ -63,14 +57,9 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-
-        $seo = new Fruit($blog);
-        $seo->meta_title;
-        $seo->meta_description;
-        $seo->meta_keywords;
-
         // add website layout here
-        return view('website.blog-single', compact('blog', 'seo'));
+        // return view('website.blog-single', compact('blog', 'seo'));
+
     }
 
     /**

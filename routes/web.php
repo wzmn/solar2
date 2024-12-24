@@ -15,6 +15,15 @@ use App\Models\Blog;
 use App\Models\Page;
 use App\Models\Testimonial;
 
+class Fruit {
+    public function __construct($data) {
+        $this->meta_title = $data->meta_title;
+        $this->meta_description = $data->meta_description;
+        $this->meta_keywords = $data->meta_keywords;
+    }   
+}  
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -106,20 +115,29 @@ Route::get('/our-solutions', function () {
 });
 
 // Blogs
-Route::get('/knowledge-center/why-off-site-solar-parks-are-the-future-of-renewable-energy', function () {
-    return view('website.blog-why-off-site-solar-parks-are-the-future-of-renewable-energy', ['seo' => Blog::where('slug', 'why-off-site-solar-parks-are-the-future-of-renewable-energy')->first(),'seoData' => Blog::where('slug', 'why-off-site-solar-parks-are-the-future-of-renewable-energy')->count(),'recentPosts' => []]);
-});
-Route::get('/knowledge-center/embracing-sustainability-with-solar-energy-and-its-environmental-benefits', function () {
-    return view('website.blog-embracing-sustainability-with-solar-energy-and-its-environmental-benefits', ['seo' => Blog::where('slug', 'embracing-sustainability-with-solar-energy-and-its-environmental-benefits')->first(),'seoData' => Blog::where('slug', 'embracing-sustainability-with-solar-energy-and-its-environmental-benefits')->count(),'recentPosts' => []]);
-});
-Route::get('/knowledge-center/choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas', function () {
-    return view('website.blog-3', ['seo' => Blog::where('slug', 'choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas')->first(),'seoData' => Blog::where('slug', 'choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas')->count(),'recentPosts' => []]);
-});
+// Route::get('/knowledge-center/why-off-site-solar-parks-are-the-future-of-renewable-energy', function () {
+//     return view('website.blog-why-off-site-solar-parks-are-the-future-of-renewable-energy', ['seo' => Blog::where('slug', 'why-off-site-solar-parks-are-the-future-of-renewable-energy')->first(),'seoData' => Blog::where('slug', 'why-off-site-solar-parks-are-the-future-of-renewable-energy')->count(),'recentPosts' => []]);
+// });
+// Route::get('/knowledge-center/embracing-sustainability-with-solar-energy-and-its-environmental-benefits', function () {
+//     return view('website.blog-embracing-sustainability-with-solar-energy-and-its-environmental-benefits', ['seo' => Blog::where('slug', 'embracing-sustainability-with-solar-energy-and-its-environmental-benefits')->first(),'seoData' => Blog::where('slug', 'embracing-sustainability-with-solar-energy-and-its-environmental-benefits')->count(),'recentPosts' => []]);
+// });
+// Route::get('/knowledge-center/choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas', function () {
+//     return view('website.blog-3', ['seo' => Blog::where('slug', 'choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas')->first(),'seoData' => Blog::where('slug', 'choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas')->count(),'recentPosts' => []]);
+// });
 
 Route::post('/submit_form', [FormEntryController::class, 'store'])->name('form-entries.store');
 
 Route::resource('form', FormEntryController::class);
 
+
+Route::get('/knowledge-center/{slug}', function (string $slug) {
+    $blog = Blog::where('slug', $slug)->firstOrFail();
+    $seo = new Fruit($blog);
+    $seo->meta_title;
+    $seo->meta_description;
+    $seo->meta_keywords;
+    return view('website.blog-single', compact('blog', 'seo'));
+})->name('blog.show');
 
 
 require __DIR__.'/auth.php';
