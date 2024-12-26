@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('form_type')->nullable();
             // $table->foreignId('job_id')->nullable()->constrained()->onDelete('set null'); // Foreign key to jobs table
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

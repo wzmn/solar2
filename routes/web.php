@@ -50,18 +50,21 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/about-us', function () {
-    return view('website.about', [
-        'seo' => Page::where('slug', 'about-us')->first(),
-        'hero_img' => [asset('assets/images/about-header.png')]
-    ]);
+    $seo = Page::where('slug', 'about-us')->first();
+    $hero_img = [asset('assets/images/about-header.png')];
+    return view('website.about', compact('seo', 'hero_img'));
 })->name('about-us');
 
 Route::get('/solar-calculator', function () {
-    return view('website.coming-soon', ['seo' => Page::where('slug', 'solar-calculator')->first(),'seoData' => Page::where('slug', 'solar-calculator')->count(),'hero_img' => [asset('assets/images/about-header.png')]]);
+    $seo = Page::where('slug', 'solar-calculator')->first();
+    $hero_img = [asset('assets/images/solar-calculator.png')];
+    return view('website.coming-soon', compact('seo', 'hero_img') );
 });
 
 Route::get('/contact-us', function () {
-    return view('website.contact', ['seo' => Page::where('slug', 'contact-us')->first(),'seoData' => Page::where('slug', 'contact-us')->count(),'hero_img' => [asset('assets/images/contact-us.png')]]);
+    $seo = Page::where('slug', 'contact-us')->first();
+    $hero_img = [asset('assets/images/contact-us.png')];
+    return view('website.contact', compact('seo', 'hero_img'));
 })->name('contact-us');
 
 Route::get('/careers', function () {
@@ -69,7 +72,7 @@ Route::get('/careers', function () {
     $seo = Page::where('slug', 'careers')->first();
     $hero_img = [asset('assets/images/career.png')];
     return view('website.career', compact('testimonials', 'seo', 'hero_img'));
-});
+})->name('careers');
 
 Route::get('/employee-testimonials', function () {
     $testimonials = Testimonial::where('type', 'employee')->get();
@@ -79,16 +82,23 @@ Route::get('/employee-testimonials', function () {
 })->name('employee-testimonials');
 
 Route::get('/job-openings', function () {
-    return view('website.job-openings', ['jobs' => JobListing::all(), 'seo' => Page::where('slug', 'job-openings')->first(),'seoData' => Page::where('slug', 'job-openings')->count(),'hero_img' => [asset('assets/images/job-openings.png')]]);
+    $seo = Page::where('slug', 'job-openings')->first();
+    $hero_img = [asset('assets/images/job-openings.png')];
+    $jobs = JobListing::all();
+    return view('website.job-openings', compact('seo', 'jobs', 'hero_img'));
 })->name('job-openings');
 
 Route::get('/life-at-enernew', function () {
-    return view('website.life-at-enernew', ['seo' => Page::where('slug', 'life-at-enernew')->first(),'seoData' => Page::where('slug', 'life-at-enernew')->count(),'hero_img' => [asset('assets/images/life-enernew.png')]]);
+    $seo = Page::where('slug', 'life-at-enernew')->first();
+    $hero_img = [asset('assets/images/life-enernew.png')];
+    return view('website.life-at-enernew', compact('seo', 'hero_img'));
 });
 
 Route::get('/press-release', function () {
-    return view('website.pr', ['hero_img' => ['seo' => Page::where('slug', 'press-release')->first(),'seoData' => Page::where('slug', 'press-release')->count(),asset('assets/images/press-release.png')]]);
-});
+    $seo = Page::where('slug', 'press-release')->first();
+    $hero_img = [asset('assets/images/press-release.png')];
+    return view('website.pr', compact('seo', 'hero_img'));
+})->name('press-release');
 
 
 Route::get('/knowledge-center/{slug}', function (string $slug) {
@@ -108,27 +118,39 @@ Route::get('/knowledge-center', function () {
 });
 
 Route::get('/privacy', function () {
-    return view('website.privacy', ['seo' => Page::where('slug', 'privacy')->first(),'seoData' => Page::where('slug', 'privacy')->count(),'hero_img' => [asset('assets/images/privacy-policy.jpg')]]);
+    $seo = Page::where('slug', 'privacy')->first();
+    $hero_img = [asset('assets/images/privacy-policy.jpg')];
+    return view('website.privacy', compact( 'seo', 'hero_img'));
 });
 
 Route::get('/terms-of-use', function () {
-    return view('website.terms-of-use', ['seo' => Page::where('slug', 'terms-of-use')->first(),'seoData' => Page::where('slug', 'terms-of-use')->count(),'hero_img' => [asset('assets/images/terms-of-use.jpg')]]);
+    $seo = Page::where('slug', 'terms-of-use')->first();
+    $hero_img = [asset('assets/images/terms-of-use.jpg')];
+    return view('website.terms-of-use', compact('seo', 'hero_img'));
 });
 
 Route::get('/b2b-solar-solutions', function () {
-    return view('website.b2b', ['hero_img' => ['seo' => Page::where('slug', 'b2b-solar-solutions')->first(),'seoData' => Page::where('slug', 'b2b-solar-solutions')->count(),asset('assets/images/b2b.png')]]);
+    $seo = Page::where('slug', 'b2b-solar-solutions')->first();
+    $hero_img = [asset('assets/images/b2b.png')];
+    return view('website.b2b', compact('seo', 'hero_img'));
 });
 
 Route::get('/asset-management-services', function () {
-    return view('website.asset-management', ['seo' => Page::where('slug', 'asset-management-services')->first(),'seoData' => Page::where('slug', 'asset-management-services')->count(),'hero_img' => [asset('assets/images/asset.png')]]);
+    $seo = Page::where('slug', 'asset-management-services')->first();
+    $hero_img = [asset('assets/images/asset.png')];
+    return view('website.asset-management', compact('seo', 'hero_img'));
 });
 
 Route::get('/utility-scale-solar-power-park-solutions', function () {
-    return view('website.solar-solutions', ['seo' => Page::where('slug', 'utility-scale-solar-power-park-solutions')->first(),'seoData' => Page::where('slug', 'utility-scale-solar-power-park-solutions')->count(),'hero_img' => [asset('assets/images/utility-scale.png')]]);
+    $seo = Page::where('slug', 'utility-scale-solar-power-park-solutions')->first();
+    $hero_img = [asset('assets/images/utility-scale.png')];
+    return view('website.solar-solutions', compact('seo', 'hero_img'));
 });
 
 Route::get('/our-solutions', function () {
-    return view('website.coming-soon', ['seo' => Page::where('slug', 'our-solutions')->first(),'seoData' => Page::where('slug', 'our-solutions')->count(),'hero_img' => [asset('assets/images/about-header.png')]]);
+    $seo = Page::where('slug', 'our-solutions')->first();
+    $hero_img = [asset('assets/images/our-solutions.png')];
+    return view('website.coming-soon', compact('seo', 'hero_img'));
 });
 
 Route::post('/submit_form', [FormEntryController::class, 'store'])->name('form-entries.store');

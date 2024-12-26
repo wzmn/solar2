@@ -85,7 +85,7 @@
         @foreach ($hero_img as $item)
             @php
                 preg_match("/[^.\W]+$/", $item, $match);
-                $type = 'image/' . $match[0];
+                $type = 'image/';# . $match[0];
             @endphp
             <link rel="preload" fetchpriority="high" as="image" href="{{ $item }}" type="{{ $type }}">
         @endforeach
