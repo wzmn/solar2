@@ -83,6 +83,7 @@
         tinymce.init({
             selector: '#mytextarea',
             plugins: 'code',
+            height: 400
         });
     </script>
 

@@ -8,11 +8,11 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             @if (session()->has('success'))
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4 p-6 flex">
-                <div class="alert alert-success">
-                    {{ session('success') }}
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4 p-6 flex">
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
                 </div>
-            </div>
             @endif
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4 p-6 flex">
                 <a href="{{ route('page.index') }}"
@@ -85,9 +85,59 @@
 
                         <div class="mb-4">
                             <label for="content" class="block text-sm font-medium text-gray-700">Content</label>
-                            <input id="content" value='{{ old('content', $page->content) }}' type="hidden" name="content">
+                            <input id="content" value='{{ old('content', $page->content) }}' type="hidden"
+                                name="content">
                             <textarea id="mytextarea">{{ old('content', $page->content) }}</textarea>
                         </div>
+
+                        <div class="" id="blockComponent">
+                            <h3 class="mb-4">Blocks</h3>
+                            <div class="flex mb-4">
+                                <div>
+                                    <select id="add-component">
+                                        <option value="none">None</option>
+                                        @foreach ($allBlocks as $component)
+                                            <option value="{{ $component->id }}">{{ $component->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <button type="button" class=" border border-gray-300 py-2 px-4"
+                                    id="add-component-button">Add
+                                    Component</button>
+                            </div>
+                            <table id="blocks-container" class="table-auto w-full">
+                                <thead>
+                                    <th class="border border-slate-300 p-2 text-left">Name</th>
+                                    <th class="border border-slate-300 p-2 text-left">Actions</th>
+                                </thead>
+                                <tbody>
+                                    @foreach ($page->blocks->sortBy('order') as $component)
+                                        <tr class="component-item" data-component-id="{{ $component->id }}">
+                                            <td class="border border-slate-300 p-2">
+                                                <input type="hidden" name="blocks[{{ $loop->index }}][id]"
+                                                    value="{{ $component->id }}">
+                                                <input type="hidden" name="blocks[{{ $loop->index }}][order]"
+                                                    value="{{ $component->order }}">
+                                                {{ $component->name }} ({{ $component->type }})
+                                                @if ($component->type === 'text')
+                                                    <p>{{ $component->data['text'] ?? '' }}</p>
+                                                @elseif ($component->type === 'image')
+                                                    <img src="{{ asset('storage/' . $component->data['path'] ?? '') }}"
+                                                        alt="Component Image">
+                                                @endif
+                                            </td>
+                                            <td class="border border-slate-300 p-2">
+                                                <span type="submit"
+                                                    class="cursor-pointer px-2 text-red-700">Remove</span>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
 
                         <div class="mt-6">
                             <button type="submit"
@@ -110,5 +160,77 @@
                 });
             }
         });
+        document.getElementById('add-component-button').addEventListener('click', function() {
+            const componentId = document.getElementById('add-component').value;
+            const si = document.getElementById('add-component').options.selectedIndex;
+            const txt = document.getElementById('add-component').options[si].innerText
+            const tableBody = document.querySelector('#blocks-container tbody');
+            const tableBodyRow = document.querySelectorAll('#blocks-container tbody tr');
+
+            if (componentId === 'none') return;
+
+            const row = createComponentRow({
+                id: componentId,
+                order: 1,
+                name: txt,
+                type: "pending"
+            }, tableBodyRow.length);
+            
+            
+            tableBody.appendChild(row);
+        });
+
+        function createComponentRow(component, index) {
+            const tr = document.createElement('tr');
+            tr.classList.add('component-item');
+            tr.dataset.componentId = component.id;
+
+            const td1 = document.createElement('td');
+            td1.classList.add('border', 'border-slate-300', 'p-2');
+
+            const idInput = document.createElement('input');
+            idInput.type = 'hidden';
+            idInput.name = `blocks[${index}][id]`;
+            idInput.value = component.id;
+
+            const orderInput = document.createElement('input');
+            orderInput.type = 'hidden';
+            orderInput.name = `blocks[${index}][order]`;
+            orderInput.value = component.order;
+
+            td1.textContent = `${component.name} (${component.type})`;
+
+            if (component.type === 'text') {
+                const p = document.createElement('p');
+                p.textContent = component.data?.text || ''; // Use optional chaining
+                td1.appendChild(p);
+            } else if (component.type === 'image') {
+                const img = document.createElement('img');
+                img.src = `/storage/${component.data?.path || ''}`; // Assuming asset function is just prepending /storage
+                img.alt = 'Component Image';
+                td1.appendChild(img);
+            }
+
+            td1.appendChild(idInput);
+            td1.appendChild(orderInput);
+
+            const td2 = document.createElement('td');
+            td2.classList.add('border', 'border-slate-300', 'p-2');
+
+            const removeSpan = document.createElement('span');
+            removeSpan.type = 'submit'; // This doesn't do anything on a span
+            removeSpan.classList.add('cursor-pointer', 'px-2', 'text-red-700');
+            removeSpan.textContent = 'Remove';
+            // Add Event Listener for Remove Functionality here
+            removeSpan.addEventListener('click', (event) => {
+                tr.remove()
+            })
+            td2.appendChild(removeSpan);
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+
+            return tr;
+        }
     </script>
 </x-app-layout>

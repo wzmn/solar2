@@ -63,7 +63,6 @@
                             <input type="file" name="image" id="image" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             @if ($blog->image)
                             <img src="{{ Storage::disk('public')->url($blog->image) }}" alt="{{ $blog->title }}" class="mt-2 h-48 w-auto">
-                            {{Storage::disk('public')->path($blog->image)}}
                             @endif
                         </div>
 
@@ -100,7 +99,8 @@
     <script>
         tinymce.init({
             selector: '#mytextarea',
-            plugins: 'code',
+            plugins: ['code', 'link'],
+            height: 400,
             setup: function(editor) {
                 editor.on('change', function() {
                     document.querySelector("#content").value = editor.getContent();

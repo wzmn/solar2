@@ -64,6 +64,7 @@
         tinymce.init({
             selector: '#mytextarea',
             plugins: 'code',
+            height: 400,
             setup: function(editor) {
                 editor.on('change', function() {
                     document.querySelector("#content").value = editor.getContent();

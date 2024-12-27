@@ -9,11 +9,16 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\SolutionsController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\BlockController;
+use App\Http\Controllers\FileController;
 
 use App\Models\JobListing;
 use App\Models\Blog;
 use App\Models\Page;
 use App\Models\Testimonial;
+use App\Models\File;
+
+use App\Http\Controllers\MediaController;
 
 class Fruit {
     public function __construct($data) {
@@ -35,10 +40,18 @@ Route::middleware('auth')->group(function () {
     Route::resource('blog', BlogController::class);
     Route::resource('page', PageController::class);
     Route::resource('jobs', JobController::class);
+    Route::resource('block', BlockController::class);
     Route::resource('testimonials', TestimonialController::class);
     Route::resource('solutions', SolutionsController::class);
     Route::resource('projects', ProjectsController::class);
     Route::resource('form', FormEntryController::class);
+    Route::resource('file', FileController::class);
+    
+    
+    // Route::get('/media', [MediaController::class, 'index'])->name('media.index');
+    // Route::get('/media/create', [MediaController::class, 'create'])->name('media.create');
+    // Route::post('/media/upload', [MediaController::class, 'upload'])->name('media.upload');
+    // Route::delete('/media/{media_id}', [MediaController::class, 'destroy'])->name('media.destroy');
 });
 
 Route::get('/', function () {

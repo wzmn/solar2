@@ -4,7 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
+use App\Models\Block;
+
 
 class Page extends Model
 {
@@ -47,6 +50,10 @@ class Page extends Model
 
     public function setSlugAttribute($value)
     {
-        //$this->attributes['slug'] = Str::slug($value, '-');
+        $this->attributes['slug'] = Str::slug($value, '-');
+    }
+    public function blocks(): BelongsToMany
+    {
+        return $this->belongsToMany(Block::class)->withPivot('order'); // Use withPivot to include 'order'
     }
 }

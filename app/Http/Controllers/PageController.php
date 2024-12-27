@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 use App\Models\User;
 use Illuminate\Support\Str;
+use App\Models\Block;
+
 
 
 class PageController extends Controller
@@ -58,7 +60,8 @@ class PageController extends Controller
     public function edit(Page $page)
     {
         $users = User::all();
-        return view('page.edit', compact('page', 'users'));
+        $allBlocks = Block::all(); // Get all available components
+        return view('page.edit', compact('page', 'users', 'allBlocks'));
     }
 
     /**
@@ -67,6 +70,18 @@ class PageController extends Controller
     public function update(UpdatePageRequest $request, Page $page): RedirectResponse
     {
         $validated = $request->validated();
+        // dd($request->input('blocks'));
+        $blocksToSync = [];
+        if ($request->has('blocks')) {
+            foreach ($request->input('blocks') as $blockData) {
+                $block = Block::find($blockData['id']);
+                if ($block) {
+                    $blocksToSync[$block->id] = ['order' => $blockData['order'] ?? null];
+                }
+            }
+        }
+
+        $page->blocks()->sync($blocksToSync);
         $page->update($validated);
         return Redirect::route('page.edit', compact('page'))->with('success', 'Page Updated');
     }

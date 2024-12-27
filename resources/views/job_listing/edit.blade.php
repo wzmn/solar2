@@ -68,6 +68,7 @@
         tinymce.init({
             selector: '#mytextarea',
             plugins: 'code',
+            height: 400,
             setup: function(editor) {
                 editor.setContent(`{!! $job->description !!}`); // Set initial content
                 editor.on('change', function() {

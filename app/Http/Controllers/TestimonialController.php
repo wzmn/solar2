@@ -26,7 +26,15 @@ class TestimonialController extends Controller
             // Add other validation rules (e.g., for image uploads, ratings, etc.)
         ]);
 
-        Testimonial::create($request->all());
+        $testimonial = new Testimonial($request->all());
+        
+        // Handle image upload if needed
+        if ($request->hasFile('image')) {
+            $testimonial->image = $request->file('image')->store('images', 'public');
+        }
+        $testimonial->save();
+
+        
 
         return redirect()->route('testimonials.index')->with('success', 'Testimonial created successfully.');
     }
@@ -53,8 +61,12 @@ class TestimonialController extends Controller
             'testimonial' => 'required',
             // Add other validation rules
         ]);
-
         $testimonial->update($request->all());
+        // Handle image upload if needed
+        if ($request->hasFile('image')) {            
+            $testimonial->image = $request->file('image')->store('images', 'public');
+        }
+        $testimonial->save();
 
         return redirect()->route('testimonials.index')->with('success', 'Testimonial updated successfully.');
     }

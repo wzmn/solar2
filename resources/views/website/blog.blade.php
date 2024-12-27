@@ -30,11 +30,11 @@
                 <div class="row">
                     @foreach ($blogs as $item)
                     <div class="col-sm-4 col-12 mb-4">
-                        <div class="card">
+                        <div class="card " style="min-height: 350px;">
                             @if($item->image) 
                             <img src="{{Storage::disk('public')->url($item->image)}}" class="card-img-top" alt="...">
                             @endif
-                            <div class="card-body d-flex flex-column justify-content-around">
+                            <div class="card-body d-flex flex-column justify-content-end">
                                 <div class="mb-2">{{$item->date}}</div>
                                 <div class="h4 mb-4 text-green">{{$item->title}}</div>
                                 <a href="{{ route('blog.show', $item->slug) }}" class="text-orange">Read More</a>

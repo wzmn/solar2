@@ -16,7 +16,9 @@
           <div class="mb-4">
             {{ $blog->date }} / by Enernew
           </div>
-          <img src="{{Storage::disk('public')->url($blog->image)}}" class="img-fluid rounded-3" alt="Comparison of Captive and Third-Party PPAS">
+          @if ($blog->image)
+            <img src="{{Storage::disk('public')->url($blog->image)}}" class="img-fluid rounded-3" alt="Comparison of Captive and Third-Party PPAS">
+          @endif
         </div>
       </div>
       <div class="row">

@@ -54,6 +54,12 @@
                             <x-dropdown-link :href="route('projects.index')" active="request()->routeIs('projects.index')">
                                 {{ __('Projects') }}
                             </x-dropdown-link>
+                            <x-dropdown-link :href="route('block.index')" active="request()->routeIs('block.index')">
+                                {{ __('Blocks') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('file.index')" active="request()->routeIs('file.index')">
+                                {{ __('Images') }}
+                            </x-dropdown-link>
                         </x-slot>
                     </x-dropdown>
                 </div>
