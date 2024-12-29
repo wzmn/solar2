@@ -115,12 +115,13 @@ Route::get('/press-release', function () {
 
 
 Route::get('/knowledge-center/{slug}', function (string $slug) {
+    $hero_img = [asset('assets/images/blog-header.png')];
     $blog = Blog::where('slug', $slug)->firstOrFail();
     $seo = new Fruit($blog);
     $seo->meta_title;
     $seo->meta_description;
     $seo->meta_keywords;
-    return view('website.blog-single', compact('blog', 'seo'));
+    return view('website.blog-single', compact('blog', 'seo', 'hero_img'));
 })->name('blog.show');
 
 Route::get('/knowledge-center', function () {
