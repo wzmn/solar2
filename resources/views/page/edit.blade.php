@@ -15,7 +15,7 @@
                 </div>
             @endif
             @if ($errors->any())
-            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+            <div class="bg-white border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
                 <strong class="font-bold">Whoops!</strong> There were some problems with your input.<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
@@ -44,8 +44,7 @@
                         <div class="mb-4">
                             <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
                             <input type="text" name="title" id="title" value="{{ $page->title }}"
-                                class="bg-gray-200 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                                disabled>
+                                class="bg-gray-200 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm pointer-events-none">
                         </div>
                         <div class="mb-4">
                             <label for="meta_title" class="block text-sm font-medium text-gray-700">Meta Title</label>
