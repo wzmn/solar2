@@ -115,20 +115,20 @@ Route::get('/press-release', function () {
 
 
 Route::get('/knowledge-center/{slug}', function (string $slug) {
-    $hero_img = [asset('assets/images/blog-header.png')];
     $blog = Blog::where('slug', $slug)->firstOrFail();
     $seo = new Fruit($blog);
     $seo->meta_title;
     $seo->meta_description;
     $seo->meta_keywords;
-    return view('website.blog-single', compact('blog', 'seo', 'hero_img'));
+    return view('website.blog-single', compact('blog', 'seo'));
 })->name('blog.show');
 
 Route::get('/knowledge-center', function () {
+    $hero_img = [asset('assets/images/blog-header.png')];
     $blogs = Blog::paginate();
     $seo = Page::where('slug', 'knowledge-center')->first();
     $recentPosts = $blogs;
-    return view('website.blog', compact('blogs', 'seo', 'recentPosts'));
+    return view('website.blog', compact('blogs', 'seo', 'recentPosts', 'hero_img'));
 });
 
 Route::get('/privacy', function () {
