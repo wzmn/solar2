@@ -101,7 +101,7 @@
                         
                         <div class="img">
                             @if ($testimonials->image)
-                                <img src="{{Storage::disk('public')->url($post->image)}}" alt="" class="img-fluid">
+                                <img src="{{Storage::disk('public')->url($testimonials->image)}}" alt="" class="img-fluid">
                             @else 
                             <img src="{{ asset('assets/images/testimonial-2.jpg') }}" alt="" class="img-fluid">
                             @endif;
