@@ -22,6 +22,7 @@ class UpdatePageRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'title' => 'required',
             'content' => 'required',
             'author_id' => 'required',
             'date' => 'required',

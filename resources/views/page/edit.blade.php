@@ -44,8 +44,7 @@
                         <div class="mb-4">
                             <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
                             <input type="text" name="title" id="title" value="{{ $page->title }}"
-                                class="bg-gray-200 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                                disabled>
+                                class="bg-gray-200 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm pointer-events-none">
                         </div>
                         <div class="mb-4">
                             <label for="meta_title" class="block text-sm font-medium text-gray-700">Meta Title</label>
