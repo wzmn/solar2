@@ -1,4 +1,3 @@
-
 @section('title', 'Innovative Renewable Energy & Solar Power Park Solutions')
 
 @extends('layouts.website')
@@ -34,17 +33,18 @@
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 93.038 93.038"
                             style="enable-background:new 0 0 93.038 93.038;" xml:space="preserve">
                             <g>
-                                <path d="M46.547,75.521c0,1.639-0.947,3.128-2.429,3.823c-0.573,0.271-1.187,0.402-1.797,0.402c-0.966,0-1.923-0.332-2.696-0.973
-                                    l-23.098-19.14H4.225C1.892,59.635,0,57.742,0,55.409V38.576c0-2.334,1.892-4.226,4.225-4.226h12.303l23.098-19.14
-                                    c1.262-1.046,3.012-1.269,4.493-0.569c1.481,0.695,2.429,2.185,2.429,3.823L46.547,75.521L46.547,75.521z M62.784,68.919
-                                    c-0.103,0.007-0.202,0.011-0.304,0.011c-1.116,0-2.192-0.441-2.987-1.237l-0.565-0.567c-1.482-1.479-1.656-3.822-0.408-5.504
-                                    c3.164-4.266,4.834-9.323,4.834-14.628c0-5.706-1.896-11.058-5.484-15.478c-1.366-1.68-1.24-4.12,0.291-5.65l0.564-0.565
-                                    c0.844-0.844,1.975-1.304,3.199-1.231c1.192,0.06,2.305,0.621,3.061,1.545c4.977,6.09,7.606,13.484,7.606,21.38
-                                    c0,7.354-2.325,14.354-6.725,20.24C65.131,68.216,64.007,68.832,62.784,68.919z M80.252,81.976
-                                    c-0.764,0.903-1.869,1.445-3.052,1.495c-0.058,0.002-0.117,0.004-0.177,0.004c-1.119,0-2.193-0.442-2.988-1.237l-0.555-0.555
-                                    c-1.551-1.55-1.656-4.029-0.246-5.707c6.814-8.104,10.568-18.396,10.568-28.982c0-11.011-4.019-21.611-11.314-29.847
-                                    c-1.479-1.672-1.404-4.203,0.17-5.783l0.554-0.555c0.822-0.826,1.89-1.281,3.115-1.242c1.163,0.033,2.263,0.547,3.036,1.417
-                                    c8.818,9.928,13.675,22.718,13.675,36.01C93.04,59.783,88.499,72.207,80.252,81.976z" />
+                                <path
+                                    d="M46.547,75.521c0,1.639-0.947,3.128-2.429,3.823c-0.573,0.271-1.187,0.402-1.797,0.402c-0.966,0-1.923-0.332-2.696-0.973
+                                        l-23.098-19.14H4.225C1.892,59.635,0,57.742,0,55.409V38.576c0-2.334,1.892-4.226,4.225-4.226h12.303l23.098-19.14
+                                        c1.262-1.046,3.012-1.269,4.493-0.569c1.481,0.695,2.429,2.185,2.429,3.823L46.547,75.521L46.547,75.521z M62.784,68.919
+                                        c-0.103,0.007-0.202,0.011-0.304,0.011c-1.116,0-2.192-0.441-2.987-1.237l-0.565-0.567c-1.482-1.479-1.656-3.822-0.408-5.504
+                                        c3.164-4.266,4.834-9.323,4.834-14.628c0-5.706-1.896-11.058-5.484-15.478c-1.366-1.68-1.24-4.12,0.291-5.65l0.564-0.565
+                                        c0.844-0.844,1.975-1.304,3.199-1.231c1.192,0.06,2.305,0.621,3.061,1.545c4.977,6.09,7.606,13.484,7.606,21.38
+                                        c0,7.354-2.325,14.354-6.725,20.24C65.131,68.216,64.007,68.832,62.784,68.919z M80.252,81.976
+                                        c-0.764,0.903-1.869,1.445-3.052,1.495c-0.058,0.002-0.117,0.004-0.177,0.004c-1.119,0-2.193-0.442-2.988-1.237l-0.555-0.555
+                                        c-1.551-1.55-1.656-4.029-0.246-5.707c6.814-8.104,10.568-18.396,10.568-28.982c0-11.011-4.019-21.611-11.314-29.847
+                                        c-1.479-1.672-1.404-4.203,0.17-5.783l0.554-0.555c0.822-0.826,1.89-1.281,3.115-1.242c1.163,0.033,2.263,0.547,3.036,1.417
+                                        c8.818,9.928,13.675,22.718,13.675,36.01C93.04,59.783,88.499,72.207,80.252,81.976z" />
                                 <path
                                     d="M 46.547 75.521 c 0 1.639 -0.947 3.128 -2.429 3.823 c -0.573 0.271 -1.187 0.402 -1.797 0.402 c -0.966 0 -1.923 -0.332 -2.696 -0.973 l -23.098 -19.14 H 4.225 C 1.892 59.635 0 57.742 0 55.409 V 38.576 c 0 -2.334 1.892 -4.226 4.225 -4.226 h 12.303 l 23.098 -19.14 c 1.262 -1.046 3.012 -1.269 4.493 -0.569 c 1.481 0.695 2.429 2.185 2.429 3.823 L 46.547 75.521 z z z" />
                             </g>
@@ -495,24 +495,11 @@
                 <div class="col-12 col-sm-6" data-aos="fade-up" data-aos-delay="100">
                     <div id="projects2" class="mb-3 carousel-dark carousel slide" data-bs-interval="false">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <h3>RAILWAY COIMBATORE</h3>
-                                <div class="bold">India’s First Solar-Powered Running Coaches</div>
-                                <div class="fs-6 mb-3 projects__content">
-                                    <p>
-                                        We showcased our engineering prowess by integrating solar panels on Janshatabdi
-                                        coaches' roofs for Southern Railways.
-                                    </p>
-
-                                    <p>
-                                        Completed in a record 72 hours per coach, this complex project involved designing
-                                        Corten Steel structures to ensure aerodynamic stability, incorporating water
-                                        drainage systems, and using special rubber for cushioning to prevent breakage. This
-                                        initiative reduces CO2 emissions by 300 tonnes and saves 95,000 liters of diesel per
-                                        rake annually.
-                                    </p>
-
-                                </div>
+                            @forelse ($projects as $item)
+                            <div class="carousel-item {{ $loop->first ? 'active' : ''}}">
+                                <h3>{{ $item->client }}</h3>
+                                <div class="bold">{{ $item->title }}</div>
+                                <div class="fs-6 mb-3 projects__content">{!! $item->description !!}</div>
                                 <a href="#" class="projects__read_more d-inline-flex align-items-center">
                                     <span class="projects__icon">
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -529,134 +516,9 @@
                                         more</span>
                                 </a>
                             </div>
-                            <div class="carousel-item">
-                                <h3>BANSWARA SYNTEX LTD</h3>
-                                <div class="bold">Rajasthan’s Largest Single-Site Rooftop Solar Project</div>
-                                <div class="fs-6 mb-3 projects__content">
-                                    <p>Banswara Syntex Ltd, a leading vertically integrated textile company, specializes in
-                                        yarn, fabric, and ready-made garments. Listed on both the NSE and BSE, the company
-                                        serves renowned fast fashion brands such as Uniqlo, Calvin Klein, Marks and Spencer,
-                                        and Next. </p>
-                                    <p>
-                                        With its own thermal power plant generating over 30 MW of captive power, Banswara
-                                        Syntex is now transitioning to solar energy. We are honored to partner with Banswara
-                                        Syntex to meet their electricity needs with a comprehensive solar solution.
-                                    </p>
-                                    <p>
-                                        In the first phase, we have been awarded a turnkey Solar Power Project EPC of 4.5 MW
-                                        at their facility in Banswara.
-                                    </p>
-                                </div>
-                                <a href="#" class="projects__read_more d-inline-flex align-items-center">
-                                    <span class="projects__icon">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"
-                                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
-                                            xml:space="preserve">
-
-                                            <path
-                                                d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216 v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z" />
-
-                                        </svg>
-                                    </span>
-                                    <span class="d-flex align-items-center">Explore
-                                        more</span>
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <h3>PRAGATI POWER CORPORATION LIMITED</h3>
-                                <div class="bold">Delhi Govt's Largest Single-Site Rooftop Solar Project</div>
-                                <div class="fs-6 mb-3 projects__content">
-                                    <p>
-                                        To address the growing energy needs of the capital city, the Delhi Government
-                                        established Pragati Power Station, Bawana (PPCL - III), a 1500 MW gas turbine
-                                        facility. We are honored to have delivered Delhi's largest and most complex
-                                        distributed rooftop solar power project at this site, with a total capacity of 1.36
-                                        MW.
-                                    </p>
-
-                                    <p>
-                                        This turnkey project spans 14 different locations within the same premise, including
-                                        a challenging installation at a height of 160 feet, where over 700 KW of solar
-                                        capacity was installed. The project was inaugurated by Delhi's Chief Minister, Mr.
-                                        Arvind Kejriwal.
-                                    </p>
-
-                                </div>
-                                <a href="#" class="projects__read_more d-inline-flex align-items-center">
-                                    <span class="projects__icon">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"
-                                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
-                                            xml:space="preserve">
-
-                                            <path
-                                                d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216 v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z" />
-
-                                        </svg>
-                                    </span>
-                                    <span class="d-flex align-items-center h-100">Explore
-                                        more</span>
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <h3>JINDAL SAW LTD.</h3>
-                                <div class="bold">Powering Industrial Growth with Ground-Mounted Solar Energy</div>
-                                <div class="fs-6 mb-3 projects__content">
-                                    <p>Jindal Saw Ltd., a flagship company of the Jindal Group led by Mr. Prithvi Raj
-                                        Jindal, specializes in manufacturing SAW pipes, spiral pipes for energy
-                                        transportation, and various pipes and tubes for industrial and water transportation
-                                        applications. </p>
-                                    <p>We are proud to have installed a 125 KW ground-mounted solar power project at their
-                                        facility in Bhilwara, Rajasthan, contributing to their sustainability goals. This
-                                        project highlights our commitment to supporting industrial leaders in their
-                                        transition to renewable energy solutions.</p>
-                                </div>
-                                <a href="#" class="projects__read_more d-inline-flex align-items-center">
-                                    <span class="projects__icon">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"
-                                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
-                                            xml:space="preserve">
-
-                                            <path
-                                                d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216 v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z" />
-
-                                        </svg>
-                                    </span>
-                                    <span class="d-flex align-items-center">Explore
-                                        more</span>
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <h3>JTEKT CORPORATION (Japanese Group)</h3>
-                                <div class="bold">Empowering a Sustainable Future with Renewable Energy</div>
-                                <div class="fs-6 mb-3 projects__content">
-                                    <p>JTEKT Group, with approximately 150 subsidiaries and 50,000 employees across 30
-                                        countries, is a global leader in power steering systems, automotive parts, bearings,
-                                        and machine tools. </p>
-                                    <p>Embracing the vision of "No.1 & Only ONE ‒ Shaping a Better Future," JTEKT India Ltd.
-                                        has entrusted us with a turnkey EPC contract to supply renewable energy for all its
-                                        factories and plants in India. </p>
-                                    <p>We are proud to have commissioned a 2.1 MW solar power project as the first phase of
-                                        this extensive renewable energy initiative.</p>
-                                </div>
-                                <a href="#" class="projects__read_more d-inline-flex align-items-center">
-                                    <span class="projects__icon">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"
-                                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
-                                            xml:space="preserve">
-
-                                            <path
-                                                d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216 v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z" />
-
-                                        </svg>
-                                    </span>
-                                    <span class="d-flex align-items-center">Explore
-                                        more</span>
-                                </a>
-                            </div>
+                            @empty
+                                <p>No Projects found.</p>
+                            @endforelse
                         </div>
                         <button class="carousel-control-prev d-none d-md-flex" type="button" data-bs-target="#projects"
                             data-bs-slide="prev">
@@ -677,8 +539,8 @@
                                 <g>
                                     <path
                                         d="M386.235,248.308L140.902,2.975c-4.267-4.053-10.987-3.947-15.04,0.213c-3.947,4.16-3.947,10.667,0,14.827l237.76,237.76
-                                                       l-237.76,237.867c-4.267,4.053-4.373,10.88-0.213,15.04c4.053,4.267,10.88,4.373,15.04,0.213c0.107-0.107,0.213-0.213,0.213-0.213
-                                                       l245.333-245.333C390.395,259.188,390.395,252.468,386.235,248.308z" />
+                                                           l-237.76,237.867c-4.267,4.053-4.373,10.88-0.213,15.04c4.053,4.267,10.88,4.373,15.04,0.213c0.107-0.107,0.213-0.213,0.213-0.213
+                                                           l245.333-245.333C390.395,259.188,390.395,252.468,386.235,248.308z" />
                                 </g>
 
                             </svg>
@@ -711,12 +573,12 @@
                             </div>
                         </div>
                         <!-- <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#projects" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#projects" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#projects" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#projects" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#projects" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        </div> -->
+                                <button type="button" data-bs-target="#projects" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#projects" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#projects" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#projects" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#projects" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            </div> -->
                     </div>
                 </div>
             </div>
@@ -756,7 +618,7 @@
                     <img src="./assets/images/c9.png" class="img-fluid" alt="India Oil Client Logo">
                 </div>
             </div>
-            
+
             <div class="row mt-5 justify-content-center pt-5">
                 <div class="col-9 mb-5">
                     <div id="clients" class="carousel carousel-dark slide flex-column" data-bs-interval="false">
@@ -764,35 +626,40 @@
                         </h2>
                         <div class="carousel-inner" data-aos="fade-up" data-aos-delay="100">
                             @foreach ($testimonials as $item)
-                                <div class="carousel-item {{ $loop->first ? 'active' : ''}}">
+                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                                     <div class="d-flex justify-content-center flex-column align-items-center pb-5 gap-2">
-                                        <svg width="50" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 57 57"
-                                            xml:space="preserve">
+                                        <svg width="50" version="1.1" id="Capa_1"
+                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            viewBox="0 0 57 57" xml:space="preserve">
 
                                             <g>
                                                 <circle style="fill:#3b9d30;" cx="18.5" cy="31.5" r="5.5" />
-                                                <path style="fill:#3b9d30;" d="M18.5,38c-3.584,0-6.5-2.916-6.5-6.5s2.916-6.5,6.5-6.5s6.5,2.916,6.5,6.5S22.084,38,18.5,38z M18.5,27c-2.481,0-4.5,2.019-4.5,4.5s2.019,4.5,4.5,4.5s4.5-2.019,4.5-4.5S20.981,27,18.5,27z" />
+                                                <path style="fill:#3b9d30;"
+                                                    d="M18.5,38c-3.584,0-6.5-2.916-6.5-6.5s2.916-6.5,6.5-6.5s6.5,2.916,6.5,6.5S22.084,38,18.5,38z M18.5,27c-2.481,0-4.5,2.019-4.5,4.5s2.019,4.5,4.5,4.5s4.5-2.019,4.5-4.5S20.981,27,18.5,27z" />
                                             </g>
                                             <g>
                                                 <circle style="fill:#3b9d30;" cx="35.5" cy="31.5" r="5.5" />
-                                                <path style="fill:#3b9d30;" d="M35.5,38c-3.584,0-6.5-2.916-6.5-6.5s2.916-6.5,6.5-6.5s6.5,2.916,6.5,6.5S39.084,38,35.5,38z M35.5,27c-2.481,0-4.5,2.019-4.5,4.5s2.019,4.5,4.5,4.5s4.5-2.019,4.5-4.5S37.981,27,35.5,27z" />
+                                                <path style="fill:#3b9d30;"
+                                                    d="M35.5,38c-3.584,0-6.5-2.916-6.5-6.5s2.916-6.5,6.5-6.5s6.5,2.916,6.5,6.5S39.084,38,35.5,38z M35.5,27c-2.481,0-4.5,2.019-4.5,4.5s2.019,4.5,4.5,4.5s4.5-2.019,4.5-4.5S37.981,27,35.5,27z" />
                                             </g>
-                                            <path style="fill:#3b9d30;" d="M13,32c-0.553,0-1-0.447-1-1c0-7.72,6.28-14,14-14c0.553,0,1,0.447,1,1s-0.447,1-1,1 c-6.617,0-12,5.383-12,12C14,31.553,13.553,32,13,32z" />
-                                            <path style="fill:#3b9d30;" d="M30,32c-0.553,0-1-0.447-1-1c0-7.72,6.28-14,14-14c0.553,0,1,0.447,1,1s-0.447,1-1,1 c-6.617,0-12,5.383-12,12C31,31.553,30.553,32,30,32z" />
+                                            <path style="fill:#3b9d30;"
+                                                d="M13,32c-0.553,0-1-0.447-1-1c0-7.72,6.28-14,14-14c0.553,0,1,0.447,1,1s-0.447,1-1,1 c-6.617,0-12,5.383-12,12C14,31.553,13.553,32,13,32z" />
+                                            <path style="fill:#3b9d30;"
+                                                d="M30,32c-0.553,0-1-0.447-1-1c0-7.72,6.28-14,14-14c0.553,0,1,0.447,1,1s-0.447,1-1,1 c-6.617,0-12,5.383-12,12C31,31.553,30.553,32,30,32z" />
                                         </svg>
                                         <i class="text-center mb-3">“{!! $item->testimonial !!}”
                                         </i>
-                                        <h2 class="h2 mb-0">- {{$item->name}}</h2>
-                                        <p>{{$item->company}}</p>
+                                        <h2 class="h2 mb-0">- {{ $item->name }}</h2>
+                                        <p>{{ $item->company }}</p>
                                     </div>
                                 </div>
                             @endforeach
                         </div>
                         <div class="carousel-indicators">
                             @foreach ($testimonials as $item)
-                            <button type="button" data-bs-target="#clients" data-bs-slide-to="{{$loop->index}}" class="{{ $loop->first ? 'active' : ''}}"
-                                aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#clients" data-bs-slide-to="{{ $loop->index }}"
+                                    class="{{ $loop->first ? 'active' : '' }}" aria-current="true"
+                                    aria-label="Slide 1"></button>
                             @endforeach
                         </div>
                     </div>

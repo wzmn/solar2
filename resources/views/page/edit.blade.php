@@ -138,7 +138,7 @@
                                             </td>
                                             <td class="border border-slate-300 p-2">
                                                 <span type="submit"
-                                                    class="cursor-pointer px-2 text-red-700">Remove</span>
+                                                    class="cursor-pointer px-2 text-red-700" data-remove>Remove</span>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -170,6 +170,11 @@
                 });
             }
         });
+        [...document.querySelectorAll('[data-remove]')].map(s => {
+            s.addEventListener('click', ()=>{
+                s.parentNode.parentNode.remove();                
+            })
+        })
         document.getElementById('add-component-button').addEventListener('click', function() {
             const componentId = document.getElementById('add-component').value;
             const si = document.getElementById('add-component').options.selectedIndex;

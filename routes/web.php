@@ -17,6 +17,7 @@ use App\Models\Blog;
 use App\Models\Page;
 use App\Models\Testimonial;
 use App\Models\File;
+use App\Models\Projects;
 
 use App\Http\Controllers\MediaController;
 
@@ -56,9 +57,10 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', function () {
     $testimonials = Testimonial::where('type', 'client')->get();
+    $projects = Projects::all();
     $seo = Page::where('slug', 'home')->first();
     $hero_img = [asset('assets/images/1.webp'), asset('assets/images/video-slide.webp'), asset('assets/images/slider-3.webp')];
-    return view('website.index', compact('seo', 'testimonials', 'hero_img'));
+    return view('website.index', compact('seo', 'testimonials', 'hero_img', 'projects'));
 
 })->name('home');
 
@@ -70,7 +72,7 @@ Route::get('/about-us', function () {
 
 Route::get('/solar-calculator', function () {
     $seo = Page::where('slug', 'solar-calculator')->first();
-    $hero_img = [asset('assets/images/solar-calculator.png')];
+    $hero_img = [asset('assets/images/about-header.png')];
     return view('website.coming-soon', compact('seo', 'hero_img') );
 });
 

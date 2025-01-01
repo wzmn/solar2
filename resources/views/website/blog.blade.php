@@ -27,7 +27,7 @@
             </div>
             <div class="row">
                 <div class="col-md-8 col-12">
-                    <div class="blogs-grid" style="display: grid;grid-template-columns: repeat(3, 1fr);gap: 10px;">
+                    <div class="blogs-grid">
                         @foreach ($blogs as $item)
                             <div class="card " style="min-height: 350px;">
                                 @if ($item->image)
@@ -35,7 +35,7 @@
                                         alt="...">
                                 @endif
                                 <div class="card-body d-flex flex-column justify-content-end">
-                                    <div class="mb-2">{{ $item->date }}</div>
+                                    <div class="mb-2">{{ date_format(date_create($item->date),"d-M-Y") }}</div>
                                     <div class="h4 mb-4 text-green">{{ $item->title }}</div>
                                     <a href="{{ route('blog.show', $item->slug) }}" class="text-orange">Read More</a>
                                 </div>

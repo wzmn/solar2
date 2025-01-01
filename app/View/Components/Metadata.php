@@ -19,7 +19,7 @@ class Metadata extends Component
             $this->keywords = $page->meta_keywords;
         } else { // Use default values if $page is null
             $this->title = "Enernew";
-            $this->desc = "Innovative Renewable Energy & Solar Power Park Solutions";
+            $this->desc = "Enernew provides renewable energy solutions, specializing in solar power parks that drive sustainability & deliver efficient, clean energy for a greener future.";
             $this->keywords = "renewable energy, solar power, renewable energy park";
         }
     }

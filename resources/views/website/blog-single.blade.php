@@ -14,7 +14,7 @@
         <div class="col">
           <h1 class="highlight mb-4" data-aos="fade-up">{{$blog->title}}</h1>
           <div class="mb-4">
-            {{ $blog->date }} / by Enernew
+            {{ date_format(date_create($blog->date),"d-M-Y") }} / by Enernew
           </div>
           @if ($blog->image)
             <img src="{{Storage::disk('public')->url($blog->image)}}" class="img-fluid rounded-3" alt="Comparison of Captive and Third-Party PPAS">

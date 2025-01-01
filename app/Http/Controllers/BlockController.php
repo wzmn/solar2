@@ -56,7 +56,6 @@ class BlockController extends Controller
             'data' => 'required|json', // Validate data as an array
         ]);
 
-        dd($Block);
         $Block->update($validatedData);
         return redirect()->route('block.index')->with('success', 'Block updated successfully.');
     }
