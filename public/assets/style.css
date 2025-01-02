@@ -1825,6 +1825,25 @@ fieldset:disabled .btn {
     gap: 25px;
 }
 
+.contact-us-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 150px;
+}
+
+.contact-us-grid>div:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.contact-us-grid>div:nth-child(2) {
+    grid-area: 1 / 2 / 3;
+}
+
+.contact-us-grid>div:nth-child(3) {
+    grid-area: 2 / 2 / 2 / 2;
+}
+
+
 @media screen and (max-width: 1200px) {
     .logo {
         width: 200px;
@@ -1852,7 +1871,27 @@ fieldset:disabled .btn {
     .career .opening-component .accordion .accordion-item {
         margin-bottom: 1.25rem;
     }
+
     .blogs-grid {
         grid-template-columns: 1fr;
     }
+
+    .contact-us-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+
+    .contact-us-grid>div:nth-child(1) {
+        grid-area: auto;
+    }
+
+    .contact-us-grid>div:nth-child(2) {
+        grid-area: auto;
+    }
+
+    .contact-us-grid>div:nth-child(3) {
+        grid-area: auto;
+    }
+
 }

@@ -17,12 +17,7 @@
         <div class="mt-5 container">
             <div class="row mb-5">
                 <div class="col">
-                    <h1 class="highlight mb-4">Charting the Future with Enernew's Discoveries and Learnings</h1>
-                    <p>Immerse yourself in Enernew's curated selection of thought-provoking articles focusing on renewable
-                        energy, sustainability practices, and cutting-edge industry insights. Explore groundbreaking
-                        technologies, impactful project showcases, and expert analyses that underscore our unwavering
-                        commitment to advancing a sustainable future. Stay informed and inspired as we delve into pivotal
-                        topics aimed at driving global sustainability efforts forward.</p>
+                    {!! $seo->content !!}
                 </div>
             </div>
             <div class="row">

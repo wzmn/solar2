@@ -50,7 +50,7 @@ class PageController extends Controller
      */
     public function show(Page $page)
     {
-        return Route::has($page->slug) ? Redirect::route($page->slug) : Redirect::route('404');
+        return !!$page->slug ? Redirect::route($page->slug) : Redirect::route('404');
     }
 
 

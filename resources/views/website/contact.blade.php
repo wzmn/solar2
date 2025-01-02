@@ -23,43 +23,21 @@
     <div class="container py-5">
         <div class="contact my-5 py-5">
             <div class="contact__info bg-white p-5 rounded-3">
-                <div class="row">
-                    <div class="align-items-center border-2 border-end col d-grid p-5">
-                        <div class="contact__info_block d-flex gap-3 align-items-center">
-                            <img src="{{ asset('assets/images/social-location.png') }}" alt="Office Location Icon">
-                            <div>
-                                <div class="bold fs-4">Corporate Office:</div>
-                                <div class="mb-4">
-                                    378-379, Electronic City, <br>Phase IV, Udyog Vihar, Sector 18, <br>Gurugram, Haryana 122015
-                                </div>
-
-                                <div class="bold fs-4">Regional Office (North):</div>
-                                <div>
-                                    Plot No - 407/157, <br> Kitasar, Bidawatan, Bikaner
+                <div class="contact-us-grid">
+                    @foreach ($seo->blocks as $item)
+                        @if ($item->type === 'Content')
+                        <?php $data = json_decode($item->data);?>
+                            <div class="p-5">
+                                <div class="contact__info_block d-flex gap-3 align-items-center">
+                                    <img src="{{ $data[0]->content }}" alt="Office Location Icon">
+                                    <div>
+                                       {!! $data[1]->content !!}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col p-5">
-                        <div class="contact__info_block d-flex gap-3 align-items-center mb-5">
-                            <img src="{{ asset('assets/images/social-phone.png') }}" alt="Social Phone Icon">
-                            <div>
-                                <div class="bold fs-4">Phone No.</div>
-                                <div>
-                                    <a href="tel:+91 88 00 222 600">+91 88 00 222 600</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact__info_block d-flex gap-3 align-items-center">
-                            <img src="{{ asset('assets/images/social-email.png') }}" alt="Email Logo">
-                            <div>
-                                <div class="bold fs-4">E-mail ID</div>
-                                <div>
-                                    <a href="mailto:contact@enernew.in">contact@enernew.in</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>

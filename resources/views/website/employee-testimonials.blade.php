@@ -19,9 +19,7 @@
                 Employee Testimonials
             </h1>
             <div class="content" data-aos="fade-up">
-                <p>
-                    Gain insight into the experiences of our team members at <a href="https://enernew.in" target="_blank" data-aos="fade-right" data-aos-delay="400" class="text-orange">Enernew</a>. Hear firsthand accounts of personal and professional growth in an environment that fosters innovation and collaboration. Discover how our employees contribute to impactful projects and embrace supportive mentorship, shaping their <a href="https://enernew.in/careers" target="_blank" data-aos="fade-right" data-aos-delay="400" class="text-orange">careers</a>. These stories and experiences serve as an inspiring testament to our collective journey towards sustainability.
-                </p>
+                {!! $seo->content !!}
             </div>
         </div>
     </div>
