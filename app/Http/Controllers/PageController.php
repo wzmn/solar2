@@ -70,7 +70,6 @@ class PageController extends Controller
     public function update(UpdatePageRequest $request, Page $page): RedirectResponse
     {
         $validated = $request->validated();
-        // dd($request->input('blocks'));
         $blocksToSync = [];
         if ($request->has('blocks')) {
             foreach ($request->input('blocks') as $blockData) {

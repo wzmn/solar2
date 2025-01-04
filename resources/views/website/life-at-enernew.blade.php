@@ -21,38 +21,7 @@
           Life @Enernew
         </h1>
         <div class="content" data-aos="fade-up">
-          <p>
-            At Enernew, we foster a vibrant work environment designed to
-            inspire creativity and collaboration. Our modern offices
-            provide a comfortable and innovative space where teams come
-            together to tackle complex challenges in renewable energy.
-            Whether working remotely or on-site, our flexible work
-            arrangements cater to diverse needs, ensuring our team remains
-            productive and engaged.
-          </p>
-          <p>
-            Our company culture is built on a foundation of integrity,
-            innovation, and inclusivity. We celebrate every achievement,
-            big and small, fostering a supportive atmosphere where
-            personal growth and professional development thrive. From
-            milestone successes to cultural festivals, we cherish
-            diversity and unity, encouraging open communication and
-            idea-sharing across all levels. At Enernew, every voice is
-            valued, empowering our employees to contribute meaningfully
-            and drive industry-leading innovation.
-          </p>
-          <p>
-            Beyond work, we prioritize the well-being of our employees
-            with comprehensive benefits packages and wellness initiatives.
-            Our commitment to work-life balance is reflected in policies
-            that promote flexibility and encourage a healthy lifestyle.
-            <a href="https://enernew.in" target="_blank" data-aos="fade-right" data-aos-delay="400" class="text-orange">Enernew</a> also stands firm in its dedication to corporate social
-            responsibility, actively contributing to sustainability
-            efforts and making a positive impact on our communities. Join
-            us at Enernew and experience a fulfilling career where
-            innovation meets purpose, shaping a sustainable future
-            together.
-          </p>
+          {!! $seo->content !!}
         </div>
       </div>
     </div>
