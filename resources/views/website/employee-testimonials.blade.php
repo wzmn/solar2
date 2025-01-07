@@ -40,12 +40,12 @@
                                 <img src="{{Storage::disk('public')->url($user->image)}}" alt="" class="img-fluid">
                             @else 
                             <img src="{{ asset('assets/images/testimonial-2.jpg') }}" alt="" class="img-fluid">
-                            @endif;
+                            @endif
                         </div>
                     </div>
                 </div>
             @endforeach
-        @endif;
+        @endif
     </div>
 </div>
 @endsection
