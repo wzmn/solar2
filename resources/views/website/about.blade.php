@@ -69,7 +69,6 @@
                 </div>
             </div>
             <div class="col-12 col-lg-5" data-aos="fade-up" data-aos-delay="100">
-                {{-- <h4 class="mb-4"></h4> --}}
                 <h2 class="highlight fs-1">Leading the Way in Clean Energy at Enernew Solar Park</h2>
                 <p class="text-justify">The demand for clean energy is surging among large commercial and industrial (C&I) entities.
                     In response, Enernew has introduced the Enernew Solar Park with a mission to achieve net
@@ -96,15 +95,7 @@
     </div>
     <div class="container position-relative">
         <div class="row">
-
-            <div class="col d-none d-md-block">
-                <!-- <div class="sun__container">
-                            <div class="sun position-sticky">
-                                <img src="./images/outer.png" class="sun__outer">
-                                <img src="./images/inner.png" class="sun__inner">
-                            </div>
-                        </div> -->
-            </div>
+            <div class="col d-none d-md-block"></div>
         </div>
     </div>
 </div>

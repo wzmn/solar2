@@ -42,6 +42,9 @@
                             <th class="border border-slate-300 p-2 text-left">
                                 File Name
                             </th>
+                            <th class="border border-slate-300 p-2 text-left">
+                                Size
+                            </th>
                             <th class="border border-slate-300 p-2 text-right">
                                 Actions
                             </th>
@@ -56,6 +59,7 @@
                                     </td>
                                     <td class="border border-slate-300 py-2 px-2 text-left">{{ $media->title }}</td>
                                     <td class="border border-slate-300 py-2 px-2 text-left">{{ $media->name }}</td>
+                                    <td class="border border-slate-300 py-2 px-2 text-left">{{ ceil((int) $media->size / 1024) }} KB</td>
                                     <td class="border border-slate-300 py-2 px-2 text-right">
                                         <form action="{{ route('file.destroy', $media->id) }}" method="POST">
                                             @csrf

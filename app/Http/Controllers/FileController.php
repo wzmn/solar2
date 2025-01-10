@@ -46,9 +46,16 @@ class FileController extends Controller
     }
     public function destroy(Request $request)
     {
-        $file = File::where('id', $request->media_id);
-        $file->delete();
-
-        return redirect()->route('file.index')->with('success', 'Image deleted successfully.');
+        $file = File::where('id', $request->media_id)->firstOrFail();
+        if ($file) {
+            if ($file->path) {
+                preg_match("/\/storage\/(.+)/", $file->path, $matches);
+                Storage::disk('public')->delete( $matches[1] );
+            }
+            File::where('id', $request->media_id)->delete();
+            return redirect()->route('file.index')->with('success', 'Image deleted successfully.');
+        } else {
+            return redirect()->route('file.index')->with('error', 'File not found.'); // Handle the case where the file doesn't exist
+        }
     }
 }

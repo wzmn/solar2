@@ -137,8 +137,8 @@
                                                 @endif
                                             </td>
                                             <td class="border border-slate-300 p-2">
-                                                <span type="submit"
-                                                    class="cursor-pointer px-2 text-red-700" data-remove>Remove</span>
+                                                <a href="{{ route('block.edit', $component->id) }}" class="cursor-pointer px-2 text-blue-700">Edit</a>
+                                                <span type="submit" class="cursor-pointer border-l-2 px-2 text-red-700" data-remove>Remove</span>
                                             </td>
                                         </tr>
                                     @endforeach

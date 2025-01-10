@@ -121,7 +121,7 @@
                         }" class="flex flex-col">
                             <div class="mb-4 cursor-pointer flex-grow flex-1">
                                 <span class="border border-gray-300 px-4 py-2 text-xs" @click="addField()">Add Field
-                                    +</span>
+                                    + <span x-model="fields.length"></span></span>
                             </div>
                             <table class="mb-2 table-auto w-full border-separate border-spacing-y-8">
                                 <tbody @dragover.prevent
@@ -198,11 +198,11 @@
                                         <div
                                             class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                                             <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                                                <div class="sm:flex sm:items-start">
+                                                <div>
                                                     <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                                                         <h3 class="text-base font-semibold text-gray-900"
                                                             id="modal-title">Choose an Image</h3>
-                                                        <div class="mt-2 grid grid-cols-4 gap-4 gallery-container">
+                                                        <div class="mt-2 grid gap-4 gallery-container" style="grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));">
                                                             @forelse ($files as $media)
                                                                 <div class="w-20">
                                                                     <img @click="(s) => {console.log(fields[currentRow].content);fields[currentRow].content = s.target.src;gallery = !gallery}"

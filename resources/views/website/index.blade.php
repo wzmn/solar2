@@ -1,3 +1,14 @@
+<?php
+
+$solutionsCount = 0;
+$solutionsIndex = 0;
+foreach (collect($seo->blocks) as $tabPill) {
+    if ($tabPill->type === 'Solutions') {
+        $solutionsCount++;
+    }
+}
+?>
+
 @section('title', 'Innovative Renewable Energy & Solar Power Park Solutions')
 
 @extends('layouts.website')
@@ -35,16 +46,16 @@
                             <g>
                                 <path
                                     d="M46.547,75.521c0,1.639-0.947,3.128-2.429,3.823c-0.573,0.271-1.187,0.402-1.797,0.402c-0.966,0-1.923-0.332-2.696-0.973
-                                        l-23.098-19.14H4.225C1.892,59.635,0,57.742,0,55.409V38.576c0-2.334,1.892-4.226,4.225-4.226h12.303l23.098-19.14
-                                        c1.262-1.046,3.012-1.269,4.493-0.569c1.481,0.695,2.429,2.185,2.429,3.823L46.547,75.521L46.547,75.521z M62.784,68.919
-                                        c-0.103,0.007-0.202,0.011-0.304,0.011c-1.116,0-2.192-0.441-2.987-1.237l-0.565-0.567c-1.482-1.479-1.656-3.822-0.408-5.504
-                                        c3.164-4.266,4.834-9.323,4.834-14.628c0-5.706-1.896-11.058-5.484-15.478c-1.366-1.68-1.24-4.12,0.291-5.65l0.564-0.565
-                                        c0.844-0.844,1.975-1.304,3.199-1.231c1.192,0.06,2.305,0.621,3.061,1.545c4.977,6.09,7.606,13.484,7.606,21.38
-                                        c0,7.354-2.325,14.354-6.725,20.24C65.131,68.216,64.007,68.832,62.784,68.919z M80.252,81.976
-                                        c-0.764,0.903-1.869,1.445-3.052,1.495c-0.058,0.002-0.117,0.004-0.177,0.004c-1.119,0-2.193-0.442-2.988-1.237l-0.555-0.555
-                                        c-1.551-1.55-1.656-4.029-0.246-5.707c6.814-8.104,10.568-18.396,10.568-28.982c0-11.011-4.019-21.611-11.314-29.847
-                                        c-1.479-1.672-1.404-4.203,0.17-5.783l0.554-0.555c0.822-0.826,1.89-1.281,3.115-1.242c1.163,0.033,2.263,0.547,3.036,1.417
-                                        c8.818,9.928,13.675,22.718,13.675,36.01C93.04,59.783,88.499,72.207,80.252,81.976z" />
+                                                            l-23.098-19.14H4.225C1.892,59.635,0,57.742,0,55.409V38.576c0-2.334,1.892-4.226,4.225-4.226h12.303l23.098-19.14
+                                                            c1.262-1.046,3.012-1.269,4.493-0.569c1.481,0.695,2.429,2.185,2.429,3.823L46.547,75.521L46.547,75.521z M62.784,68.919
+                                                            c-0.103,0.007-0.202,0.011-0.304,0.011c-1.116,0-2.192-0.441-2.987-1.237l-0.565-0.567c-1.482-1.479-1.656-3.822-0.408-5.504
+                                                            c3.164-4.266,4.834-9.323,4.834-14.628c0-5.706-1.896-11.058-5.484-15.478c-1.366-1.68-1.24-4.12,0.291-5.65l0.564-0.565
+                                                            c0.844-0.844,1.975-1.304,3.199-1.231c1.192,0.06,2.305,0.621,3.061,1.545c4.977,6.09,7.606,13.484,7.606,21.38
+                                                            c0,7.354-2.325,14.354-6.725,20.24C65.131,68.216,64.007,68.832,62.784,68.919z M80.252,81.976
+                                                            c-0.764,0.903-1.869,1.445-3.052,1.495c-0.058,0.002-0.117,0.004-0.177,0.004c-1.119,0-2.193-0.442-2.988-1.237l-0.555-0.555
+                                                            c-1.551-1.55-1.656-4.029-0.246-5.707c6.814-8.104,10.568-18.396,10.568-28.982c0-11.011-4.019-21.611-11.314-29.847
+                                                            c-1.479-1.672-1.404-4.203,0.17-5.783l0.554-0.555c0.822-0.826,1.89-1.281,3.115-1.242c1.163,0.033,2.263,0.547,3.036,1.417
+                                                            c8.818,9.928,13.675,22.718,13.675,36.01C93.04,59.783,88.499,72.207,80.252,81.976z" />
                                 <path
                                     d="M 46.547 75.521 c 0 1.639 -0.947 3.128 -2.429 3.823 c -0.573 0.271 -1.187 0.402 -1.797 0.402 c -0.966 0 -1.923 -0.332 -2.696 -0.973 l -23.098 -19.14 H 4.225 C 1.892 59.635 0 57.742 0 55.409 V 38.576 c 0 -2.334 1.892 -4.226 4.225 -4.226 h 12.303 l 23.098 -19.14 c 1.262 -1.046 3.012 -1.269 4.493 -0.569 c 1.481 0.695 2.429 2.185 2.429 3.823 L 46.547 75.521 z z z" />
                             </g>
@@ -75,7 +86,13 @@
         <div class="container-fluid mt-5 position-relative">
             <div class="row mb-5">
                 <div class="col-lg-5 col mb-3">
-                    <img src="./assets/images/3.webp" class="img-fluid" alt="Off-Site Captive Open Access Solar Parks">
+                    @foreach ($seo->blocks as $overview)
+                        @if ($overview->type === 'Overview')
+                            <?php $data = json_decode($overview->data); ?>
+                            <img src="{{ $data[3]->content }}" class="img-fluid"
+                                alt="Off-Site Captive Open Access Solar Parks">
+                        @endif
+                    @endforeach
                     <div class="d-md-flex flex-wrap flex-md-nowrap justify-content-center icon_wrapper animate"
                         data-aos="fade-up" data-aos-offset="400">
                         <div class="icon">
@@ -133,16 +150,15 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-5">
-                    <h2 class="highlight" data-aos="fade-up" data-aos-delay="100">Overview</h2>
-                    {{-- <p class="text-justify">
-                    In the ever-evolving landscape of renewable energy, Enernew Private Limited stands as a pioneering force dedicated to delivering innovative and sustainable energy solutions. Founded by the visionaries behind Sriram Cables, Enernew has recently unveiled its latest venture, Enernew, a fully owned subsidiary committed to pushing the boundaries of solar energy.
-                </p>
-                <p class="text-justify">
-                    Specializing in Off-Site Captive Open Access Solar Parks and On-Site C&I Solar Projects, Enernew caters to conglomerates spanning various sectors of the economy. With a stellar track record of successfully executing over 50 MWp+ Solar projects, Enernew is not just leading but reshaping the journey towards a greener future.
-                </p>
-                <p class="text-justify">
-                    Beyond mere business ambitions, Enernew's mission is rooted in catalyzing sustainable development through clean energy solutions. By harnessing the inexhaustible potential of solar power, Enernew not only meets the energy demands of its diverse clientele but also champions environmental conservation efforts. Through cutting-edge technologies and meticulous project management practices, Enernew is steadfast in its commitment to achieving net-zero emissions, ensuring that each project contributes meaningfully to global sustainability goals.
-                </p> --}}
+                    @foreach ($seo->blocks as $overviewContent)
+                        @if ($overviewContent->type === 'Overview')
+                            <?php $data = json_decode($overviewContent->data); ?>
+                            <h2 class="highlight" data-aos="fade-up" data-aos-delay="100">{{ $data[0]->content }}</h2>
+                            {!! $data[1]->content !!}
+                            <a href="{{ $data[2]->content }}" class="btn btn--orange">Explore Our Solution</a>
+                        @endif
+                    @endforeach
+                    {{-- <h2 class="highlight" data-aos="fade-up" data-aos-delay="100">Overview</h2>
                     <p class="text-justify">
                         In the ever-evolving landscape of renewable energy, Enernew stands as a pioneering force dedicated
                         to delivering innovative and sustainable energy solutions. Founded by the visionaries behind Sriram
@@ -169,7 +185,7 @@
                         Enernew is steadfast in its commitment to achieving net-zero emissions, ensuring that each project
                         contributes meaningfully to global sustainability goals.
                     </p>
-                    <a href="/about-us" class="btn btn--orange">Explore Our Solution</a>
+                    <a href="/about-us" class="btn btn--orange">Explore Our Solution</a> --}}
                 </div>
                 <div class="col d-none d-lg-block col-sm-1">
 
@@ -200,21 +216,21 @@
                 <div class="col">
                     <ul class="nav nav-pills flex-column flex-md-row mb-3 gap-2 justify-content-center" id="pills-tab"
                         role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="btn btn--green active" id="pills-home-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                                aria-selected="true">Solar Power Park Developer</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="btn btn--green" id="pills-profile-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-profile" type="button" role="tab"
-                                aria-controls="pills-profile" aria-selected="false">B2B Solar Solutions</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="btn btn--green" id="pills-contact-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-contact" type="button" role="tab"
-                                aria-controls="pills-contact" aria-selected="false">Asset Management</button>
-                        </li>
+
+                        @foreach (collect($seo->blocks) as $tabPill)
+                            @if ($tabPill->type === 'Solutions')
+                                <?php $data = json_decode($tabPill->data); ?>
+                                <li class="nav-item" role="presentation">
+                                    <button class="btn btn--green @if ($solutionsIndex === 0) active @endif"
+                                        id="pills-{{ $tabPill->id }}-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-{{ $tabPill->id }}" type="button" role="tab"
+                                        aria-controls="pills-home" aria-selected="true">{{ $tabPill->name }}</button>
+                                </li>
+                                <?php $solutionsIndex++; ?>
+                            @endif
+                        @endforeach
+
+                        <?php $solutionsIndex = 0; ?>
                     </ul>
                 </div>
             </div>
@@ -222,234 +238,82 @@
                 <div class="col mb-5">
                     <div class="row">
                         <div class="tab-content" id="solutions-tabContent">
-                            <div class="tab-pane col-12 fade show active" id="pills-home" role="tabpanel"
-                                aria-labelledby="pills-home-tab">
-                                <div class="d-flex flex-lg-row flex-column-reverse gap-3">
-                                    <div class="col">
-                                        <div class="h3">Solar Power Park Developer</div>
-                                        <p>Developing Comprehensive Solar Solutions for Captive Customers</p>
+                            @foreach ($seo->blocks as $tabContent)
+                                @if ($tabContent->type === 'Solutions')
+                                    <?php $data = json_decode($tabContent->data); ?>
+                                    <div class="tab-pane col-12 fade show @if ($solutionsIndex === 0) active @endif"
+                                        id="pills-{{ $tabContent->id }}" role="tabpanel"
+                                        aria-labelledby="pills-home-tab">
+                                        <div class="d-flex flex-lg-row flex-column-reverse gap-3">
+                                            <div class="col">
+                                                <div class="h3">{{ $data[1]->content }}</div>
+                                                <p>{{ $data[2]->content }}</p>
 
-                                        <div class="accordion" id="solutions-accordion1">
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingThree">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                        aria-expanded="false" aria-controls="collapseThree">
-                                                        Efficient Land Aggregation and Planning
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseThree" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingThree" data-bs-parent="#solutions-tabContent">
-                                                    <div class="accordion-body">
-                                                        Leveraging strong local relationships and expertise, Enernew
-                                                        conducts thorough topographical assessments and planning to
-                                                        aggregate land efficiently, selecting prime locations that enhance
-                                                        solar generation potential and logistical connectivity.
+                                                <div class="accordion" id="solutions-accordion1">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingThree">
+                                                            <button class="accordion-button collapsed" type="button"
+                                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                                aria-expanded="false" aria-controls="collapseThree">
+                                                                {{ $data[3]->content }}
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingThree"
+                                                            data-bs-parent="#solutions-tabContent">
+                                                            <div class="accordion-body">
+                                                                {{ $data[4]->content }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingTwo">
+                                                            <button class="accordion-button collapsed" type="button"
+                                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                                {{ $data[5]->content }}
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                                            aria-labelledby="headingTwo"
+                                                            data-bs-parent="#solutions-tabContent">
+                                                            <div class="accordion-body">
+                                                                {{ $data[6]->content }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button" type="button"
+                                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                                aria-expanded="true" aria-controls="collapseOne">
+                                                                {{ $data[7]->content }}
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseOne" class="accordion-collapse collapse show"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#solutions-tabContent">
+                                                            <div class="accordion-body">
+                                                                {{ $data[8]->content }}
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingTwo">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                        aria-expanded="false" aria-controls="collapseTwo">
-                                                        Regulatory Approvals and Compliance
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingTwo" data-bs-parent="#solutions-tabContent">
-                                                    <div class="accordion-body">
-                                                        Enernew prioritizes comprehensive regulatory approvals and
-                                                        compliance, navigating government policies and frameworks to secure
-                                                        all necessary permits for seamless project execution and long-term
-                                                        operation.
-                                                    </div>
+                                                <div class="mt-4">
+                                                    <a href="{{ $data[9]->content }}" class="btn btn--orange">Explore Our
+                                                        Solution</a>
                                                 </div>
                                             </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingOne">
-                                                    <button class="accordion-button" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                        aria-expanded="true" aria-controls="collapseOne">
-                                                        Well-Planned Solar Plant Units
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                                    aria-labelledby="headingOne" data-bs-parent="#solutions-tabContent">
-                                                    <div class="accordion-body">
-                                                        Enernew meticulously designs and structures each solar plant unit
-                                                        within its solar parks, covering all aspects from project
-                                                        development and transmission to EHV substations and pooling
-                                                        stations. This comprehensive approach ensures optimal layout and
-                                                        configuration to maximize energy output and operational efficiency.
-                                                    </div>
-                                                </div>
+                                            <div class="col align-items-start d-md-flex mb-4">
+                                                <img src="{{ $data[0]->content }}" class="img-fluid"
+                                                    alt="Solar Power Park Developer">
                                             </div>
-                                        </div>
-                                        <div class="mt-4">
-                                            <a href="/utility-scale-solar-power-park-solutions"
-                                                class="btn btn--orange">Explore Our Solution</a>
-                                        </div>
-                                    </div>
-                                    <div class="col align-items-start d-md-flex mb-4">
-                                        <img src="{{ asset('assets/images/5.webp') }}" class="img-fluid"
-                                            alt="Solar Power Park Developer">
-                                    </div>
 
-                                </div>
-                            </div>
-                            <div class="tab-pane col-12 fade" id="pills-profile" role="tabpanel"
-                                aria-labelledby="pills-profile-tab">
-                                <div class="d-flex flex-lg-row flex-column-reverse gap-3">
-                                    <div class="col">
-                                        <div class="h3">B2B Solar Solutions</div>
-                                        <p>Tailored Solar Energy Solutions for Commercial & Industrial Clients</p>
-                                        <div class="accordion" id="solutions-accordion2">
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingOne">
-                                                    <button class="accordion-button" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                        aria-expanded="true" aria-controls="collapseOne">
-                                                        Flexible Solar Financing Solutions
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                                    aria-labelledby="headingOne" data-bs-parent="#solutions-tabContent">
-                                                    <div class="accordion-body">
-                                                        Providing adaptable financing options for solar installations,
-                                                        customized to suit diverse client requirements. Our solutions are
-                                                        designed to deliver flexibility and efficiency, ensuring optimal
-                                                        performance and value.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingTwo">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                        aria-expanded="false" aria-controls="collapseTwo">
-                                                        Design and Engineering Expertise
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingTwo" data-bs-parent="#solutions-tabContent">
-                                                    <div class="accordion-body">
-                                                        Utilizing an experienced in-house team to design and engineer over
-                                                        100 MW of solar plants, ensuring customized solutions that optimize
-                                                        energy efficiency and operational performance.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingThree">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                        aria-expanded="false" aria-controls="collapseThree">
-                                                        Turnkey Project Execution
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseThree" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingThree" data-bs-parent="#solutions-tabContent">
-                                                    <div class="accordion-body">
-                                                        Successfully delivering turnkey solar projects across India, managed
-                                                        by
-                                                        dedicated project managers and site engineers, ensuring seamless
-                                                        execution from
-                                                        inception to completion.
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-4">
-                                            <a href="/b2b-solar-solutions" class="btn btn--orange">Explore Our
-                                                Solution</a>
                                         </div>
                                     </div>
-                                    <div class="col align-items-start d-md-flex mb-4">
-                                        <img src="{{ asset('assets/images/solution-2.webp') }}" class="img-fluid"
-                                            alt="B2B Solar Solutions">
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="tab-pane col-12 fade" id="pills-contact" role="tabpanel"
-                                aria-labelledby="pills-contact-tab">
-                                <div class="d-flex flex-lg-row flex-column-reverse gap-3">
-                                    <div class="col">
-                                        <div class="h3">Asset Management Services</div>
-                                        <p>Comprehensive Management for Optimal Solar Asset Performance</p>
-
-                                        <div class="accordion" id="solutions-accordion3">
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingOne">
-                                                    <button class="accordion-button" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                        aria-expanded="true" aria-controls="collapseOne">
-                                                        Performance Analytics
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                                    aria-labelledby="headingOne" data-bs-parent="#solutions-tabContent">
-                                                    <div class="accordion-body">
-                                                        Providing detailed performance reports on energy generation and key
-                                                        metrics,
-                                                        shared regularly with stakeholders to ensure transparency and
-                                                        informed
-                                                        decision-making.
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingTwo">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                        aria-expanded="false" aria-controls="collapseTwo">
-                                                        Preventive and Routine Maintenance
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingTwo" data-bs-parent="#solutions-tabContent">
-                                                    <div class="accordion-body">
-                                                        Implementing proactive maintenance strategies and routine activities
-                                                        to minimize
-                                                        downtime and extend the lifespan of solar assets.
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingThree">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                        aria-expanded="false" aria-controls="collapseThree">
-                                                        Corrective Actions and Issue Resolution
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseThree" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingThree" data-bs-parent="#solutions-tabContent">
-                                                    <div class="accordion-body">
-                                                        Rapid response to any faults or issues, with a dedicated team of
-                                                        skilled
-                                                        technicians ensuring timely corrective actions to maintain optimal
-                                                        performance.
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-4">
-                                            <a href="/asset-management-services" class="btn btn--orange">Explore Our
-                                                Solution</a>
-                                        </div>
-                                    </div>
-                                    <div class="col align-items-start d-md-flex mb-4">
-                                        <img src="{{ asset('assets/images/solution-3.png') }}" class="img-fluid"
-                                            alt="Asset Management Services">
-                                    </div>
-                                </div>
-                            </div>
+                                    <?php $solutionsIndex++; ?>
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -457,33 +321,29 @@
         </div>
 
     </div>
-    <div class="lets_talk py-5 ">
-        <div class="container">
-            <div class="row">
-                <div class="col mb-5">
-                    <h3 class="highlight highlight--center text-center mb-5" data-aos="fade-up">50 MW Solar Park</h3>
-                    <p>Enernew's solar power initiatives reflect our unwavering commitment to shaping a sustainable future
-                        through innovative energy solutions. Our 50 MW Solar Power Park in Bikaner, Rajasthan, serves as a
-                        prime example of our expertise in executing large-scale renewable energy projects.</p>
-                    <p>Spread across 300 acres, this ambitious project highlights our proficiency in developing Off-site
-                        solar power solutions, tailored to meet the growing demand for clean energy. We have successfully
-                        navigated the complex process of land acquisition and secured all necessary statutory clearances,
-                        ensuring the project aligns with both local and national regulations.</p>
-                    <p>This solar park marks a key milestone in India's journey toward achieving its renewable energy goals.
-                        With a focus on efficient project execution and adherence to industry-leading standards for safety,
-                        quality, and environmental stewardship, Enernew is driving the transition to cost-effective,
-                        reliable solar power. The Bikaner project is not just an energy solution but a contribution to a
-                        greener future, cementing Enernew’s position as a leader in the renewable energy sector.</p>
+    @foreach ($seo->blocks as $tabContent)
+        @if ($tabContent->type === 'Content 1')
+            <?php $data = json_decode($tabContent->data); ?>
+            <div class="lets_talk py-5 ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col mb-5">
+                            <h3 class="highlight highlight--center text-center mb-5" data-aos="fade-up">
+                                {{ $data[0]->content }}
+                            </h3>
+                            {!! $data[1]->content !!}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-5">
+                            <img src="{{ $data[2]->content }}" class="rounded-3 img-fluid"
+                                alt="50 MW Solar Power Park in Bikaner, Rajasthan">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col mb-5">
-                    <img src="./assets/images/50MW.webp" class="rounded-3 img-fluid"
-                        alt="50 MW Solar Power Park in Bikaner, Rajasthan">
-                </div>
-            </div>
-        </div>
-    </div>
+        @endif
+    @endforeach
     <div class="our-projects pb-5 pt-5" style="background-image: url('./assets/images/7.png');background-size: cover;">
         <div class="container">
             <div class="row">
@@ -496,26 +356,26 @@
                     <div id="projects2" class="mb-3 carousel-dark carousel slide" data-bs-interval="false">
                         <div class="carousel-inner">
                             @forelse ($projects as $item)
-                            <div class="carousel-item {{ $loop->first ? 'active' : ''}}">
-                                <h3>{{ $item->client }}</h3>
-                                <div class="bold">{{ $item->title }}</div>
-                                <div class="fs-6 mb-3 projects__content">{!! $item->description !!}</div>
-                                <a href="#" class="projects__read_more d-inline-flex align-items-center">
-                                    <span class="projects__icon">
-                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"
-                                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
-                                            xml:space="preserve">
+                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                    <h3>{{ $item->client }}</h3>
+                                    <div class="bold">{{ $item->title }}</div>
+                                    <div class="fs-6 mb-3 projects__content">{!! $item->description !!}</div>
+                                    <a href="#" class="projects__read_more d-inline-flex align-items-center">
+                                        <span class="projects__icon">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"
+                                                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                                                xml:space="preserve">
 
-                                            <path
-                                                d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216 v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z" />
+                                                <path
+                                                    d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216 v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z" />
 
-                                        </svg>
-                                    </span>
-                                    <span class="d-flex align-items-center h-100">Explore
-                                        more</span>
-                                </a>
-                            </div>
+                                            </svg>
+                                        </span>
+                                        <span class="d-flex align-items-center h-100">Explore
+                                            more</span>
+                                    </a>
+                                </div>
                             @empty
                                 <p>No Projects found.</p>
                             @endforelse
@@ -539,8 +399,8 @@
                                 <g>
                                     <path
                                         d="M386.235,248.308L140.902,2.975c-4.267-4.053-10.987-3.947-15.04,0.213c-3.947,4.16-3.947,10.667,0,14.827l237.76,237.76
-                                                           l-237.76,237.867c-4.267,4.053-4.373,10.88-0.213,15.04c4.053,4.267,10.88,4.373,15.04,0.213c0.107-0.107,0.213-0.213,0.213-0.213
-                                                           l245.333-245.333C390.395,259.188,390.395,252.468,386.235,248.308z" />
+                                                                               l-237.76,237.867c-4.267,4.053-4.373,10.88-0.213,15.04c4.053,4.267,10.88,4.373,15.04,0.213c0.107-0.107,0.213-0.213,0.213-0.213
+                                                                               l245.333-245.333C390.395,259.188,390.395,252.468,386.235,248.308z" />
                                 </g>
 
                             </svg>
@@ -573,52 +433,94 @@
                             </div>
                         </div>
                         <!-- <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#projects" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#projects" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#projects" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#projects" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                <button type="button" data-bs-target="#projects" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                            </div> -->
+                                                    <button type="button" data-bs-target="#projects" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                    <button type="button" data-bs-target="#projects" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                    <button type="button" data-bs-target="#projects" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                    <button type="button" data-bs-target="#projects" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                                    <button type="button" data-bs-target="#projects" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                                </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="clients pt-5" style="background-image: url('./assets/images/8.webp');">
         <div class="container">
-            <div class="row pb-5">
-                <div class="col-12 col-sm-5 d-flex justify-content-center flex-column mb-5">
-                    <h2 data-aos="fade-up" class="highlight">Our Clients</h2>
-                    <p data-aos="fade-up" data-aos-delay="100" class="text-justify">We take pride in serving a diverse
-                        and prestigious clientele
-                        that spans various industries and sectors. From large corporations and government agencies to
-                        educational institutions and residential communities, our clients trust us to deliver reliable,
-                        innovative, and sustainable <a href="https://enernew.in/b2b-solar-solutions" target="_blank"
-                            data-aos="fade-right" data-aos-delay="400" class="text-orange">solar energy solutions</a>.
-                        Our commitment to excellence and customer
-                        satisfaction has enabled us to build strong, long-lasting relationships with each of our valued
-                        partners.
-                    </p>
-                </div>
-                <div class="col"></div>
-                <div class="col-12 col-sm-6 clients__grid">
-                    <img src="./assets/images/c1.png" class="img-fluid" data-aos="fade-left"
-                        alt="Jindal Saw Client Logo">
-                    <img src="./assets/images/c2.png" class="img-fluid" data-aos="fade-left" data-aos-delay="100"
-                        alt="NTPC Client Logo">
-                    <img src="./assets/images/c4.png" class="img-fluid" data-aos="fade-left" data-aos-delay="200"
-                        alt="HSIL Client Logo">
-                    <img src="./assets/images/c5.png" class="img-fluid" data-aos="fade-left" data-aos-delay="300"
-                        alt="OM Logistics Client Logo">
-                    <img src="./assets/images/c6.png" class="img-fluid" data-aos="fade-left" data-aos-delay="400"
-                        alt="Banswara Syntex Client Logo">
-                    <img src="./assets/images/c7.png" class="img-fluid" data-aos="fade-left" data-aos-delay="500"
-                        alt="JTEKT Client Logo">
-                    <img src="./assets/images/c8.png" class="img-fluid" alt="SECI Client Logo">
-                    <img src="./assets/images/c9.png" class="img-fluid" alt="India Oil Client Logo">
-                </div>
-            </div>
+            @foreach ($seo->blocks as $tabContent)
+                @if ($tabContent->type === 'Our Clients')
+                    <?php $data = json_decode($tabContent->data); ?>
+                    <div class="row pb-5">
+                        <div class="col-12 col-sm-5 d-flex justify-content-center flex-column mb-5">
+                            <h2 data-aos="fade-up" class="highlight">Our Clients</h2>
+                            {!! $data[0]->content !!}
+                            {{-- <p data-aos="fade-up" data-aos-delay="100" class="text-justify">We take pride in serving a
+                                diverse
+                                and prestigious clientele
+                                that spans various industries and sectors. From large corporations and government agencies
+                                to
+                                educational institutions and residential communities, our clients trust us to deliver
+                                reliable,
+                                innovative, and sustainable <a href="https://enernew.in/b2b-solar-solutions"
+                                    target="_blank" data-aos="fade-right" data-aos-delay="400" class="text-orange">solar
+                                    energy solutions</a>.
+                                Our commitment to excellence and customer
+                                satisfaction has enabled us to build strong, long-lasting relationships with each of our
+                                valued
+                                partners.
+                            </p> --}}
+                        </div>
+                        <div class="col"></div>
 
+                        <div class="col-12 col-sm-6 clients__grid">
+                            @if ($data[1]->type === 'image')
+                                <img src="{{ $data[1]->content }}" class="img-fluid" data-aos="fade-left"
+                                    alt="Jindal Saw Client Logo">
+                            @endif
+                            @if (isset($data[2]->type) && $data[2]->type === 'image')
+                                <img src="{{ $data[2]->content }}" class="img-fluid" data-aos="fade-left"
+                                    alt="Jindal Saw Client Logo">
+                            @endif
+                            @if (isset($data[3]->type) && $data[3]->type === 'image')
+                                <img src="{{ $data[3]->content }}" class="img-fluid" data-aos="fade-left"
+                                    alt="Jindal Saw Client Logo">
+                            @endif
+                            @if (isset($data[4]->type) && $data[4]->type === 'image')
+                                <img src="{{ $data[4]->content }}" class="img-fluid" data-aos="fade-left"
+                                    alt="Jindal Saw Client Logo">
+                            @endif
+                            @if (isset($data[5]->type) && $data[5]->type === 'image')
+                                <img src="{{ $data[5]->content }}" class="img-fluid" data-aos="fade-left"
+                                    alt="Jindal Saw Client Logo">
+                            @endif
+                            @if (isset($data[6]->type) && $data[6]->type === 'image')
+                                <img src="{{ $data[6]->content }}" class="img-fluid" data-aos="fade-left"
+                                    alt="Jindal Saw Client Logo">
+                            @endif
+                            @if (isset($data[7]->type) && $data[7]->type === 'image')
+                                <img src="{{ $data[7]->content }}" class="img-fluid" data-aos="fade-left"
+                                    alt="Jindal Saw Client Logo">
+                            @endif
+                            @if (isset($data[8]->type) && $data[8]->type === 'image')
+                                <img src="{{ $data[8]->content }}" class="img-fluid" data-aos="fade-left"
+                                    alt="Jindal Saw Client Logo">
+                            @endif
+                            {{-- <img src="./assets/images/c2.png" class="img-fluid" data-aos="fade-left"
+                                data-aos-delay="100" alt="NTPC Client Logo">
+                            <img src="./assets/images/c4.png" class="img-fluid" data-aos="fade-left"
+                                data-aos-delay="200" alt="HSIL Client Logo">
+                            <img src="./assets/images/c5.png" class="img-fluid" data-aos="fade-left"
+                                data-aos-delay="300" alt="OM Logistics Client Logo">
+                            <img src="./assets/images/c6.png" class="img-fluid" data-aos="fade-left"
+                                data-aos-delay="400" alt="Banswara Syntex Client Logo">
+                            <img src="./assets/images/c7.png" class="img-fluid" data-aos="fade-left"
+                                data-aos-delay="500" alt="JTEKT Client Logo">
+                            <img src="./assets/images/c8.png" class="img-fluid" alt="SECI Client Logo">
+                            <img src="./assets/images/c9.png" class="img-fluid" alt="India Oil Client Logo"> --}}
+                        </div>
+                    </div>
+                @endif
+            @endforeach
             <div class="row mt-5 justify-content-center pt-5">
                 <div class="col-9 mb-5">
                     <div id="clients" class="carousel carousel-dark slide flex-column" data-bs-interval="false">
