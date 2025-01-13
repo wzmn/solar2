@@ -57,7 +57,7 @@ class BlockController extends Controller
         ]);
 
         $Block->update($validatedData);
-        return redirect()->route('block.index')->with('success', 'Block updated successfully.');
+        return redirect()->route('block.edit', $Block)->with('success', 'Block updated successfully.');
     }
 
 
