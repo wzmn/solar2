@@ -23,14 +23,17 @@ use App\Models\Projects;
 
 use App\Http\Controllers\MediaController;
 
-class Fruit {
-    public function __construct($data) {
-        $this->meta_title = $data->meta_title;
-        $this->meta_description = $data->meta_description;
-        $this->meta_keywords = $data->meta_keywords;
-    }   
-}  
+if (!class_exists('SeoData')) {
 
+    class SeoData {
+        public function __construct($data) {
+            $this->meta_title = $data->meta_title;
+            $this->meta_description = $data->meta_description;
+            $this->meta_keywords = $data->meta_keywords;
+        }   
+    }  
+    
+}
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -115,10 +118,10 @@ Route::get('/press-release', function () {
 
 Route::get('/knowledge-center/{slug}', function (string $slug) {
     $blog = Blog::where('slug', $slug)->firstOrFail();
-    $seo = new Fruit($blog);
-    $seo->meta_title;
-    $seo->meta_description;
-    $seo->meta_keywords;
+    $seo = new SeoData($blog);
+    $seo->meta_title = $blog->meta_title;
+    $seo->meta_description = $blog->meta_description;
+    $seo->meta_keywords = $blog->meta_keywords;
     return view('website.blog-single', compact('blog', 'seo'));
 })->name('blog.show');
 
@@ -169,10 +172,10 @@ Route::get('/our-solutions', function () {
 Route::get('/page/{slug}', function (string $slug) {
     $page = Page::where('slug', $slug)->firstOrFail();
     $hero_img = [asset('assets/images/about-header.png')];
-    $seo = new Fruit($page);
-    $seo->meta_title;
-    $seo->meta_description;
-    $seo->meta_keywords;
+    $seo = new SeoData($page);
+    $seo->meta_title = $blog->meta_title;
+    $seo->meta_description = $blog->meta_description;
+    $seo->meta_keywords = $blog->meta_keywords;
     return view('website.page-single', compact('page', 'seo', 'hero_img'));
 })->name('page.show');
 
