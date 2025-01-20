@@ -107,7 +107,7 @@ class BlogController extends Controller
 
         $blog->save();
         
-        return Redirect::route('blog.edit', compact('blog'))->with('success', 'Blog Updated');
+        return Redirect::route('blog.edit', compact('blog'))->with('success', 'blog-updated');
     }
 
     /**

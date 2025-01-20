@@ -106,6 +106,7 @@
                                 this.formatData()
                             },
                             load(){
+                                this.formatData()
                                 console.log('load', this.selectedCategories)
                             }
                         

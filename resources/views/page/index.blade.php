@@ -41,7 +41,7 @@ use App\Models\User;
                                     <td class="border border-slate-300 px-2">
                                         <div class="flex gap-3 justify-end">
                                             <a class="border-l-2 px-2" href="{{ route('page.edit', $item) }}">Edit</a>
-                                            <a class="border-l-2 px-2" href="{{ route('page.show', $item) }}">View</a>
+                                            <a class="border-l-2 px-2" href="{{ route('page.single', $item) }}">View</a>
                                             <form method="POST" action="{{ route('page.destroy', $item) }}">
                                                 @csrf
                                                 @method('DELETE')
