@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreBlogRequest extends FormRequest
+class UpdateCategoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,12 +25,6 @@ class StoreBlogRequest extends FormRequest
             //
             'title' => 'required',
             'content' => 'required',
-            'date' => 'required',
-            'author_id' => 'required',
-            'meta_title' => 'required',
-            'meta_description' => 'required',
-            'meta_keywords' => 'required',
-            'categories' => 'required|array', // Ensure categories is an array
         ];
     }
 }

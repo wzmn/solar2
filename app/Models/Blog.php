@@ -4,7 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany; 
 use Illuminate\Support\Str;
+
 class Blog extends Model
 {
     public static function boot()
@@ -47,5 +49,10 @@ class Blog extends Model
     public function setSlugAttribute($value)
     {
         $this->attributes['slug'] = Str::slug($value, '-');
+    }
+
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(Category::class); // You can specify the table name and foreign keys if needed
     }
 }

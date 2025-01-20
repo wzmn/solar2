@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\User;
+use App\Models\Category;
 use App\Http\Requests\StoreBlogRequest;
 use App\Http\Requests\UpdateBlogRequest;
 use Illuminate\Http\RedirectResponse;
@@ -31,8 +32,15 @@ class BlogController extends Controller
     public function create()
     {
         //
+        $categories = json_encode(Category::all()->map(function($item){
+            return [
+                'id' => $item->id,
+                'title' => $item->title,
+                'slug' => $item->slug
+            ];
+        }));
         $users = User::all();
-        return view('blog.create', compact('users'));
+        return view('blog.create', compact('users','categories'));
     }
 
     /**
@@ -45,8 +53,11 @@ class BlogController extends Controller
         if ($request->hasFile('image')) {
             $blog->image = $request->file('image')->store('images', 'public');
         }
-
+        
         $blog->save();
+
+        // Sync categories after creating the blog so that $blog->id is available
+        $blog->categories()->sync($request->input('categories', [])); // Sync categories
 
         return Redirect::route('blog.index')->with('success', 'Blog Created');
     }
@@ -69,7 +80,14 @@ class BlogController extends Controller
     {
         //
         $users = User::all();
-        return view('blog.edit', compact('blog', 'users'));
+        $categories = json_encode(Category::all()->map(function($item){
+            return [
+                'id' => $item->id,
+                'title' => $item->title,
+                'slug' => $item->slug
+            ];
+        }));
+        return view('blog.edit', compact('blog', 'users', 'categories'));
     }
 
     /**
@@ -84,7 +102,9 @@ class BlogController extends Controller
         if ($request->hasFile('image')) {
             $blog->image = $request->file('image')->store('images', 'public');
         }
-        
+        $categoriesArray = explode(',', $request->input('categories', [])[0]);
+        $blog->categories()->sync($categoriesArray); // Sync categories
+
         $blog->save();
         
         return Redirect::route('blog.edit', compact('blog'))->with('success', 'blog-updated');

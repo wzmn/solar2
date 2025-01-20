@@ -74,7 +74,95 @@
                                 @endforeach
                             </select>
                         </div>
+                        <div class="mb-4" x-data="{
+                            availableCategories: {{ $categories }},
+                            selectedCategories: {{ $blog->categories }}, // Initialize as an empty array
+                            selectedCategoriesIDs: [], // Initialize as an empty array
+                            formatData(){
+                               this.selectedCategoriesIDs = this.selectedCategories.map(s => s.id);
+                            },
+                            addCategory(index) {
+                                let AC = this.availableCategories;
+                                let ACi = AC[index - 1];
+                                if (index === 0) return;
+                                if (AC.length > 0) {                        
+                                    //Check if the category is already selected
+                                    let alreadySelected = this.selectedCategories.filter(s => {
+                                        return s.title === ACi.title
+                                    })
+                                    if (!!alreadySelected.length) {
+                                        alert('Category already selected')
+                                    } else {
+                                        this.selectedCategories.push(ACi);
+                                    }
+                                }
+                                this.formatData()
+                            },
+                            removeCategory(categoryId) {
+                                let newSelected = this.selectedCategories.filter(s => {
+                                    return s.id !== categoryId
+                                })
+                                this.selectedCategories = [...newSelected]
+                                this.formatData()
+                            },
+                            load(){
+                                console.log('load', this.selectedCategories)
+                            }
+                        
+                        }">
+                            <div class=" mb-4">
 
+                                <label for="categories"
+                                    class="block text-sm font-medium text-gray-700">Categories</label>
+                            </div>
+
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                                <div>
+                                    <label for="availableCategories" class="text-sm font-bold">Available
+                                        Categories</label>
+
+                                    <select x-ref="availableCategories" name="availableCategories" id="availableCategories"
+                                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                        <option value="Uncategorized">Uncategorized</option>
+                                        <template x-for="category in availableCategories" :key="category.id">
+                                            <option x-bind:value="category.id" x-text="category.title"></option>
+                                        </template>
+
+                                    </select>
+
+                                    <div class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 cursor-pointer rounded"
+                                        @click="addCategory($refs.availableCategories.selectedIndex)">Add</div>
+                                </div>
+                                <div class="hidden"
+                                    x-effect="load()">
+                                </div>
+                                <div>
+
+                                    <label for="selectedCategories" class="text-sm font-bold">Selected
+                                        Categories</label>
+
+                                    <template x-for="(category, index) in selectedCategories" :key="category.id">
+
+                                        <div
+                                            class="flex items-center justify-between mt-1  w-full rounded-md border p-2">
+                                            <span
+                                                x-text="category.title"></span>
+                                            <div
+                                                class="ml-2 cursor-pointer bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded"
+                                                @click="removeCategory(category.id)">Remove</div>
+                                        </div>
+
+                                    </template>
+
+
+                                </div>
+
+                            </div>
+                            <input type="hidden" name="categories[]" id="categories" :value="selectedCategoriesIDs">
+
+                        </div>
                         <div class="mb-4">
                             <label for="date" class="block text-sm font-medium text-gray-700">Date</label>
                             <input type="date" name="date" id="date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="{{ old('date', $blog->date) }}" required>

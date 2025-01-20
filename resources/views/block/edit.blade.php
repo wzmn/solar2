@@ -93,11 +93,12 @@
                                     return data;
                                 });
                             },
-                            rerenderKey: 0,
+                            isLoading: false,
                             addField() {
                                 this.fields.push({ type: 'text', content: '' })
                             },
                             load() {
+                                let vm = this;
                                 setTimeout(() => {
                                     [...document.querySelectorAll('wysiwyg')].map(e => {
                                         let html;
@@ -116,9 +117,12 @@
                                                     editor.setContent(html);
                                                 });
                                             }
+                                        }).then(s => {
+                                            console.log('Load()', s)
+                                            if (!!s.length) {
+                                                vm.load();
+                                            }
                                         });
-                        
-                        
                                     })
                                 }, 100)
                             },
@@ -127,15 +131,13 @@
                                 document.querySelector('#data').innerHTML = JSON.stringify(formattedFields);
                             },
                             reorderRows(currentIndex, newIndex) {
-                                console.log(currentIndex, newIndex, this.fields.length - 1 && newIndex < 0);
+                                if(newIndex > this.fields.length -1) return;
+                                if(newIndex < 0) return;
 
                                 [this.fields[currentIndex], this.fields[newIndex]] = [this.fields[newIndex], this.fields[currentIndex]];
 
                                 // Trigger Alpine.js to re-render by forcing a change detection
                                 this.fields = [...this.fields];
-                        
-                                // Refresh TinyMCE instances (if used)
-                                this.load();
                             },
                         }" class="flex flex-col">
                             <div class="mb-4 cursor-pointer flex-grow flex-1">
@@ -156,9 +158,8 @@
                                                     <path fill-rule="evenodd"
                                                         d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894z" />
                                                 </svg>
-                                                <div x-text="index"
-                                                    class="disabled pointer-events-none text-xs text-gray-500 w-16 border border-gray-300 p-2 text-center">
-                                                </div>
+                                                <input @change="reorderRows(index, $event.target.value)" class="disabled pointer-events-nones text-xs text-gray-500 w-16 border border-gray-300 p-2 text-center" x-bind:value="index">
+                                                </input>
                                                 <svg @click="reorderRows(index, (index)+1)"
                                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor"
@@ -177,7 +178,7 @@
                                                     <option value="link">Link</option>
                                                 </select>
                                                 <div
-                                                    x-effect="console.log('Maybe order changed:', fields[index].order), load()">
+                                                    x-effect="if (fields[index].type === 'wysiwyg') load()">
                                                 </div>
                                             </td>
                                             <template x-if="fields[index].type === 'text'">
@@ -254,8 +255,6 @@
                                                 </div>
                                             </div>
                                             <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                                                {{-- <button x-on:click="gallery = ! gallery" type="button"
-                                                    class="inline-flex w-full justify-center rounded-md bg-teal-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 sm:ml-3 sm:w-auto">Save</button> --}}
                                                 <button x-on:click="gallery = ! gallery" type="button"
                                                     class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancel</button>
                                             </div>
