@@ -43,8 +43,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::resource('blog', BlogController::class);
-    Route::resource('page', PageController::class);
+
+    Route::get('/blog', [BlogController::class, 'edit'])->name('blog.edit');
+    Route::patch('/blog', [BlogController::class, 'update'])->name('blog.update');
+    Route::delete('/blog', [BlogController::class, 'destroy'])->name('blog.destroy');
+
+    Route::get('/page', [PageController::class, 'edit'])->name('page.edit');
+    Route::patch('/page', [PageController::class, 'update'])->name('page.update');
+    Route::delete('/page', [PageController::class, 'destroy'])->name('page.destroy');
+
+    // Route::resource('page', PageController::class);
+    // Route::resource('blog', BlogController::class);
+
     Route::resource('jobs', JobController::class);
     Route::resource('block', BlockController::class);
     Route::resource('testimonials', TestimonialController::class);
