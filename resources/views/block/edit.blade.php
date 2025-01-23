@@ -105,6 +105,7 @@
                                         if (!!e.parentNode.querySelector('[data-content]').value) {
                                             html = e.parentNode.querySelector('[data-content]').value
                                         }
+                                        console.log('selector',e.id)
                                         tinymce.init({
                                             selector: `#${e.id}`,
                                             plugins: 'code',
@@ -126,7 +127,7 @@
                                     })
                                 }, 100)
                             },
-                            saveFields() {
+                            saveFields() {  
                                 const formattedFields = this.getFormattedFields();
                                 document.querySelector('#data').innerHTML = JSON.stringify(formattedFields);
                             },
@@ -210,7 +211,7 @@
                                             <template x-if="fields[index].type === 'wysiwyg'">
                                                 <td class="border-b-2 border p-2 shadow-sm" width="66%">
                                                     <wysiwyg class="border border-gray-300 cursor-pointer"
-                                                        x-bind:id="index"></wysiwyg>
+                                                    :id="'wysiwyg-' + index"></wysiwyg>
                                                     <input type="hidden" name="content" some="content"
                                                         x-model="fields[index].content" data-content>
                                                 </td>
