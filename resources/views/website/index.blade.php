@@ -411,7 +411,15 @@ foreach (collect($seo->blocks) as $tabPill) {
                 <div class="col-12 col-sm-6" data-aos="fade-up" data-aos-delay="200">
                     <div id="projects" class="carousel slide" data-bs-interval="false">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                            @forelse ($projects as $item)
+                            <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                <img src="{{Storage::disk('public')->url($item->image)}}" class="d-block w-100"
+                                    alt="{{$item->title}}">
+                            </div>
+                            @empty
+                                <p>No Projects found.</p>
+                            @endforelse
+                            {{-- <div class="carousel-item active">
                                 <img src="./assets/images/projects/Railway-Single.webp" class="d-block w-100"
                                     alt="India’s First Solar-Powered Running Coaches">
                             </div>
@@ -430,7 +438,7 @@ foreach (collect($seo->blocks) as $tabPill) {
                             <div class="carousel-item">
                                 <img src="./assets/images/projects/JTEKT-Collage.webp" class="d-block w-100"
                                     alt="JTEKT Corporation turnkey EPC- solar power project">
-                            </div>
+                            </div> --}}
                         </div>
                         <!-- <div class="carousel-indicators">
                                                     <button type="button" data-bs-target="#projects" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

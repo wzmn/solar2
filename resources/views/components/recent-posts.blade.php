@@ -6,7 +6,7 @@
         <a href="{{ route('blog.show', $post->slug) }}"><img src="{{Storage::disk('public')->url($post->image)}}" class=""></a>
         @endif
         <div class="recent__post_content">
-            <div class="recent__post__date">{{ $post->date }}</div>
+            <div class="recent__post__date">{{ date_format(date_create($item->date),"d-M-Y") }}</div>
             <a href="{{ route('blog.show', $post->slug) }}" class="post-title text-green">{{ $post->title }}</a>
         </div>
     </div>
