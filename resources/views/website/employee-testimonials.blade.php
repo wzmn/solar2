@@ -26,6 +26,7 @@
     <div class="row">
         @if ($testimonials)
             @foreach ($testimonials as $user)
+             @if ($loop->index == 0) @continue @endif  
                 <div class="testimonials__grid_item col-lg-6 mb-5 @if ($loop->index === 2) offset-lg-3 @endif">
                     <img src="{{ asset('assets/images/test-bg.png') }}" class="bg">
                     <div class="content">

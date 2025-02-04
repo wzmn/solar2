@@ -16,6 +16,9 @@
 div[href] {
     cursor: pointer;
 }
+a {
+    color: var(--primary);
+}
 
 .fixed {
     position: fixed;
@@ -1454,7 +1457,7 @@ form[class] .input--error {
 }
 
 .testimonials__grid_item .content {
-    padding: 50px;
+    padding: 60px;
     display: grid;
 }
 
