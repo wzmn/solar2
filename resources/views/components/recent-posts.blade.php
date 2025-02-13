@@ -7,7 +7,7 @@
         @endif
         <div class="recent__post_content">
             <div class="recent__post__date">{{ date_format(date_create($post->date),"d-M-Y") }}</div>
-            <a href="{{ route('blog.show', $post->slug) }}" class="post-title text-green">{{ $post->title }}</a>
+            <a href="/knowledge-center/{{ $post->slug }}" class="post-title text-green">{{ $post->title }}</a>
         </div>
     </div>
     @endforeach
