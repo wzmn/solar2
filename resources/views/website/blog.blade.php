@@ -32,7 +32,7 @@
                                 <div class="card-body d-flex flex-column justify-content-end">
                                     <div class="mb-2">{{ date_format(date_create($item->date),"d-M-Y") }}</div>
                                     <div class="h4 mb-4 text-green">{{ $item->title }}</div>
-                                    <a href="{{ route('blog.show', $item->slug) }}" class="text-orange">Read More</a>
+                                    <a href="/knowledge-center/{{ $item->slug }}" class="text-orange">Read More</a>
                                 </div>
                             </div>
                         @endforeach

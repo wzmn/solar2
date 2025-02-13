@@ -23,18 +23,6 @@ use App\Models\Projects;
 
 use App\Http\Controllers\MediaController;
 
-if (!class_exists('SeoData')) {
-
-    class SeoData {
-        public function __construct($data) {
-            $this->meta_title = $data->meta_title;
-            $this->meta_description = $data->meta_description;
-            $this->meta_keywords = $data->meta_keywords;
-        }   
-    }  
-    
-}
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -118,7 +106,7 @@ Route::get('/press-release', function () {
 
 Route::get('/knowledge-center/{slug}', function (string $slug) {
     $blog = Blog::where('slug', $slug)->firstOrFail();
-    $seo = new SeoData($blog);
+    $seo = new stdClass();
     $seo->meta_title = $blog->meta_title;
     $seo->meta_description = $blog->meta_description;
     $seo->meta_keywords = $blog->meta_keywords;
@@ -172,7 +160,7 @@ Route::get('/our-solutions', function () {
 Route::get('/page/{slug}', function (string $slug) {
     $page = Page::where('slug', $slug)->firstOrFail();
     $hero_img = [asset('assets/images/about-header.png')];
-    $seo = new SeoData($page);
+    $seo = new stdClass();
     $seo->meta_title = $blog->meta_title;
     $seo->meta_description = $blog->meta_description;
     $seo->meta_keywords = $blog->meta_keywords;
