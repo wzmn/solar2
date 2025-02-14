@@ -48,6 +48,8 @@ class BlogController extends Controller
      */
     public function store(StoreBlogRequest $request)
     {
+        $categoriesArray = explode(',', $request->input('categories', [])[0]);
+        
         $blog = new Blog($request->validated());
 
         if ($request->hasFile('image')) {
@@ -57,7 +59,11 @@ class BlogController extends Controller
         $blog->save();
 
         // Sync categories after creating the blog so that $blog->id is available
-        $blog->categories()->sync($request->input('categories', [])); // Sync categories
+        if (!$categoriesArray[0]) {
+            $blog->categories()->sync([]); // Empty categories
+        }else{
+            $blog->categories()->sync($categoriesArray); // Sync categories
+        }
 
         return Redirect::route('blog.index')->with('success', 'Blog Created');
     }
@@ -102,8 +108,13 @@ class BlogController extends Controller
         if ($request->hasFile('image')) {
             $blog->image = $request->file('image')->store('images', 'public');
         }
+
         $categoriesArray = explode(',', $request->input('categories', [])[0]);
-        $blog->categories()->sync($categoriesArray); // Sync categories
+        if (!$categoriesArray[0]) {
+            $blog->categories()->sync([]); // Empty categories
+        }else{
+            $blog->categories()->sync($categoriesArray); // Sync categories
+        }
 
         $blog->save();
         

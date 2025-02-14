@@ -23,6 +23,7 @@
                     <table class="table-auto w-full">
                         <thead>
                             <tr>
+                                <th class="border border-slate-300 p-2 text-left">ID</th>
                                 <th class="border border-slate-300 p-2 text-left">Title</th>
                                 <th class="border border-slate-300 p-2 text-left">Description</th>
                                 <th class="border border-slate-300 p-2 text-right">Actions</th>
@@ -31,6 +32,9 @@
                         <tbody>
                             @forelse ($categories as $category)
                                 <tr>
+                                    <td class="border border-slate-300 py-2 px-2 text-left">
+                                        {{ $category->id }}
+                                    </td>
                                     <td class="border border-slate-300 py-2 px-2 text-left">
                                         {{ $category->title }}
                                     </td>
