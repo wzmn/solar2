@@ -53,6 +53,13 @@ Route::get('/', function () {
 
 })->name('home');
 
+Route::post('/webhook', function(){
+    // $old_path = getcwd();
+    $output = shell_exec('mkdir test');
+    // chdir($old_path);
+    return $output;
+})->name('webhook');
+
 Route::get('/about-us', function () {
     $seo = Page::where('slug', 'about-us')->first();
     $hero_img = [asset('assets/images/about-header.png')];
