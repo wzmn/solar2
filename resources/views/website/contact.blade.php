@@ -165,7 +165,7 @@
                                     <input type="text" placeholder="First Name*" name="name" id="name" required>
                                 </label>
                                 <label for="LastName">
-                                    <input type="text" placeholder="Last Name*" name="LastName" id="LastName" required>
+                                    <input type="text" placeholder="Last Name" name="LastName" id="LastName">
                                 </label>
                                 <label for="email">
                                     <input name="email" id="email" type="email" placeholder="Email Address*" required>
@@ -174,18 +174,18 @@
                                     <input name="phone" id="phone" type="phone" placeholder="Phone No.*" required>
                                 </label>
                                 <label for="zip">
-                                    <input name="zip" autocomplete="off" id="zip" type="zip" placeholder="Zipcode/Pincode*" required>
+                                    <input name="zip" autocomplete="off" id="zip" type="zip" placeholder="Zipcode/Pincode">
                                 </label>
                                 <label for="city">
-                                    <input name="city" id="city" type="text" placeholder="City*" required>
+                                    <input name="city" id="city" type="text" placeholder="City">
                                 </label>
                                 <label for="state">
-                                    <input name="state" id="state" type="text" placeholder="State*" required>
+                                    <input name="state" id="state" type="text" placeholder="State">
                                 </label>
                                 <label for="country">
-                                    <input name="country" id="country" type="text" placeholder="Country*" required>
+                                    <input name="country" id="country" type="text" placeholder="Country">
                                 </label>
-                                <textarea name="message" id="message" id="" placeholder="Your Message" rows="30"></textarea>
+                                <textarea name="message" id="message" id="" placeholder="Your Message*" rows="30" required></textarea>
                                 <div class="message_box"></div>
                             </div>
                             <button type="submit" class="btn btn--orange">Send Message</button>
@@ -203,7 +203,7 @@
                                     <input type="text" placeholder="First Name*" name="name" id="name" required>
                                 </label>
                                 <label for="LastName">
-                                    <input type="text" placeholder="Last Name*" name="LastName" id="LastName" required>
+                                    <input type="text" placeholder="Last Name" name="LastName" id="LastName">
                                 </label>
                                 <label for="email">
                                     <input name="email" id="email" type="email" placeholder="Email Address*" required>
@@ -212,18 +212,18 @@
                                     <input name="phone" id="phone" type="phone" placeholder="Phone No.*" required>
                                 </label>
                                 <label for="zip">
-                                    <input name="zip" autocomplete="off" id="zip" type="zip" placeholder="Zipcode/Pincode*" required>
+                                    <input name="zip" autocomplete="off" id="zip" type="zip" placeholder="Zipcode/Pincode">
                                 </label>
                                 <label for="city">
-                                    <input name="city" id="city" type="text" placeholder="City*" required>
+                                    <input name="city" id="city" type="text" placeholder="City">
                                 </label>
                                 <label for="state">
-                                    <input name="state" id="state" type="text" placeholder="State*" required>
+                                    <input name="state" id="state" type="text" placeholder="State">
                                 </label>
                                 <label for="country">
-                                    <input name="country" id="country" type="text" placeholder="Country*" required>
+                                    <input name="country" id="country" type="text" placeholder="Country">
                                 </label>
-                                <textarea name="message" id="message" id="" placeholder="Your Message" rows="30"></textarea>
+                                <textarea name="message" id="message" id="" placeholder="Your Message*" rows="30" required></textarea>
                                 <div class="message_box"></div>
                             </div>
                             <button type="submit" class="btn btn--orange">Send Message</button>
@@ -241,7 +241,7 @@
                                     <input type="text" placeholder="First Name*" name="name" id="name" required>
                                 </label>
                                 <label for="LastName">
-                                    <input type="text" placeholder="Last Name*" name="LastName" id="LastName" required>
+                                    <input type="text" placeholder="Last Name" name="LastName" id="LastName">
                                 </label>
                                 <label for="email">
                                     <input name="email" id="email" type="email" placeholder="Email Address*" required>
@@ -250,18 +250,18 @@
                                     <input name="phone" id="phone" type="phone" placeholder="Phone No.*" required>
                                 </label>
                                 <label for="zip">
-                                    <input name="zip" autocomplete="off" id="zip" type="zip" placeholder="Zipcode/Pincode*" required>
+                                    <input name="zip" autocomplete="off" id="zip" type="zip" placeholder="Zipcode/Pincode">
                                 </label>
                                 <label for="city">
-                                    <input name="city" id="city" type="text" placeholder="City*" required>
+                                    <input name="city" id="city" type="text" placeholder="City">
                                 </label>
                                 <label for="state">
-                                    <input name="state" id="state" type="text" placeholder="State*" required>
+                                    <input name="state" id="state" type="text" placeholder="State">
                                 </label>
                                 <label for="country">
-                                    <input name="country" id="country" type="text" placeholder="Country*" required>
+                                    <input name="country" id="country" type="text" placeholder="Country">
                                 </label>
-                                <textarea name="message" id="message" id="" placeholder="Your Message" rows="30"></textarea>
+                                <textarea name="message" id="message" id="" placeholder="Your Message*" rows="30" required></textarea>
                                 <div class="message_box"></div>
                             </div>
                             <button type="submit" class="btn btn--orange">Send Message</button>
@@ -279,7 +279,7 @@
                                     <input type="text" placeholder="First Name*" name="name" id="name" required>
                                 </label>
                                 <label for="LastName">
-                                    <input type="text" placeholder="Last Name*" name="LastName" id="LastName" required>
+                                    <input type="text" placeholder="Last Name" name="LastName" id="LastName">
                                 </label>
                                 <label for="email">
                                     <input name="email" id="email" type="email" placeholder="Email Address*" required>
@@ -288,18 +288,18 @@
                                     <input name="phone" id="phone" type="phone" placeholder="Phone No.*" required>
                                 </label>
                                 <label for="zip">
-                                    <input name="zip" autocomplete="off" id="zip" type="zip" placeholder="Zipcode/Pincode*" required>
+                                    <input name="zip" autocomplete="off" id="zip" type="zip" placeholder="Zipcode/Pincode">
                                 </label>
                                 <label for="city">
-                                    <input name="city" id="city" type="text" placeholder="City*" required>
+                                    <input name="city" id="city" type="text" placeholder="City">
                                 </label>
                                 <label for="state">
-                                    <input name="state" id="state" type="text" placeholder="State*" required>
+                                    <input name="state" id="state" type="text" placeholder="State">
                                 </label>
                                 <label for="country">
-                                    <input name="country" id="country" type="text" placeholder="Country*" required>
+                                    <input name="country" id="country" type="text" placeholder="Country">
                                 </label>
-                                <textarea name="message" id="message" id="" placeholder="Your Message" rows="30"></textarea>
+                                <textarea name="message" id="message" id="" placeholder="Your Message*" rows="30" required></textarea>
                                 <div class="message_box"></div>
                             </div>
                             <button type="submit" class="btn btn--orange">Send Message</button>
@@ -317,7 +317,7 @@
                                     <input type="text" placeholder="First Name*" name="name" id="name" required>
                                 </label>
                                 <label for="LastName">
-                                    <input type="text" placeholder="Last Name*" name="LastName" id="LastName" required>
+                                    <input type="text" placeholder="Last Name" name="LastName" id="LastName">
                                 </label>
                                 <label for="email">
                                     <input name="email" id="email" type="email" placeholder="Email Address*" required>
@@ -326,18 +326,18 @@
                                     <input name="phone" id="phone" type="phone" placeholder="Phone No.*" required>
                                 </label>
                                 <label for="zip">
-                                    <input name="zip" autocomplete="off" id="zip" type="zip" placeholder="Zipcode/Pincode*" required>
+                                    <input name="zip" autocomplete="off" id="zip" type="zip" placeholder="Zipcode/Pincode">
                                 </label>
                                 <label for="city">
-                                    <input name="city" id="city" type="text" placeholder="City*" required>
+                                    <input name="city" id="city" type="text" placeholder="City">
                                 </label>
                                 <label for="state">
-                                    <input name="state" id="state" type="text" placeholder="State*" required>
+                                    <input name="state" id="state" type="text" placeholder="State">
                                 </label>
                                 <label for="country">
-                                    <input name="country" id="country" type="text" placeholder="Country*" required>
+                                    <input name="country" id="country" type="text" placeholder="Country">
                                 </label>
-                                <textarea name="message" id="message" id="" placeholder="Your Message" rows="30"></textarea>
+                                <textarea name="message" id="message" id="" placeholder="Your Message*" rows="30" required></textarea>
                                 <div class="message_box"></div>
                             </div>
                             <button type="submit" class="btn btn--orange">Send Message</button>
