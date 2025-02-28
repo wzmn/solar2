@@ -46,9 +46,10 @@ Route::middleware('auth')->group(function () {
 Route::get('/', function () {
     $testimonials = Testimonial::where('type', 'client')->get();
     $projects = Projects::all();
+    $blogs = Blog::orderBy('date', 'desc')->take(3)->get();
     $seo = Page::where('slug', 'home')->first();
     $hero_img = [asset('assets/images/1.webp'), asset('assets/images/video-slide.webp'), asset('assets/images/slider-3.webp')];
-    return view('website.index', compact('seo', 'testimonials', 'hero_img', 'projects'));
+    return view('website.index', compact('seo', 'testimonials', 'hero_img', 'projects', 'blogs'));
 
 })->name('home');
 
@@ -115,10 +116,11 @@ Route::get('/knowledge-center/{slug}', function (string $slug) {
 
 Route::get('/knowledge-center', function () {
     $hero_img = [asset('assets/images/blog-header.png')];
-    $blogs = Blog::paginate();
+    $blogs = Blog::orderBy('date', 'desc')->paginate();
     $seo = Page::where('slug', 'knowledge-center')->first();
-    $recentPosts = $blogs;
-    return view('website.blog', compact('blogs', 'seo', 'recentPosts', 'hero_img'));
+    $recentPosts = [$blogs[0], $blogs[1], $blogs[2]];
+    $categories = Category::all();
+    return view('website.blog', compact('blogs', 'seo', 'recentPosts', 'hero_img', 'categories'));
 })->name('knowledge-center');
 
 Route::get('/privacy', function () {

@@ -67,7 +67,7 @@
     </script>
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://enernew.in/">
+    <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Innovative Renewable Energy & Solar Power Park Solutions">
     <meta property="og:description"
@@ -76,7 +76,7 @@
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://enernew.in/">
+    <meta property="twitter:url" content="{{ url()->current() }}">
     <meta name="twitter:title" content="Innovative Renewable Energy & Solar Power Park Solutions">
     <meta name="twitter:description"
         content="Enernew provides renewable energy solutions, specializing in solar power parks that drive sustainability & deliver efficient, clean energy for a greener future.">

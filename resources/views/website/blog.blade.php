@@ -81,40 +81,16 @@
                     <div class="categories">
                         <h4 class="mb-4 text-orange">Categories</h4>
                         <ul class="p-0">
-                            <li class="align-items-center border-2 border-bottom d-flex justify-content-between mb-2">
-                                <a class="py-3">Enviroment</a>
-                                <span>(3)</span>
-                            </li>
-
-                            <li class="align-items-center border-2 border-bottom d-flex justify-content-between mb-2">
-                                <a class="py-3">EPC Project</a>
-                                <span>(1)</span>
-                            </li>
-                            <li class="align-items-center border-2 border-bottom d-flex justify-content-between mb-2">
-                                <a class="py-3">Solar</a>
-                                <span>(2)</span>
-                            </li>
-                            <li class="align-items-center border-2 border-bottom d-flex justify-content-between mb-2">
-                                <a class="py-3">Solar Pump</a>
-                                <span>(6)</span>
-                            </li>
-                            <li class="align-items-center border-2 border-bottom d-flex justify-content-between mb-2">
-                                <a class="py-3">Solar Inverter</a>
-                                <span>(1)</span>
-                            </li>
-                            <li class="align-items-center border-2 border-bottom d-flex justify-content-between mb-2">
-                                <a class="py-3">Lithium-ion Battery</a>
-                                <span>(1)</span>
-                            </li>
-                            <li class="align-items-center border-2 border-bottom d-flex justify-content-between mb-2">
-                                <a class="py-3">Solar PV modules</a>
-                                <span>(1)</span>
-                            </li>
-                            <li class="align-items-center border-2 border-bottom d-flex justify-content-between mb-2">
-                                <a class="py-3">Waaree Expert</a>
-                                <span>(3)</span>
-                            </li>
-
+                            @forelse ($categories as $item)
+                                <li class="align-items-center border-2 border-bottom d-flex justify-content-between mb-2">
+                                    <a class="py-3">{{ $item->title }}</a>
+                                    <span>({{ count($item->blogs) }})</span>
+                                </li>
+                            @empty
+                                <li class="align-items-center border-2 border-bottom d-flex justify-content-between mb-2">
+                                    There are no categories to show
+                                </li>
+                            @endforelse
                         </ul>
                     </div>
                 </div>

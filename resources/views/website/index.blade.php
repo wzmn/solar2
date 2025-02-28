@@ -46,16 +46,16 @@ foreach (collect($seo->blocks) as $tabPill) {
                             <g>
                                 <path
                                     d="M46.547,75.521c0,1.639-0.947,3.128-2.429,3.823c-0.573,0.271-1.187,0.402-1.797,0.402c-0.966,0-1.923-0.332-2.696-0.973
-                                                            l-23.098-19.14H4.225C1.892,59.635,0,57.742,0,55.409V38.576c0-2.334,1.892-4.226,4.225-4.226h12.303l23.098-19.14
-                                                            c1.262-1.046,3.012-1.269,4.493-0.569c1.481,0.695,2.429,2.185,2.429,3.823L46.547,75.521L46.547,75.521z M62.784,68.919
-                                                            c-0.103,0.007-0.202,0.011-0.304,0.011c-1.116,0-2.192-0.441-2.987-1.237l-0.565-0.567c-1.482-1.479-1.656-3.822-0.408-5.504
-                                                            c3.164-4.266,4.834-9.323,4.834-14.628c0-5.706-1.896-11.058-5.484-15.478c-1.366-1.68-1.24-4.12,0.291-5.65l0.564-0.565
-                                                            c0.844-0.844,1.975-1.304,3.199-1.231c1.192,0.06,2.305,0.621,3.061,1.545c4.977,6.09,7.606,13.484,7.606,21.38
-                                                            c0,7.354-2.325,14.354-6.725,20.24C65.131,68.216,64.007,68.832,62.784,68.919z M80.252,81.976
-                                                            c-0.764,0.903-1.869,1.445-3.052,1.495c-0.058,0.002-0.117,0.004-0.177,0.004c-1.119,0-2.193-0.442-2.988-1.237l-0.555-0.555
-                                                            c-1.551-1.55-1.656-4.029-0.246-5.707c6.814-8.104,10.568-18.396,10.568-28.982c0-11.011-4.019-21.611-11.314-29.847
-                                                            c-1.479-1.672-1.404-4.203,0.17-5.783l0.554-0.555c0.822-0.826,1.89-1.281,3.115-1.242c1.163,0.033,2.263,0.547,3.036,1.417
-                                                            c8.818,9.928,13.675,22.718,13.675,36.01C93.04,59.783,88.499,72.207,80.252,81.976z" />
+                                                                l-23.098-19.14H4.225C1.892,59.635,0,57.742,0,55.409V38.576c0-2.334,1.892-4.226,4.225-4.226h12.303l23.098-19.14
+                                                                c1.262-1.046,3.012-1.269,4.493-0.569c1.481,0.695,2.429,2.185,2.429,3.823L46.547,75.521L46.547,75.521z M62.784,68.919
+                                                                c-0.103,0.007-0.202,0.011-0.304,0.011c-1.116,0-2.192-0.441-2.987-1.237l-0.565-0.567c-1.482-1.479-1.656-3.822-0.408-5.504
+                                                                c3.164-4.266,4.834-9.323,4.834-14.628c0-5.706-1.896-11.058-5.484-15.478c-1.366-1.68-1.24-4.12,0.291-5.65l0.564-0.565
+                                                                c0.844-0.844,1.975-1.304,3.199-1.231c1.192,0.06,2.305,0.621,3.061,1.545c4.977,6.09,7.606,13.484,7.606,21.38
+                                                                c0,7.354-2.325,14.354-6.725,20.24C65.131,68.216,64.007,68.832,62.784,68.919z M80.252,81.976
+                                                                c-0.764,0.903-1.869,1.445-3.052,1.495c-0.058,0.002-0.117,0.004-0.177,0.004c-1.119,0-2.193-0.442-2.988-1.237l-0.555-0.555
+                                                                c-1.551-1.55-1.656-4.029-0.246-5.707c6.814-8.104,10.568-18.396,10.568-28.982c0-11.011-4.019-21.611-11.314-29.847
+                                                                c-1.479-1.672-1.404-4.203,0.17-5.783l0.554-0.555c0.822-0.826,1.89-1.281,3.115-1.242c1.163,0.033,2.263,0.547,3.036,1.417
+                                                                c8.818,9.928,13.675,22.718,13.675,36.01C93.04,59.783,88.499,72.207,80.252,81.976z" />
                                 <path
                                     d="M 46.547 75.521 c 0 1.639 -0.947 3.128 -2.429 3.823 c -0.573 0.271 -1.187 0.402 -1.797 0.402 c -0.966 0 -1.923 -0.332 -2.696 -0.973 l -23.098 -19.14 H 4.225 C 1.892 59.635 0 57.742 0 55.409 V 38.576 c 0 -2.334 1.892 -4.226 4.225 -4.226 h 12.303 l 23.098 -19.14 c 1.262 -1.046 3.012 -1.269 4.493 -0.569 c 1.481 0.695 2.429 2.185 2.429 3.823 L 46.547 75.521 z z z" />
                             </g>
@@ -158,34 +158,6 @@ foreach (collect($seo->blocks) as $tabPill) {
                             <a href="{{ $data[2]->content }}" class="btn btn--orange">Explore Our Solution</a>
                         @endif
                     @endforeach
-                    {{-- <h2 class="highlight" data-aos="fade-up" data-aos-delay="100">Overview</h2>
-                    <p class="text-justify">
-                        In the ever-evolving landscape of renewable energy, Enernew stands as a pioneering force dedicated
-                        to delivering innovative and sustainable energy solutions. Founded by the visionaries behind Sriram
-                        Cables, Enernew has recently unveiled its latest venture, committed to pushing the boundaries of
-                        green energy.
-
-                    </p>
-                    <p class="text-justify">
-                        Specializing in Off-Site Captive Open Access Solar Parks and On-Site C&I Solar Projects, Enernew
-                        caters to conglomerates spanning various sectors of the economy. With a stellar track record of
-                        successfully executing over 100 MWp+ Solar projects, Enernew is not just leading but reshaping the
-                        journey towards a greener future.
-                    </p>
-                    <p class="text-justify">
-                        We empower industries to transcend traditional energy constraints by leveraging cutting-edge
-                        renewable technologies, including wind, Battery Energy Storage Systems (BESS), and advanced
-                        wind-solar hybrids, to create a future where power needs are met sustainably and efficiently.
-                    </p>
-                    <p class="text-justify">
-                        Beyond mere business ambitions, Enernew's mission is rooted in catalyzing sustainable development
-                        through clean energy solutions. By harnessing the inexhaustible potential of solar power, Enernew
-                        not only meets the energy demands of its diverse clientele but also champions environmental
-                        conservation efforts. Through cutting-edge technologies and meticulous project management practices,
-                        Enernew is steadfast in its commitment to achieving net-zero emissions, ensuring that each project
-                        contributes meaningfully to global sustainability goals.
-                    </p>
-                    <a href="/about-us" class="btn btn--orange">Explore Our Solution</a> --}}
                 </div>
                 <div class="col d-none d-lg-block col-sm-1">
 
@@ -399,8 +371,8 @@ foreach (collect($seo->blocks) as $tabPill) {
                                 <g>
                                     <path
                                         d="M386.235,248.308L140.902,2.975c-4.267-4.053-10.987-3.947-15.04,0.213c-3.947,4.16-3.947,10.667,0,14.827l237.76,237.76
-                                                                               l-237.76,237.867c-4.267,4.053-4.373,10.88-0.213,15.04c4.053,4.267,10.88,4.373,15.04,0.213c0.107-0.107,0.213-0.213,0.213-0.213
-                                                                               l245.333-245.333C390.395,259.188,390.395,252.468,386.235,248.308z" />
+                                                                                   l-237.76,237.867c-4.267,4.053-4.373,10.88-0.213,15.04c4.053,4.267,10.88,4.373,15.04,0.213c0.107-0.107,0.213-0.213,0.213-0.213
+                                                                                   l245.333-245.333C390.395,259.188,390.395,252.468,386.235,248.308z" />
                                 </g>
 
                             </svg>
@@ -412,41 +384,15 @@ foreach (collect($seo->blocks) as $tabPill) {
                     <div id="projects" class="carousel slide" data-bs-interval="false">
                         <div class="carousel-inner">
                             @forelse ($projects as $item)
-                            <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                                <img src="{{Storage::disk('public')->url($item->image)}}" class="d-block w-100"
-                                    alt="{{$item->title}}">
-                            </div>
+                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                    <img src="{{ Storage::disk('public')->url($item->image) }}" class="d-block w-100"
+                                        alt="{{ $item->title }}">
+                                </div>
                             @empty
                                 <p>No Projects found.</p>
                             @endforelse
-                            {{-- <div class="carousel-item active">
-                                <img src="./assets/images/projects/Railway-Single.webp" class="d-block w-100"
-                                    alt="India’s First Solar-Powered Running Coaches">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./assets/images/projects/Banswara-Collage.webp" class="d-block w-100"
-                                    alt="Banswara Syntex - Single-Site Rooftop Solar Project">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./assets/images/projects/Pragati-Power-Collage.webp" class="d-block w-100"
-                                    alt="Pragati Power Rooftop Solar Project">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./assets/images/projects/Jindal-Collage.webp" class="d-block w-100"
-                                    alt="Jindal Saw Ground-Mounted Solar Power Project">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./assets/images/projects/JTEKT-Collage.webp" class="d-block w-100"
-                                    alt="JTEKT Corporation turnkey EPC- solar power project">
-                            </div> --}}
+
                         </div>
-                        <!-- <div class="carousel-indicators">
-                                                    <button type="button" data-bs-target="#projects" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                                    <button type="button" data-bs-target="#projects" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                                    <button type="button" data-bs-target="#projects" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                                    <button type="button" data-bs-target="#projects" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                                    <button type="button" data-bs-target="#projects" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                                </div> -->
                     </div>
                 </div>
             </div>
@@ -462,21 +408,6 @@ foreach (collect($seo->blocks) as $tabPill) {
                         <div class="col-12 col-sm-5 d-flex justify-content-center flex-column mb-5">
                             <h2 data-aos="fade-up" class="highlight">Our Clients</h2>
                             {!! $data[0]->content !!}
-                            {{-- <p data-aos="fade-up" data-aos-delay="100" class="text-justify">We take pride in serving a
-                                diverse
-                                and prestigious clientele
-                                that spans various industries and sectors. From large corporations and government agencies
-                                to
-                                educational institutions and residential communities, our clients trust us to deliver
-                                reliable,
-                                innovative, and sustainable <a href="https://enernew.in/b2b-solar-solutions"
-                                    target="_blank" data-aos="fade-right" data-aos-delay="400" class="text-orange">solar
-                                    energy solutions</a>.
-                                Our commitment to excellence and customer
-                                satisfaction has enabled us to build strong, long-lasting relationships with each of our
-                                valued
-                                partners.
-                            </p> --}}
                         </div>
                         <div class="col"></div>
 
@@ -513,18 +444,6 @@ foreach (collect($seo->blocks) as $tabPill) {
                                 <img src="{{ $data[8]->content }}" class="img-fluid" data-aos="fade-left"
                                     alt="Jindal Saw Client Logo">
                             @endif
-                            {{-- <img src="./assets/images/c2.png" class="img-fluid" data-aos="fade-left"
-                                data-aos-delay="100" alt="NTPC Client Logo">
-                            <img src="./assets/images/c4.png" class="img-fluid" data-aos="fade-left"
-                                data-aos-delay="200" alt="HSIL Client Logo">
-                            <img src="./assets/images/c5.png" class="img-fluid" data-aos="fade-left"
-                                data-aos-delay="300" alt="OM Logistics Client Logo">
-                            <img src="./assets/images/c6.png" class="img-fluid" data-aos="fade-left"
-                                data-aos-delay="400" alt="Banswara Syntex Client Logo">
-                            <img src="./assets/images/c7.png" class="img-fluid" data-aos="fade-left"
-                                data-aos-delay="500" alt="JTEKT Client Logo">
-                            <img src="./assets/images/c8.png" class="img-fluid" alt="SECI Client Logo">
-                            <img src="./assets/images/c9.png" class="img-fluid" alt="India Oil Client Logo"> --}}
                         </div>
                     </div>
                 @endif
@@ -647,49 +566,27 @@ foreach (collect($seo->blocks) as $tabPill) {
                 </div>
             </div>
             <div class="row mb-5">
-                <div href="/knowledge-center/why-off-site-solar-parks-are-the-future-of-renewable-energy"
-                    class="col-12 col-md-4 d-flex justify-content-center mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card">
-                        <img src="./assets/images/blogs/blog-1-home.webp" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column justify-content-around">
-                            <h5 class="card-title highlight mb-3" data-aos="fade-up">Why Off-Site Solar Parks are the
-                                Future of Renewable
-                                Energy</h5>
-                            <p class="card-text">In the heart of the renewable energy revolution, off-site solar parks are
-                                emerging as a beacon of innovation and sustainability ...</p>
-                            <a href="/knowledge-center/why-off-site-solar-parks-are-the-future-of-renewable-energy"
-                                data-aos="fade-right" data-aos-delay="400" class="text-orange">Read More</a>
+                @foreach ($blogs as $blog)
+                    <div href="/knowledge-center/{{ $blog->slug }}" class="col-12 col-md-4 d-flex mb-5"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="card w-100">
+                            <div class="card-img-top overflow-hidden">
+                                <img src="{{ Storage::disk('public')->url($blog->image) }}"
+                                    style="width: 150%;
+    top: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);"
+                                    alt="...">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-around">
+                                <h5 class="card-title highlight mb-3" data-aos="fade-up">{{ $blog->title }}</h5>
+                                <p class="card-text">{{ substr(strip_tags($blog->content), 0, 115) . '...' }}</p>
+                                <a data-aos="fade-right" data-aos-delay="400" class="text-orange">Read More</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div href="/knowledge-center/embracing-sustainability-with-solar-energy-and-its-environmental-benefits"
-                    class="col-12 col-md-4 d-flex justify-content-center mb-5" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <img src="./assets/images/blogs/blog-2-home.webp" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column justify-content-around">
-                            <h5 class="card-title highlight mb-3" data-aos="fade-up">Embracing Sustainability with Solar
-                                Energy and Its Environmental Benefits</h5>
-                            <p class="card-text">Transitioning to sustainable practices is crucial for preserving our
-                                planet for future generations...</p>
-                            <a href="/knowledge-center/embracing-sustainability-with-solar-energy-and-its-environmental-benefits"
-                                data-aos="fade-right" data-aos-delay="500" class="text-orange">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div href="/knowledge-center/choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas"
-                    class="col-12 col-md-4 d-flex justify-content-center mb-5" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card">
-                        <img src="./assets/images/blogs/blog-3-home.webp" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column justify-content-around">
-                            <h5 class="card-title highlight mb-3" data-aos="fade-up">Choosing the Right Green Energy Path:
-                                A Comparison of Captive and Third-Party PPAS</h5>
-                            <p class="card-text">As experience with other renewable technologies show, lack of social
-                                acceptance and incongruity...</p>
-                            <a href="knowledge-center/choosing-the-right-green-energy-path-a-comparison-of-captive-and-third-party-ppas"
-                                data-aos="fade-right" data-aos-delay="600" class="text-orange">Read More</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
